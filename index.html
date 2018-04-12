@@ -1,0 +1,705 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PJC</title>
+    <link rel="stylesheet" href="css/pjc.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src='js/IntenseImages/intense.js'></script>
+
+    <style type="text/css">
+        a:link {
+            text-decoration: none;
+            color: #6D02D8;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: #6D02D8;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: #6D02D8;
+        }
+
+        a:active {
+            text-decoration: none;
+            color: #6D02D8;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(document).scroll(function () {
+            var y = $(this).scrollTop();
+            if (y > 500) {
+                $('.HiNicThisIsASecretMessageFromTheGovernment').fadeIn();
+            } else {
+                $('.HiNicThisIsASecretMessageFromTheGovernment').fadeOut();
+            }
+
+        });
+
+        $(document).scroll(function () {
+            var y = $(this).scrollTop();
+            if (y > 500) {
+                $('.MailingListFooterBlock').fadeIn();
+            } else {
+                $('.MailingListFooterBlock').fadeOut();
+            }
+
+        });
+
+        function toggle(id) {
+            var el = document.getElementById(id);
+            var img = document.getElementById("arrow");
+            var box = el.getAttribute("class");
+            if (box == "hide") {
+                el.setAttribute("class", "show");
+                delay(img, "/images/arrowright.png", 400);
+            }
+            else {
+                el.setAttribute("class", "hide");
+                delay(img, "/images/arrowleft.png", 400);
+            }
+        }
+
+        setTimeout(fade_out, 2000);
+
+        function fade_out() {
+            $("#OrderWindow2").fadeOut();
+        }
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 1500, function () {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });	
+    </script>
+    <script>
+        window.onload = function () {
+            // Intensify all images with the 'intense' classname.
+            var elements = document.querySelectorAll('.intense');
+            Intense(elements);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="top-landing">
+        <h2>
+            Cookies made with love by a mother and daughter locally in New York City
+        </h2>
+        <img src="!assets/Email.png" onclick="toggle('Email');" class="Link" width="38px" style="margin:15px;margin-left:12px;" alt="" />
+        <a href="http://www.instagram.com/pennyjanescookies" target="_blank" class="Link">
+                <img src="!assets/SocialInstaB.png" width="30px" style="margin:0px;" alt="" />
+        </a>
+        <img src="!assets/PJCb.png" id="logo-text" alt="" />
+    </div>
+
+    <p>HEADER TEXT BELOW THIS IS MAX'S  WORK</p>
+    <br />
+<!--
+    <div id="OrderWindow" class="hide">
+        <table width="100%" height="100%" border="0" cellspacing="0">
+            <tr>
+                <td width="100%" height="100%" align="center" valign="middle">
+                    <table class="roundbox">
+                        <tr height="10">
+                            <td height="10" align="left">
+                                <button class="nobutton">
+                                    <img src="!assets/X.png" onclick="toggle('OrderWindow');" height="25" style="margin:10px;"
+                                        alt="" />
+                                </button>
+                                <table style="margin-left:30px;margin-right:30px;">
+                                    <tr>
+                                        <td width="100%" align="center" valign="top">
+                                            <font face="futura" style="font-weight:bold;font-weight:500;" size="6" color="#DD5958">Cookies are coming!</font>
+                                            <br>
+                                            <br>
+                                            <font face="helvetica" style="font-weight:bold;" size="3" color="#000000">Our cookies are available for pickup in NYC, we cannot ship them.</font>
+                                            <br>
+                                            <br>
+                                            <form action="mailto:you@yourwebsite.com">
+
+                                                <input class="input" type="text" style="width:98%;" value="What is your name?" onfocus="if(this.value == 'What is your name?') { this.value = ''; }">
+                                                <br>
+                                                <br>
+                                                <input class="input" type="text" style="width:98%;" value="What is your email?" onfocus="if(this.value == 'What is your email?') { this.value = ''; }">
+                                                <br>
+                                                <br>
+                                                <select class="input" style="width:98%;">
+                                                    <option value="0">How many cookies do you want?</option>
+                                                    <option value="1">A dozen</option>
+                                                    <option value="2">Two dozen</option>
+                                                    <option value="3">Three dozen or more</option>
+                                                    <option value="4">I'm not sure</option>
+                                                </select>
+                                                <br>
+                                                <br>
+                                                <select class="input" style="width:98%;">
+                                                    <option value="0">What occasion are they for?</option>
+                                                    <option value="1">Birthday party</option>
+                                                    <option value="2">Wedding</option>
+                                                    <option value="3">Other</option>
+                                                </select>
+                                                <br>
+                                                <br>
+                                                <input class="input" type="text" style="width:98%;" value="Anything else we should know?" onfocus="if(this.value == 'Anything else we should know?') { this.value = ''; }">
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <div onclick="toggle('OrderWindow2');">
+                                                    <button onclick="toggle('OrderWindow');" style="opacity:0.5;">
+                                                        <font face="helvetica" size="2" color="white">
+                                                            <b>
+                                                                <font face="Helvetica" size="3" color="white">Submit my order</b>
+                                                            </font>
+                                                    </button>
+                                                </div>
+                                                <br>
+                                                <br>
+                                                <br>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="OrderWindow2" class="hide" onclick="toggle('OrderWindow2');">
+        <table width="100%" height="100%" border="0" cellspacing="0">
+            <tr>
+                <td width="100%" height="100%" align="center" valign="middle">
+                    <table class="roundbox">
+                        <tr height="10">
+                            <td height="10" align="left">
+                                <table style="margin-left:30px;margin-right:30px;">
+                                    <tr>
+                                        <td width="100%" align="center" valign="top">
+                                            <br>
+                                            <br>
+                                            <font face="futura" style="font-weight:bold;font-weight:500;" size="6" color="#DD5958">We're firing up the oven
+                                                <br>& will be in touch soon!</font>
+                                            <br>
+                                            <br>
+                                            <br>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="Email" class="hide">
+        <table width="100%" height="100%" border="0" cellspacing="0">
+            <tr>
+                <td width="100%" height="100%" align="center" valign="middle">
+                    <table class="roundbox">
+                        <tr height="10">
+                            <td height="10" align="left">
+                                <button class="nobutton">
+                                    <img src="!assets/X.png" onclick="toggle('Email');" height="25" style="margin:10px;" alt=""
+                                    />
+                                </button>
+                                <table style="margin-left:30px;margin-right:30px;">
+                                    <tr>
+                                        <td width="100%" align="center" valign="top">
+                                            <font face="futura" style="font-weight:bold;font-weight:500;" size="6" color="#6D02D8">Get in touch:</font>
+                                            <br>
+                                            <br>
+                                            <font face="helvetica" style="font-weight:bold;" size="3" color="#000000">pennyjanescookies@gmail.com</font>
+                                            <br>
+                                            <br>
+                                            <br>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="ClassWindow" class="hide">
+        <table width="100%" height="100%" border="0" cellspacing="0">
+            <tr>
+                <td width="100%" height="100%" align="center" valign="middle">
+                    <table class="roundbox">
+                        <tr height="10">
+                            <td height="10" align="left">
+                                <button class="nobutton">
+                                    <img src="!assets/X.png" onclick="toggle('ClassWindow');" height="25" style="margin:10px;"
+                                        alt="" />
+                                </button>
+                                <table style="margin-left:30px;margin-right:30px;">
+                                    <tr>
+                                        <td width="100%" align="center" valign="top">
+                                            <font face="futura" style="font-weight:bold;font-weight:500;" size="6" color="#6D02D8">Our classes</font>
+                                            <br>
+                                            <br>
+                                            <font face="helvetica" style="font-weight:bold;" size="3" color="#000000">We love to teach others how to make cookies!</font>
+                                            <br>
+                                            <br>
+                                            <div onclick="toggle('ClassWindow3');" style="display:inline-block;" class="Link">
+                                                <button onclick="toggle('ClassWindow');" style="opacity:1;background-color:transparent;border:2px solid #6D02D8;margin:10px;">
+                                                    <font face="helvetica" size="2" color="white">
+                                                        <b>
+                                                            <font face="Helvetica" size="3" color="#6D02D8">Book a class</b>
+                                                        </font>
+                                                </button>
+                                            </div>
+                                            <div onclick="toggle('ClassWindow2');" class="Link" style="display:inline-block;">
+                                                <button onclick="toggle('ClassWindow');" style="opacity:1;background-color:#6D02D8;border:2px solid #6D02D8;margin:10px;">
+                                                    <font face="helvetica" size="2" color="white">
+                                                        <b>
+                                                            <font face="Helvetica" size="3" color="white">Join a class</b>
+                                                        </font>
+                                                </button>
+                                            </div>
+                                            <br>
+                                            <br>
+                                            <br>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="ClassWindow2" class="hide">
+        <table width="100%" height="100%" border="0" cellspacing="0">
+            <tr>
+                <td width="100%" height="100%" align="center" valign="middle">
+                    <table class="roundbox">
+                        <tr height="10">
+                            <td height="10" align="left">
+                                <button class="nobutton">
+                                    <img src="!assets/X.png" onclick="toggle('ClassWindow2');" height="25" style="margin:10px;"
+                                        alt="" />
+                                </button>
+                                <table style="margin-left:30px;margin-right:30px;">
+                                    <tr>
+                                        <td width="100%" align="center" valign="top">
+                                            <font face="futura" style="font-weight:bold;font-weight:500;" size="6" color="#6D02D8">Join our classes!</font>
+                                            <br>
+                                            <br>
+                                            <font face="helvetica" style="font-weight:bold;" size="3" color="#000000">We'll let you know when our next class is:</font>
+                                            <br>
+                                            <br>
+                                            <input class="input" type="text" style="width:350px;" value="What is your name?" onfocus="if(this.value == 'What is your name?') { this.value = ''; }">
+                                            <br>
+                                            <br>
+                                            <input class="input" type="text" style="width:350px;" value="What is your email?" onfocus="if(this.value == 'What is your email?') { this.value = ''; }">
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <div onclick="toggle('ClassWindow4');">
+                                                <button onclick="toggle('ClassWindow2');" style="opacity:0.5;background-color:#6D02D8;border:#6D02D8;">
+                                                    <font face="helvetica" size="2" color="white">
+                                                        <b>
+                                                            <font face="Helvetica" size="3" color="white">Notify me</b>
+                                                        </font>
+                                                </button>
+                                            </div>
+                                            <br>
+                                            <br>
+                                            <br>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="ClassWindow3" class="hide">
+        <table width="100%" height="100%" border="0" cellspacing="0">
+            <tr>
+                <td width="100%" height="100%" align="center" valign="middle">
+                    <table class="roundbox">
+                        <tr height="10">
+                            <td height="10" align="left">
+                                <button class="nobutton">
+                                    <img src="!assets/X.png" onclick="toggle('ClassWindow3');" height="25" style="margin:10px;"
+                                        alt="" />
+                                </button>
+                                <table style="margin-left:30px;margin-right:30px;">
+                                    <tr>
+                                        <td width="100%" align="center" valign="top">
+                                            <font face="futura" style="font-weight:bold;font-weight:500;" size="6" color="#6D02D8">Book a class!</font>
+                                            <br>
+                                            <br>
+                                            <font face="helvetica" style="font-weight:bold;" size="3" color="#000000">We're always open to new class opportunities.</font>
+                                            <br>
+                                            <br>
+                                            <input class="input" type="text" style="width:350px;" value="What is your name?" onfocus="if(this.value == 'What is your name?') { this.value = ''; }">
+                                            <br>
+                                            <br>
+                                            <input class="input" type="text" style="width:350px;" value="What is your email?" onfocus="if(this.value == 'What is your email?') { this.value = ''; }">
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <div onclick="toggle('ClassWindow4');">
+                                                <button onclick="toggle('ClassWindow3');" style="opacity:0.5;background-color:#6D02D8;border:#6D02D8;">
+                                                    <font face="helvetica" size="2" color="white">
+                                                        <b>
+                                                            <font face="Helvetica" size="3" color="white">Get in touch</b>
+                                                        </font>
+                                                </button>
+                                            </div>
+                                            <br>
+                                            <br>
+                                            <br>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="ClassWindow4" class="hide" onclick="toggle('ClassWindow4');">
+        <table width="100%" height="100%" border="0" cellspacing="0">
+            <tr>
+                <td width="100%" height="100%" align="center" valign="middle">
+                    <table class="roundbox">
+                        <tr height="10">
+                            <td height="10" align="left">
+                                <table style="margin-left:30px;margin-right:30px;">
+                                    <tr>
+                                        <td width="100%" align="center" valign="top">
+                                            <br>
+                                            <br>
+                                            <font face="futura" style="font-weight:bold;font-weight:500;" size="6" color="#6D02D8">We'll be in
+                                                <br>touch soon!</font>
+                                            <br>
+                                            <br>
+                                            <br>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <table id="HiNicThisIsASecretMessageFromTheGovernment" class="HiNicThisIsASecretMessageFromTheGovernment">
+        <tr>
+            <td align="left" width="10%">
+                <a href="#MainBlock" class="Link">
+                    <img src="!assets/PJCNoText.png" width="30px" style="margin-left:10px;" alt="" />
+                </a>
+                <img src="!assets/Email.png" onclick="toggle('Email');" class="Link" width="38px" style="margin:15px;margin-left:12px;"
+                    alt="" />
+                <a href="http://www.instagram.com/pennyjanescookies" target="_blank" class="Link">
+                    <img src="!assets/SocialInstaB.png" width="30px" style="margin:0px;" alt="" />
+                </a>
+            </td>
+            <td align="center" width="40%">
+                <a href="#MainBlock" class="Link">
+                    <img src="!assets/PJCTextA.png" height="45px" alt="" />
+                </a>
+            </td>
+            <td align="right" width="10%">
+                <button class="buttonsml" onclick="toggle('OrderWindow');">
+                    <font face="Helvetica" style="font-weight:bold;" size="3" color="#ffffff">Place an order</font>
+                </button>
+            </td>
+        </tr>
+    </table>
+
+    <table class="MainBlock" id="MainBlock">
+        <tr>
+            <td align="center" width="50%">
+                <img src="!assets/PJCb.png" width="250px" alt="" />
+                <br>
+                <br>
+                <font face="Helvetica" size="3" color="#ffffff">
+                    Made with love by a mother & daughter.</font>
+                <br>
+                <br>
+                <img src="!assets/Email.png" onclick="toggle('Email');" class="Link" width="48px" style="margin:15px;" alt="" />
+                <a href="http://www.instagram.com/pennyjanescookies" target="_blank">
+                    <img src="!assets/SocialInstaB.png" class="Link" width="40px" style="margin:15px;" alt="" />
+                </a>
+            </td>
+            <td width="50%">
+                <table width="100%" height="100%">
+                    <tr>
+                        <td width="100%" height="33.33%" align="center" valign="middle" class="MainBTN" style="background-image: url(!assets/OrderB.jpg);"
+                            bgcolor="#767352">
+                            <a href="#Below">
+                                <div width="100%" height="100%" align="center">
+                                    <font face="futura" size="4" style="font-weight:300;letter-spacing:4px;" color="#ffffff">BROWSE OUR COOKIES</font>
+                                </div>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" height="33.33%" align="center" valign="middle" class="MainBTN" style="background-image: url(!assets/Classes3.jpg);"
+                            onclick="toggle('ClassWindow');">
+                            <font face="futura" size="4" style="font-weight:300;letter-spacing:4px;" color="#ffffff" class="ClassTXT">JOIN OR BOOK A CLASS</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" height="33.33%" align="center" valign="middle" class="MainBTN" style="background-image: url(!assets/Order2b.jpg);"
+                            bgcolor="#DD5958" onclick="toggle('OrderWindow');">
+                            <font face="futura" size="4" style="font-weight:300;letter-spacing:4px;" color="#ffffff">PLACE AN ORDER</font>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <div class="MainBlockTransBG"></div>
+
+    <table width="100%" height="100%" class="MainSlide" bgcolor="#ffffff">
+        <tr>
+            <td width="100%" align="center" valign="middle" bgcolor="#ffffff">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="!assets/IMG_0085.JPG" width="100%">
+                        </div>
+                        <div class="item">
+                            <img src="!assets/IMG_0078.JPG" width="100%">
+                        </div>
+                        <div class="item">
+                            <img src="!assets/Photo1.jpg" width="100%">
+                        </div>
+            </td>
+        </tr>
+    </table>
+
+
+    <table class="BelowFold">
+        <tr>
+            <td width="100%">
+
+                <table width="100%" height="100%" id="Below">
+                    <tr>
+                        <td width="50%">
+                            <img src="!assets/Photo1.jpg" width="50%" class="intense" alt="" />
+                            <img src="!assets/Photo2.jpg" class="intense" width="50%" alt="" />
+                            <img src="!assets/Photo3.jpg" width="50%" class="intense" alt="" />
+                            <img src="!assets/Photo4.jpg" width="50%" class="intense" alt="" />
+                        </td>
+                        <td width="50%" align="center" bgcolor="#DD5958">
+                            <img src="!assets/PennCirc.png" width="250px" alt="" />
+                            <br>
+                            <Br>
+                            <font face="futura" size="6" style="font-weight:500;letter-spacing:0px;" color="#ffffff">Hi, I’m Penny Jane May!</font>
+                            <br>
+                            <Br>
+                            <table width="435px" style="white-space:normal;">
+                                <tr>
+                                    <td align="center">
+                                        <font face="Helvetica" size="3" color="#ffffff">
+                                            Me & my mother, Julie May, bake and hand-decorate cookies. Years ago, we started making holiday cookies and fell in love
+                                            with the process. Afterwards we didn’t want to stop and ended up making more
+                                            than we knew what to do with. So we started giving them away to strangers!</font>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+                <table width="100%" height="100%">
+                    <tr>
+                        <td width="50%" align="center" bgcolor="#6D02D8">
+                            <img src="!assets/Ma.png" width="250px" alt="" />
+                            <br>
+                            <Br>
+                            <font face="futura" size="6" style="font-weight:500;letter-spacing:0px;" color="#ffffff">Hi, I’m Julie May!</font>
+                            <br>
+                            <Br>
+                            <table width="435px" style="white-space:normal;">
+                                <tr>
+                                    <td align="center">
+                                        <font face="Helvetica" size="3" color="#ffffff">
+                                            Me & my daughter started handing out cookies in the park to inspire joy and spread positivity. We called our project Cookies
+                                            For Love. Then people started asking for batches, so we created this cookie company
+                                            where they could order from. Each order keeps Cookies For Love going! </font>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="50%" align="center">
+                            <img src="!assets/Photo1.jpg" class="intense" width="50%" alt="" />
+                            <img src="!assets/Photo2.jpg" class="intense" width="50%" alt="" />
+                            <img src="!assets/Photo3.jpg" width="50%" class="intense" alt="" />
+                            <img src="!assets/Photo4.jpg" class="intense" width="50%" alt="" />
+                        </td>
+                    </tr>
+                </table>
+
+                <table width="100%" height="100%">
+                    <tr>
+                        <td width="50%">
+                            <img src="!assets/Photo1.jpg" class="intense" width="50%" alt="" />
+                            <img src="!assets/Photo2.jpg" class="intense" width="50%" alt="" />
+                            <img src="!assets/Photo3.jpg" class="intense" width="50%" alt="" />
+                            <img src="!assets/Photo4.jpg" class="intense" width="50%" alt="" />
+                        </td>
+                        <td width="50%" align="center" bgcolor="#DD5958">
+                            <img src="!assets/ClassCirc.png" width="250px" alt="" />
+                            <br>
+                            <Br>
+                            <font face="futura" size="6" style="font-weight:500;letter-spacing:0px;" color="#ffffff">We do classes!</font>
+                            <br>
+                            <Br>
+                            <table width="435px" style="white-space:normal;">
+                                <tr>
+                                    <td align="center">
+                                        <font face="Helvetica" size="3" color="#ffffff">
+                                            After giving out 1,000s of cookies we decided to start teaching others how to make them. We love seeing their delight when
+                                            creating something beautiful they can eat or give to friends and family. Anybody
+                                            can join our classes, just sign up for our email list to learn when the next
+                                            one is.</font>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <button class="whiteghostbutton" onclick="toggle('ClassWindow');">
+                                            <font face="Helvetica" style="font-weight:bold;" size="3" color="#ffffff">Join a class</font>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+                <table width="100%" height="100%">
+                    <tr>
+                        <td width="50%" align="center" bgcolor="#6D02D8">
+                            <img src="!assets/Ma.png" width="250px" alt="" />
+                            <br>
+                            <Br>
+                            <font face="futura" size="6" style="font-weight:500;letter-spacing:0px;" color="#ffffff">Decorate your wedding!</font>
+                            <br>
+                            <Br>
+                            <table width="435px" style="white-space:normal;">
+                                <tr>
+                                    <td align="center">
+                                        <font face="Helvetica" size="3" color="#ffffff">
+                                            We also do weddings and something here about weddings more about weddings yep yep yep </font>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <button class="whiteghostbutton" onclick="toggle('OrderWindow');">
+                                            <font face="Helvetica" style="font-weight:bold;" size="3" color="#ffffff">Ask for an estimate</font>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="50%" align="center">
+                            <img src="!assets/Photo1.jpg" class="intense" width="50%" alt="" />
+                            <img src="!assets/Photo2.jpg" class="intense" width="50%" alt="" />
+                            <img src="!assets/Photo3.jpg" width="50%" class="intense" alt="" />
+                            <img src="!assets/Photo4.jpg" class="intense" width="50%" alt="" />
+                        </td>
+                    </tr>
+                </table>
+
+                <table width="100%" height="500px">
+                    <tr>
+                        <td width="100%" align="center">
+                            <font face="Helvetica" size="5" color="#ffffff" style="font-weight:bold;">Get fresh news about our cookies
+                                <br> & classes delievered to your inbox:</font>
+                            <br>
+                            <br>
+                            <form action="https://github.us18.list-manage.com/subscribe/post?u=001fc7f8967d5959dddfc1b01&amp;id=a40c44d50d" method="post"
+                                id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+                                novalidate>
+
+
+                                <input class="input" style="width:400px;" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="What is your email?"
+                                    required>
+                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <!--                          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                    <input type="text" name="b_001fc7f8967d5959dddfc1b01_a40c44d50d" tabindex="-1" value="">
+                                </div>
+                                <div class="clear">
+                                    <input type="submit" value="Add my email address" name="subscribe" id="mc-embedded-subscribe"
+                                        class="button">
+                                </div>
+                                </div>
+                            </form>
+
+                        </td>
+                    </tr>
+                </table>
+
+                <div width="100%" align="center">
+                    <font face="Helvetica" size="3" color="white">This site was made by Julie's sons / Penny's brothers.
+                        <br>Designed by
+                        <a href="http://www.maximillian.nyc" target="_blank">Maximillian Piras</a> & developed by
+                        <a href="http://www.crumrinecoder.com" target="_blank">Nicolas Crumrine</a>.</font>
+                </div>
+                <br>
+            </td>
+        </tr>
+    </table>
+-->
+</body>
+
+</html>
