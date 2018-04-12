@@ -20,6 +20,27 @@ html, body{
 #logo-text{
 	max-height: 250px; 
 }
+
+#bottom-landing{
+	height: 50%; 
+	background: blue; 
+	text-align: center;  
+}
+#bottom-landing button{
+	height: 33%; 
+	width: 100%; 
+	border: none; 
+}
+#browse-button{
+	background: green;
+}
+#book-button{
+	background: purple;
+}
+#order-button{
+	background: orange; 
+}
+
 /*
 html {
   	height: 100%;
