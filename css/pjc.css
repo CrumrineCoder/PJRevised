@@ -27,18 +27,18 @@ html, body{
 	text-align: center;  
 }
 #bottom-landing button{
-	height: 33%; 
+	height: 33.3%; 
 	width: 100%; 
 	border: none; 
 }
 #browse-button{
-	background: green;
+	background-image: url("../!assets/OrderB.jpg");
 }
 #book-button{
-	background: purple;
+	background-image: url("../!assets/Classes3.jpg");
 }
 #order-button{
-	background: orange; 
+	background-image: url("../!assets/Order2b.jpg");
 }
 
 /*
