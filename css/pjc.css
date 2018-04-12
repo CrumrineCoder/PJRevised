@@ -40,6 +40,26 @@ html, body{
 #order-button{
 	background-image: url("../!assets/Order2b.jpg");
 }
+.main-button{
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    -webkit-transition: background-size 1s;
+    transition: background-size 1s;
+    cursor: pointer;
+	overflow: hidden;
+	
+	font-weight: 300;
+	letter-spacing: 4px;
+	font-family: futura;
+    font-size: large;
+    color: rgb(255, 255, 255);
+}
+.main-button:hover {
+	background-size: 105%;
+	-webkit-transition: background-size 1s;
+    transition: background-size 1s;
+}
 
 /*
 html {
