@@ -27,15 +27,13 @@ $(document).scroll(function () {
 	
 	
 function toggle(id) {
-    console.log("test");
-    var el = document.getElementById(id);
-    var img = document.getElementById("arrow");
-    var box = el.getAttribute("class");
-    if(box == "hide"){
-        el.setAttribute("class", "show");
-    }
-    else{
-        el.setAttribute("class", "hide");
-    }
+    console.log("er");
+    $("#" + id).toggleClass("hide");
 }
+    /*
+    
 	
+$(".toggle").click(function(){
+    var target = "#" + $(this).attr("toggle-target");
+    $(target).toggleClass("hide");
+  }); */

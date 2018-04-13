@@ -54,8 +54,8 @@ label {
 
 /* Popup background and headers */
 .popup{
-	position: fixed;
-	z-index: 3; 
+	position: absolute;
+	z-index: 900; 
 	width: 100%;
 	height: 90%;
 	right: -100%;
@@ -91,17 +91,8 @@ label {
 }
 
 /* For showing and hiding the popups */
-.show, .hide{
-	transition: margin-right .0s ease-in;
-	-webkit-transition: margin-right .0s ease-in;
-}
 .hide{
-	margin-right:-100%;
-	opacity: 1.0;
-}
-.show{
-	margin-right:100%;
-	opacity: 1.0;
+	display: none; 
 }
 
 /* Top-left button */
