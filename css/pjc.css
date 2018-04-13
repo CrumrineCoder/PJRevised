@@ -177,6 +177,31 @@
 	display: block; 
     outline: none;
 }
+
+#credits{
+	width: 100%; 
+	text-align: center; 
+	background: #18788C;
+}
+#credits p{
+	margin: 0px; 
+}
+a:link {
+	text-decoration: none;
+	color: #6D02D8;
+}
+a:visited {
+	text-decoration: none;
+	color: #6D02D8;
+}
+a:hover {
+	text-decoration: none;
+	color: #6D02D8;
+}
+a:active {
+	text-decoration: none;
+	color: #6D02D8;
+}
 /* html {
      height: 100%;
      width: 100%;
