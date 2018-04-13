@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* CSS Document */
+/** CSS Document **/
  html, body{
      height: 100%;
      width: 100%;
@@ -7,103 +7,17 @@
      position: relative;
      color: white;
 }
-/* Popups */
 
-#OrderWindow, #OrderWindow2 {
-	width: 100%;
-	height: 90%;
-	right: -100%;
-	top: 5%;
-	position: fixed;
-	opacity: 1.0;
-	z-index: 990;
-	background-image: url('../!assets/BlackO.png');
-	
-	border: 0px solid #ffffff;
-	border-radius: 15px;
-	background-color: #ffffff;
-	opacity: 1.0;
-	z-index: 1000;
-}
-#OrderWindow h2{
-	font-weight: 500;
-	font-family: futura;
-    font-size: xx-large;
-	color: rgb(221, 89, 88);
-	text-align: center; 
-	margin: 0; 
-}
-#OrderWindow p{
-	font-weight: bold; 
-	color: black; 
-	font-size: medium; 
-	text-align: center; 
-	font-family: helvetica;
-}
-#ClassWindow, #ClassWindow2, #ClassWindow3, #ClassWindow4, #ClassWindow5, #Email {
-	width: 100%;
-	height: 100%;
-	right: -100%;
-	top: 0px;
-	position: fixed;
-	opacity: 1.0;
-	z-index: 990;
-	background-image: url('../!assets/BlackO.png');
-}
-.show, .hide{
-	transition: margin-right .0s ease-in;
-	-webkit-transition: margin-right .0s ease-in;
-}
-.hide{
-	margin-right:-100%;
-	opacity: 1.0;
-}
-.show{
-	margin-right:100%;
-	opacity: 1.0;
-}
-#ClassWindow, #ClassWindow2, #ClassWindow3, #ClassWindow4, #ClassWindow5, #OrderWindow2, #Email {
-	width: 100%;
-	height: 100%;
-	right: -100%;
-	top: 0px;
-	position: fixed;
-	opacity: 1.0;
-	z-index: 990;
-	background-image: url('../!assets/BlackO.png');
-}
-.nobutton {
-	border-radius: 0px;
-	padding: 0px;
-	background: Transparent;
-	border: 0px solid #ffffff;
+button:not(.main-button){
+	padding: 10px 20px;
+	margin-bottom: 15px;
+	border-radius: 100px;
+	font: Helvetica;
+	font-weight: bold;
+	font-size: 16px;
+	color: #ffffff;
 	cursor: pointer;
-	vertical-align:middle 
 }
-
-#OrderWindow .input{
-	box-sizing: border-box;
-	margin: 10px auto 0px; 
-	display: block; 
-}
-
-.class-buttons{
-	display: inline-block; 
-	border:2px solid #6D02D8;
-	margin:10px;
-	font-family: Helvetica; 
-	font-size: 3; 
-}
-#booking-button{
-	background-color:transparent;
-	color: #6D02D8; 
-}
-
-#join-button{
-	background-color:#6D02D8;
-}
-
-
 
 .input{
 	background-color: #ffffff;
@@ -136,7 +50,97 @@ label {
 	white-space: nowrap;
 }
 
-/* Nav */
+/** Popups **/
+
+/* Popup background and headers */
+.popup{
+	position: fixed;
+	z-index: 3; 
+	width: 100%;
+	height: 90%;
+	right: -100%;
+	top: 5%;
+	border: 0px solid #ffffff;
+	border-radius: 15px;
+	background-color: #ffffff;
+}
+.purple-popup{
+
+}
+.red-popup{
+	
+}
+
+.red-popup h2{
+	color: rgb(221, 89, 88);
+}
+.popup h2{
+	font-weight: 500;
+	font-family: futura;
+	font-size: xx-large;
+	text-align: center; 
+	margin: 0; 
+}
+
+.popup p{
+	font-weight: bold; 
+	color: black; 
+	font-size: medium; 
+	text-align: center; 
+	font-family: helvetica;
+}
+
+/* For showing and hiding the popups */
+.show, .hide{
+	transition: margin-right .0s ease-in;
+	-webkit-transition: margin-right .0s ease-in;
+}
+.hide{
+	margin-right:-100%;
+	opacity: 1.0;
+}
+.show{
+	margin-right:100%;
+	opacity: 1.0;
+}
+
+/* Top-left button */
+.nobutton {
+	border-radius: 0px;
+	padding: 0px;
+	background: Transparent;
+	border: 0px solid #ffffff;
+	cursor: pointer;
+	vertical-align:middle 
+}
+
+/* Inputs for Ordering popups */
+.order-popup .input{
+	box-sizing: border-box;
+	margin: 10px auto 0px; 
+	display: block; 
+}
+
+.booking-buttons{
+	display: inline-block; 
+	border:2px solid #6D02D8;
+	margin:10px;
+	font-family: Helvetica; 
+	font-size: 3; 
+}
+
+#purple-background-button{
+	background-color:transparent;
+	color: #6D02D8; 
+}
+#white-background-purple-border-button{
+	background-color:#6D02D8;
+}
+
+
+
+
+/** Nav **/
  nav{
      position: fixed;
      top: 0px;
@@ -202,15 +206,6 @@ label {
  nav button, #submit-order-button{
      background: #DD5958;
      border: 2px solid #DD5958;
-     padding: 10px 20px;
-     margin-bottom: 15px;
-     border-radius: 100px;
-     font: Helvetica;
-     font-weight: bold;
-     font-size: 16px;
-     color: #ffffff;
-     cursor: pointer;
-
 }
 nav button{
 	    /* Mobile only */
@@ -251,7 +246,7 @@ nav button{
      display: none;
 }
 
-/* Landing */
+/** Landing **/
  #top-landing{
      height: 50%;
      background: rgba(173, 113, 0, 0.644) ;
@@ -334,7 +329,7 @@ nav button{
  #slide2{
      background-image: url("../!assets/IMG_0085.JPG");
 }
-/* Boxes of information next to portfolio images */
+/** Boxes of information next to portfolio images **/
  .info-box{
      text-align: center;
      padding: 10px;
@@ -386,14 +381,14 @@ nav button{
      color: white;
      cursor: pointer;
 }
-/* Portfolio */
+/** Portfolio **/
 .portfolio-image{
 	width: 50%;
 	margin: 0px;
 	float: left;
 }
 
-/* Newsletter and footer */
+/** Newsletter and footer **/
  #newsletter{
      background: #18788C;
 }

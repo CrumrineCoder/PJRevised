@@ -13,7 +13,7 @@
 
 <body>
 
-    
+
     <div id="OrderWindow" class="hide">
         <button class="nobutton">
             <img src="!assets/X.png" onclick="toggle('OrderWindow');" height="25" style="margin:10px;" alt="">
@@ -43,18 +43,20 @@
     </div>
 
     <div id="OrderWindow2" class="hide">
-            <button class="nobutton">
-                <img src="!assets/X.png" onclick="toggle('OrderWindow2');" height="25" style="margin:10px;" alt="">
-            </button>
-    
-            <h2>Our classes</h2>
-            <p>We love to teach others how to make cookies!</p>
-    
-            <button id="booking-button" class="class-buttons Link" onclick="toggle('ClassWindow3'); toggle('ClassWindow');"></button>
+        <button class="nobutton">
+            <img src="!assets/X.png" onclick="toggle('OrderWindow2');" height="25" style="margin:10px;" alt="">
+        </button>
 
-            <button id="join-button" class="class-buttons Link" onclick="toggle('ClassWindow3')"></button>
-    
+        <h2>Our classes</h2>
+        <p>We love to teach others how to make cookies!</p>
+
+        <div id="buttons-ordering">
+            <button id="booking-button" class="class-buttons Link" onclick="toggle('ClassWindow3'); toggle('ClassWindow');">Book a class</button>
+
+            <button id="join-button" class="class-buttons Link" onclick="toggle('ClassWindow3')">Join a class</button>
         </div>
+
+    </div>
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide" id="slide1"></div>
@@ -78,7 +80,7 @@
     <div id="bottom-landing">
         <button class="main-button" id="browse-button">BROWSE OUR COOKIES</button>
         <button class="main-button" onclick="toggle('OrderWindow2')" id="book-button">JOIN OR BOOK A CLASS</button>
-        <button class="main-button"  onclick="toggle('OrderWindow');" id="order-button">PLACE AN ORDER</button>
+        <button class="main-button" onclick="toggle('OrderWindow');" id="order-button">PLACE AN ORDER</button>
     </div>
 
     <nav>
