@@ -25,27 +25,17 @@ $(document).scroll(function () {
 
 });	
 	
-$(document).scroll(function () {
-    var y = $(this).scrollTop();
-    if (y > 500) {
-        $('.MailingListFooterBlock').fadeIn();
-    } else {
-        $('.MailingListFooterBlock').fadeOut();
-    }
-
-});	
 	
 function toggle(id) {
+    console.log("test");
     var el = document.getElementById(id);
     var img = document.getElementById("arrow");
     var box = el.getAttribute("class");
     if(box == "hide"){
         el.setAttribute("class", "show");
-        delay(img, "/images/arrowright.png", 400);
     }
     else{
         el.setAttribute("class", "hide");
-        delay(img, "/images/arrowleft.png", 400);
     }
 }
 	

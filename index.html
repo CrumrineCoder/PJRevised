@@ -13,6 +13,37 @@
 </head>
 
 <body>
+        <div id="OrderWindow" class="hide">
+                <table width="100%" height="100%" border="0" cellspacing="0"><tbody><tr><td width="100%" height="100%" align="center" valign="middle">
+                <table class="roundbox"><tbody><tr height="10"><td height="10" align="left">
+                <button class="nobutton"><img src="!assets/X.png" onclick="toggle('OrderWindow');" height="25" style="margin:10px;" alt=""></button>
+                 <table style="margin-left:30px;margin-right:30px;"><tbody><tr><td width="100%" align="center" valign="top">
+                    <font face="futura" style="font-weight:bold;font-weight:500;" size="6" color="#DD5958">Cookies are coming!</font>
+                    <br><br><font face="helvetica" style="font-weight:bold;" size="3" color="#000000">Our cookies are available for pickup in NYC, we cannot ship them.</font><br><br>
+                    <input class="input" type="text" style="width:98%;" value="What is your name?" onfocus="if(this.value == 'What is your name?') { this.value = ''; }">
+                    <br><br> 
+                    <input class="input" type="text" style="width:98%;" value="What is your email?" onfocus="if(this.value == 'What is your email?') { this.value = ''; }">
+                    <br><br> 
+                    <select class="input" style="width:98%;">
+                         <option value="0">How many cookies do you want?</option>
+                          <option value="1">A dozen</option>
+                          <option value="2">Two dozen</option>
+                          <option value="3">Three dozen or more</option>
+                        <option value="4">I'm not sure</option>
+                        </select>
+                    <br><br> 
+                    <select class="input" style="width:98%;">
+                         <option value="0">What occasion are they for?</option>
+                          <option value="1">Birthday party</option>
+                          <option value="2">Wedding</option>
+                          <option value="3">Other</option>
+                        </select> 
+                    <br><br> 
+                    <input class="input" type="text" style="width:98%;" value="Anything else we should know?" onfocus="if(this.value == 'Anything else we should know?') { this.value = ''; }">
+                    <br><br><br> 
+                     <div onclick="toggle('OrderWindow2');"><button onclick="toggle('OrderWindow');" style="opacity:0.5;"><font face="helvetica" size="2" color="white"><b><font face="Helvetica" size="3" color="white">Submit my order</font></b></font></button></div><font face="helvetica" size="2" color="white">
+                    <br><br><br></font></td></tr></tbody></table></td></tr></tbody></table><br><br></td></tr></tbody></table>
+                </div>
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide" id="slide1"></div>
