@@ -12,56 +12,49 @@
 </head>
 
 <body>
-        <div id="OrderWindow" class="hide">
-            <button class="nobutton"><img src="!assets/X.png" onclick="toggle('OrderWindow');" height="25" style="margin:10px;" alt=""></button>
 
-            <h2>Cookies are coming!</h2>
-            <p>Our cookies are avaliable for pickup in NYC, we cannot ship them.</p>
-            
-            <input class="input" type="text" placeholder="What is your name?"/>
-            <input class="input" type="text" placeholder="What is your email?" />
-            <select class="input">
-                    <option value="0">How many cookies do you want?</option>
-                     <option value="1">A dozen</option>
-                     <option value="2">Two dozen</option>
-                     <option value="3">Three dozen or more</option>
-                   <option value="4">I'm not sure</option>
-                   </select>
-               <select class="input">
-                    <option value="0">What occasion are they for?</option>
-                     <option value="1">Birthday party</option>
-                     <option value="2">Wedding</option>
-                     <option value="3">Other</option>
-                   </select> 
-               <input class="input" type="text" placeholder="Anything else we should know?">
-                <button onclick="toggle('OrderWindow'); toggle('OrderWindow2')" id="submit-order-button" disabled>Submit my order</button>
+    
+    <div id="OrderWindow" class="hide">
+        <button class="nobutton">
+            <img src="!assets/X.png" onclick="toggle('OrderWindow');" height="25" style="margin:10px;" alt="">
+        </button>
 
-            <!--
-              
-                    <input class="input" type="text" style="width:98%;" value="What is your name?" onfocus="if(this.value == 'What is your name?') { this.value = ''; }">
-                    <br><br> 
-                    <input class="input" type="text" style="width:98%;" value="What is your email?" onfocus="if(this.value == 'What is your email?') { this.value = ''; }">
-                    <br><br> 
-                    <select class="input" style="width:98%;">
-                         <option value="0">How many cookies do you want?</option>
-                          <option value="1">A dozen</option>
-                          <option value="2">Two dozen</option>
-                          <option value="3">Three dozen or more</option>
-                        <option value="4">I'm not sure</option>
-                        </select>
-                    <br><br> 
-                    <select class="input" style="width:98%;">
-                         <option value="0">What occasion are they for?</option>
-                          <option value="1">Birthday party</option>
-                          <option value="2">Wedding</option>
-                          <option value="3">Other</option>
-                        </select> 
-                    <br><br> 
-                    <input class="input" type="text" style="width:98%;" value="Anything else we should know?" onfocus="if(this.value == 'Anything else we should know?') { this.value = ''; }">
-                    <br><br><br> 
-                     <div onclick="toggle('OrderWindow2');"><button onclick="toggle('OrderWindow');" style="opacity:0.5;"><font face="helvetica" size="2" color="white"><b><font face="Helvetica" size="3" color="white">Submit my order</font></b></font></button></div><font face="helvetica" size="2" color="white">
-                    <br><br><br></font></td></tr></tbody></table></td></tr></tbody></table><br><br></td></tr></tbody></table> -->
-                </div>
+        <h2>Cookies are coming!</h2>
+        <p>Our cookies are avaliable for pickup in NYC, we cannot ship them.</p>
+
+        <input class="input" type="text" placeholder="What is your name?" />
+        <input class="input" type="text" placeholder="What is your email?" />
+        <select class="input">
+            <option value="0">How many cookies do you want?</option>
+            <option value="1">A dozen</option>
+            <option value="2">Two dozen</option>
+            <option value="3">Three dozen or more</option>
+            <option value="4">I'm not sure</option>
+        </select>
+        <select class="input">
+            <option value="0">What occasion are they for?</option>
+            <option value="1">Birthday party</option>
+            <option value="2">Wedding</option>
+            <option value="3">Other</option>
+        </select>
+        <input class="input" type="text" placeholder="Anything else we should know?">
+        <button onclick="toggle('OrderWindow'); toggle('OrderWindow2')" id="submit-order-button" disabled>Submit my order</button>
+
+    </div>
+
+    <div id="OrderWindow2" class="hide">
+            <button class="nobutton">
+                <img src="!assets/X.png" onclick="toggle('OrderWindow2');" height="25" style="margin:10px;" alt="">
+            </button>
+    
+            <h2>Our classes</h2>
+            <p>We love to teach others how to make cookies!</p>
+    
+            <button id="booking-button" class="class-buttons Link" onclick="toggle('ClassWindow3'); toggle('ClassWindow');"></button>
+
+            <button id="join-button" class="class-buttons Link" onclick="toggle('ClassWindow3')"></button>
+    
+        </div>
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide" id="slide1"></div>
@@ -84,8 +77,8 @@
     </div>
     <div id="bottom-landing">
         <button class="main-button" id="browse-button">BROWSE OUR COOKIES</button>
-        <button class="main-button" id="book-button">JOIN OR BOOK A CLASS</button>
-        <button class="main-button" id="order-button">PLACE AN ORDER</button>
+        <button class="main-button" onclick="toggle('OrderWindow2')" id="book-button">JOIN OR BOOK A CLASS</button>
+        <button class="main-button"  onclick="toggle('OrderWindow');" id="order-button">PLACE AN ORDER</button>
     </div>
 
     <nav>

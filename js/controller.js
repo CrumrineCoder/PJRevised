@@ -39,8 +39,3 @@ function toggle(id) {
     }
 }
 	
-setTimeout(fade_out, 2000);
-
-function fade_out() {
-  $("#OrderWindow2").fadeOut();
-}	
