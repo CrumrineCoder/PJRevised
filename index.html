@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>PJC</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.css">
     <link rel="stylesheet" href="css/pjc.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.js"></script>
@@ -36,6 +38,42 @@
         <button class="main-button" id="book-button">JOIN OR BOOK A CLASS</button>
         <button class="main-button" id="order-button">PLACE AN ORDER</button>
     </div>
+
+    <nav class="navbar-expand-md navbar-dark bg-dark">
+        <div class="subnav">
+            <ul class="navbar-nav left">
+                <li class="nav-item">
+                    <a href="#MainBlock" class="Link">
+                        <img src="!assets/PJCNoText.png" width="30px" style="margin-left:10px; margin-top: 10px; " alt="" />
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <img src="!assets/Email.png" onclick="toggle('Email');" class="Link" width="38px" style="margin:15px;margin-left:12px;" alt=""
+                    />
+                </li>
+                <li class="nav-item">
+                    <a href="http://www.instagram.com/pennyjanescookies" target="_blank" class="Link">
+                        <img src="!assets/SocialInstaB.png" width="30px" style="margin:15px; margin-left: 5px;" alt="" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="right order-0">
+            <a href="#MainBlock" class="Link navbar-brand">
+                <img src="!assets/PJCTextA.png" height="45px" alt="" />
+            </a>
+
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav right">
+                <li class="nav-item">
+                    <button class="buttonsml" onclick="toggle('OrderWindow');">
+                        <font face="Helvetica" style="font-weight:bold;" size="3" color="#ffffff">Place an order</font>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <div class="info-box red">
         <img src="!assets/PennCirc.png" alt="" />
@@ -110,8 +148,7 @@
             id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
 
-            <input class="input" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="What is your email?"
-                required>
+            <input class="input" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="What is your email?" required>
             <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
             <div style="position: absolute; left: -5000px;" aria-hidden="true">
                 <input type="text" name="b_001fc7f8967d5959dddfc1b01_a40c44d50d" tabindex="-1" value="">
@@ -121,10 +158,12 @@
             </div>
         </form>
         <div id="credits">
-            <p> This site was made by Julie's sons / Penny's brothers.  </p>
-            <p>Designed by <a href="http://www.maximillian.nyc" target="_blank">Maximillian Piras</a> and developed by
-                <a href="http://www.crumrinecoder.com" target="_blank">Nicolas Crumrine</a></p>
-    
+            <p> This site was made by Julie's sons / Penny's brothers. </p>
+            <p>Designed by
+                <a href="http://www.maximillian.nyc" target="_blank">Maximillian Piras</a> and developed by
+                <a href="http://www.crumrinecoder.com" target="_blank">Nicolas Crumrine</a>
+            </p>
+
         </div>
     </div>
 
