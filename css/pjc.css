@@ -12,13 +12,15 @@ nav button{
 	background: #DD5958;
     border: 2px solid #DD5958;
     padding: 10px 20px;
-    margin: 10px;
+	margin: 10px;
+	margin-top: 0px; 
     border-radius: 100px;
-    font: Futura;
-    font-weight: 500;
-    font-size: 11pt;
+    font: Helvetica;
+    font-weight: bold;
+    font-size: 16px;
     color: #ffffff;
-    cursor: pointer;
+	cursor: pointer;
+	
 }
 
 nav{
@@ -37,6 +39,7 @@ nav{
     flex-flow: row nowrap;
     -ms-flex-pack: start;
 	justify-content: flex-start;
+	box-sizing: border-box;
 }
 
 .subnav{
@@ -55,11 +58,43 @@ nav{
     list-style: none;
 }
 
+.test{
+	display: -ms-flexbox!important;
+    display: flex!important;
+    -ms-flex-preferred-size: auto;
+	flex-basis: auto;
+	order: 3;
+	width: 100%!important;
+}
+
 .right{
 	margin-left: auto!important;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
 }
 .left{
 	margin-right: auto!important;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+	list-style: none;	
+}
+.brand{
+	display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
 }
 
  #top-landing{
