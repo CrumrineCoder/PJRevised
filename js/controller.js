@@ -24,7 +24,8 @@ $(document).scroll(function () {
     }
 
 });	
-	
+    
+$("nav").toggle();
 	
 function toggle(id) {
     console.log("er");

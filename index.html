@@ -14,7 +14,7 @@
 <body>
 
     
-    <div id="OrderWindow" class="hide">
+    <div id="OrderWindow" class="popup order-popup hide">
             <button class="nobutton">
                 <img src="!assets/X.png" onclick="toggle('OrderWindow');" height="25" style="margin:10px;" alt="">
             </button>
@@ -38,11 +38,11 @@
                 <option value="3">Other</option>
             </select>
             <input class="input" type="text" placeholder="Anything else we should know?">
-            <button onclick="toggle('OrderWindow'); toggle('OrderWindow2')" id="submit-order-button" disabled>Submit my order</button>
+            <button onclick="toggle('OrderWindow'); toggle('OrderWindow2')" id="submit-order-button" class="Link" disabled>Submit my order</button>
         </div>
     </div>
 
-    <div id="OrderWindow2" class="">
+    <div id="OrderWindow2" class="popup hide">
             <button class="nobutton">
                 <img src="!assets/X.png" onclick="toggle('OrderWindow2');" height="25" style="margin:10px;" alt="">
             </button>
@@ -50,10 +50,10 @@
             <h2>Our classes</h2>
             <p>We love to teach others how to make cookies!</p>
 
-            <div id="buttons-ordering">
-                <button id="booking-button" class="class-buttons Link" onclick="toggle('ClassWindow3'); toggle('ClassWindow');">Book a class</button>
+            <div id="booking-buttons">
+                <button id="purple-background-button" class="booking-buttons Link" onclick="toggle('ClassWindow3'); toggle('ClassWindow');">Book a class</button>
 
-                <button id="join-button" class="class-buttons Link" onclick="toggle('ClassWindow3')">Join a class</button>
+                <button id="white-background-purple-border-button" class="booking-buttons Link" onclick="toggle('ClassWindow3')">Join a class</button>
             </div>
     </div>
     <div class="swiper-container">
@@ -79,9 +79,9 @@
     <div id="bottom-landing">
         <button class="main-button" id="browse-button">BROWSE OUR COOKIES</button>
         <button class="main-button toggle" 
-        toggle-target="OrderWindow2"    onclick="toggle('OrderWindow')"  
+         onclick="toggle('OrderWindow2')"  
        id="book-button">JOIN OR BOOK A CLASS</button>
-        <button class="main-button toggle"   onclick="toggle('OrderWindow2')" toggle-target="OrderWindow2"  style="height: 34%" id="order-button">PLACE AN ORDER</button>
+        <button class="main-button toggle"   onclick="toggle('OrderWindow')"  style="height: 34%" id="order-button">PLACE AN ORDER</button>
     </div>
 
     <nav>

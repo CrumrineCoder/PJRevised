@@ -8,7 +8,7 @@
      color: white;
 }
 
-button:not(.main-button){
+button:not(.main-button):not(.nobutton){
 	padding: 10px 20px;
 	margin-bottom: 15px;
 	border-radius: 100px;
@@ -18,6 +18,8 @@ button:not(.main-button){
 	color: #ffffff;
 	cursor: pointer;
 }
+
+button:focus {outline:0;}
 
 .input{
 	background-color: #ffffff;
@@ -54,24 +56,20 @@ label {
 
 /* Popup background and headers */
 .popup{
-	position: absolute;
+	position: fixed; 
+	left: 0px; 
 	z-index: 900; 
 	width: 100%;
-	height: 90%;
+	max-height: 90%;
 	right: -100%;
-	top: 5%;
 	border: 0px solid #ffffff;
 	border-radius: 15px;
-	background-color: #ffffff;
-}
-.purple-popup{
-
-}
-.red-popup{
-	
+    background-color: #ffffff;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.red-popup h2{
+.popup h2{
 	color: rgb(221, 89, 88);
 }
 .popup h2{
@@ -112,11 +110,22 @@ label {
 	display: block; 
 }
 
-.booking-buttons{
-	display: inline-block; 
-	border:2px solid #6D02D8;
-	margin:10px;
+#submit-order-button{
 	font-family: Helvetica; 
+	font-size: 18px; 	
+	margin: 10px auto; 
+	display: block; 
+}
+
+/* Inputs for Booking popups */
+#booking-buttons{
+    display: block;
+    text-align: center; 
+}
+.booking-buttons{
+    border:2px solid #6D02D8;
+    display:inline-block;
+    font-family: Helvetica; 
 	font-size: 3; 
 }
 
@@ -206,12 +215,7 @@ nav button{
 		margin-bottom: 16px;
 }
 
-#submit-order-button{
-	font-family: Helvetica; 
-	font-size: 18px; 	
-	margin: 10px auto 0px; 
-	display: block; 
-}
+
  ul{
      padding: 0px;
 }
