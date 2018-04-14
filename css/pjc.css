@@ -75,13 +75,6 @@
      z-index: 1000;
      background: rgba(0, 0, 0, 0.6);
 }
- .book-popup{
-     width: 50%;
-     left: 25%;
-    /* Mobile only */
-     width: 100%;
-     left: 0%;
-}
  .thankyou-popup{
      width: 50%;
      padding: 25px;
@@ -222,13 +215,7 @@
      background: #DD5958;
      border: 2px solid #DD5958;
 }
- #nav-button{
-    /* Mobile only */
-     font-size: 14px;
-     border-radius: 0px;
-     height: 60px;
-     margin-bottom: 16px;
-}
+
  ul{
      padding: 0px;
 }
@@ -243,7 +230,6 @@
      list-style: none;
 }
  .brand{
-     display: inline-block;
      padding-top: .3125rem;
      padding-bottom: .3125rem;
      margin-right: 1rem;
@@ -456,4 +442,25 @@ h1{
 #browser-anchor-link{
     color: white; 
     text-decoration: none; 
+}
+
+@media screen and (max-width: 599px) {
+    #nav-button{
+        font-size: 14px;
+        border-radius: 0px;
+        height: 60px;
+        margin-bottom: 16px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .class-popup{
+        width: 60%;
+    }
+    nav{
+        padding: .5rem 1rem;
+    }
+    .brand{
+        display: inline-block;
+    }
 }

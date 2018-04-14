@@ -67,7 +67,7 @@
     <div id="joining-window" class="hide cover">
         <div class="popup class-popup">
             <button class="nobutton">
-                <img src="!assets/X.png" onclick="toggle('booking-window');" alt="">
+                <img src="!assets/X.png" onclick="toggle('joining-window');" alt="">
             </button>
             <h2>Join our classes!</h2>
             <p>We'll let you know when our next class is:</p>
@@ -123,7 +123,7 @@
         <div class="subnav-right">
             <ul class="right">
                 <li>
-                    <button id="nav-button" onclick="toggle('initial-ordering');">
+                    <button id="nav-button" class="Link" onclick="toggle('initial-ordering');">
                         Place an order
                     </button>
                 </li>
@@ -155,8 +155,8 @@
         <button class="main-button" id="browse-button">
             <a href="#MainBlock" id="browser-anchor-link">BROWSE OUR COOKIES</a>
         </button>
-        <button class="main-button toggle" onclick="toggle('initial-class')" id="book-button">JOIN OR BOOK A CLASS</button>
-        <button class="main-button toggle" onclick="toggle('initial-ordering')" style="height: 34%" id="order-button">PLACE AN ORDER</button>
+        <button class="main-button" onclick="toggle('initial-class')" id="book-button">JOIN OR BOOK A CLASS</button>
+        <button class="main-button" onclick="toggle('initial-ordering')" style="height: 34%" id="order-button">PLACE AN ORDER</button>
     </div>
     <div class="info-box red" id="MainBlock">
         <img src="!assets/PennCirc.png" alt="" />
