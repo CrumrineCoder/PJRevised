@@ -18,7 +18,7 @@
         <div class="popup order-popup">
 
             <button class="nobutton">
-                <img src="!assets/X.png" onclick="toggle('initial-ordering');"  alt="">
+                <img src="!assets/X.png" onclick="toggle('initial-ordering');" alt="">
             </button>
 
             <h2>Cookies are coming!</h2>
@@ -40,7 +40,7 @@
                 <option value="3">Other</option>
             </select>
             <input class="input" type="text" placeholder="Anything else we should know?">
-            <button onclick="toggle('initial-ordering'); toggle('initial-class')" class="submit-order-button Link" disabled>Submit my order</button>
+            <button onclick="toggle('initial-ordering'); toggle('thankyou-order')" class="red-background-button Link" >Submit my order</button>
         </div>
     </div>
 
@@ -56,7 +56,7 @@
             <div id="booking-buttons-container">
                 <button id="purple-background-button" class="booking-buttons Link" onclick="toggle('booking-window'); toggle('initial-class');">Book a class</button>
 
-                <button id="white-background-purple-border-button" class="booking-buttons Link" onclick="toggle('ClassWindow3')">Join a class</button>
+                <button id="white-background-purple-border-button" class="booking-buttons Link" onclick="toggle('joining-window'); toggle('initial-class')">Join a class</button>
             </div>
         </div>
     </div>
@@ -73,17 +73,43 @@
             <input class="input" type="text" placeholder="What is your name?" />
             <input class="input" type="text" placeholder="What is your email?" />
 
-            <button onclick="toggle('booking-window'); toggle('thankyou-booking')" class="booking-buttons Link" id="purple-background-button">Get in touch</button>
+            <button onclick="toggle('booking-window'); toggle('thankyou-class')" class="booking-buttons Link" id="purple-background-button">Get in touch</button>
         </div>
     </div>
 
-    <div id="thankyou-booking" class="hide cover" onclick="toggle('thankyou-booking')">
-            <div class="popup class-popup thankyou-popup">
-               <h2>We'll be in <br> touch soon!</h2>
+
+
+
+
+    <div id="joining-window" class="hide cover">
+        <div class="popup class-popup">
+            <button class="nobutton">
+                <img src="!assets/X.png" onclick="toggle('booking-window');" alt="">
+            </button>
+
+            <h2>Join our classes!</h2>
+            <p>We'll let you know when our next class is:</p>
+
+            <input class="input" type="text" placeholder="What is your name?" />
+            <input class="input" type="text" placeholder="What is your email?" />
+
+            <button onclick="toggle('joining-window'); toggle('thankyou-class')" class="booking-buttons Link" id="purple-background-button">Notify me</button>
+        </div>
+    </div>
+
+    <div id="thankyou-class" class="hide cover" onclick="toggle('thankyou-class')">
+        <div class="popup class-popup thankyou-popup">
+            <h2>We'll be in
+                <br> touch soon!</h2>
+        </div>
+    </div>
+
+    <div id="thankyou-order" class="hide cover" onclick="toggle('thankyou-order')">
+            <div class="popup order-popup thankyou-popup">
+                <h2>We're firing up the oven 
+                    <br> & will be in touch soon!</h2>
             </div>
         </div>
-
-
     <nav class="hide">
         <div class="subnav">
             <ul class="left">

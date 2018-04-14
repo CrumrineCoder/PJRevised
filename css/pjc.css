@@ -90,8 +90,8 @@ label {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-width: 50%;
-padding: 25px;
+    width: 50%;
+    padding: 25px;
 }
 .order-popup h2{
 	color: rgb(221, 89, 88);
@@ -167,7 +167,10 @@ padding: 25px;
 	background-color:#6D02D8;
 }
 
-
+.red-background-button{
+    background: #DD5958;
+    border: 2px solid #DD5958;
+}
 
 
 /** Nav **/
