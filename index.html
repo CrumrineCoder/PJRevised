@@ -14,11 +14,11 @@
 <body>
 
 
-    <div id="OrderWindow" class="hide">
+    <div id="initial-ordering" class="hide cover">
         <div class="popup order-popup">
 
             <button class="nobutton">
-                <img src="!assets/X.png" onclick="toggle('OrderWindow');" height="25" style="margin:10px;" alt="">
+                <img src="!assets/X.png" onclick="toggle('initial-ordering');"  alt="">
             </button>
 
             <h2>Cookies are coming!</h2>
@@ -40,26 +40,50 @@
                 <option value="3">Other</option>
             </select>
             <input class="input" type="text" placeholder="Anything else we should know?">
-            <button onclick="toggle('OrderWindow'); toggle('OrderWindow2')" id="submit-order-button" class="Link" disabled>Submit my order</button>
+            <button onclick="toggle('initial-ordering'); toggle('initial-class')" class="submit-order-button Link" disabled>Submit my order</button>
         </div>
     </div>
 
-    <div id="OrderWindow2" class="hide">
-        <div class="popup book-popup">
+    <div id="initial-class" class="hide cover">
+        <div class="popup class-popup">
             <button class="nobutton">
-                <img src="!assets/X.png" onclick="toggle('OrderWindow2');" height="25" style="margin:10px;" alt="">
+                <img src="!assets/X.png" onclick="toggle('initial-class');" alt="">
             </button>
 
             <h2>Our classes</h2>
             <p>We love to teach others how to make cookies!</p>
 
-            <div id="booking-buttons">
-                <button id="purple-background-button" class="booking-buttons Link" onclick="toggle('ClassWindow3'); toggle('ClassWindow');">Book a class</button>
+            <div id="booking-buttons-container">
+                <button id="purple-background-button" class="booking-buttons Link" onclick="toggle('booking-window'); toggle('initial-class');">Book a class</button>
 
                 <button id="white-background-purple-border-button" class="booking-buttons Link" onclick="toggle('ClassWindow3')">Join a class</button>
             </div>
         </div>
     </div>
+
+    <div id="booking-window" class="hide cover">
+        <div class="popup class-popup">
+            <button class="nobutton">
+                <img src="!assets/X.png" onclick="toggle('booking-window');" alt="">
+            </button>
+
+            <h2>Book a class!</h2>
+            <p>We're always open to new class opportunities.</p>
+
+            <input class="input" type="text" placeholder="What is your name?" />
+            <input class="input" type="text" placeholder="What is your email?" />
+
+            <button onclick="toggle('booking-window'); toggle('thankyou-booking')" class="booking-buttons Link" id="purple-background-button">Get in touch</button>
+        </div>
+    </div>
+
+    <div id="thankyou-booking" class="hide cover" onclick="toggle('thankyou-booking')">
+            <div class="popup class-popup thankyou-popup">
+               <h2>We'll be in <br> touch soon!</h2>
+            </div>
+        </div>
+
+
     <nav class="hide">
         <div class="subnav">
             <ul class="left">
@@ -88,7 +112,7 @@
         <div class="subnav-right">
             <ul class="right">
                 <li>
-                    <button id="nav-button" onclick="toggle('OrderWindow');">
+                    <button id="nav-button" onclick="toggle('initial-ordering');">
                         Place an order
                     </button>
                 </li>
@@ -117,8 +141,8 @@
     </div>
     <div id="bottom-landing">
         <button class="main-button" id="browse-button">BROWSE OUR COOKIES</button>
-        <button class="main-button toggle" onclick="toggle('OrderWindow2')" id="book-button">JOIN OR BOOK A CLASS</button>
-        <button class="main-button toggle" onclick="toggle('OrderWindow')" style="height: 34%" id="order-button">PLACE AN ORDER</button>
+        <button class="main-button toggle" onclick="toggle('initial-class')" id="book-button">JOIN OR BOOK A CLASS</button>
+        <button class="main-button toggle" onclick="toggle('initial-ordering')" style="height: 34%" id="order-button">PLACE AN ORDER</button>
     </div>
 
 

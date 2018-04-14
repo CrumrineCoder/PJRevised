@@ -69,7 +69,7 @@ label {
     transform: translateY(-50%);
 }
 
-#OrderWindow, #OrderWindow2{
+.cover{
     width: 100%;
     height: 100%;
     left: 0px;
@@ -81,10 +81,23 @@ label {
 .book-popup{
     width: 50%;
     left: 25%;
+    /* Mobile only */
+    width: 100%;
+    left: 0%;
 }
 
-.popup h2{
+.thankyou-popup{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+width: 50%;
+padding: 25px;
+}
+.order-popup h2{
 	color: rgb(221, 89, 88);
+}
+.class-popup h2{
+    color: #6D02D8; 
 }
 .popup h2{
 	font-weight: 500;
@@ -102,6 +115,13 @@ label {
 	font-family: helvetica;
 }
 
+.popup button:not(.nobutton){
+    font-family: Helvetica; 
+    font-size: 3; 	
+    margin: 10px auto; 
+	display: block; 
+}
+
 /* For showing and hiding the popups */
 .hide{
 	display: none; 
@@ -114,33 +134,29 @@ label {
 	background: Transparent;
 	border: 0px solid #ffffff;
 	cursor: pointer;
-	vertical-align:middle 
+    vertical-align:middle;
 }
-
+.nobutton *{
+    height: 25px;
+    margin: 10px;
+}
 /* Inputs for Ordering popups */
-.order-popup .input{
+.popup .input{
 	box-sizing: border-box;
 	margin: 10px auto 0px; 
 	display: block; 
 }
 
-#submit-order-button{
-	font-family: Helvetica; 
-	font-size: 18px; 	
-	margin: 10px auto; 
-	display: block; 
-}
-
 /* Inputs for Booking popups */
-#booking-buttons{
+#booking-buttons-container{
     display: block;
     text-align: center; 
 }
+#booking-buttons-container button{
+    display: inline-block; 
+}
 .booking-buttons{
     border:2px solid #6D02D8;
-    display:inline-block;
-    font-family: Helvetica; 
-	font-size: 3; 
 }
 
 #purple-background-button{
