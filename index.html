@@ -1,232 +1,244 @@
 <!doctype html>
 <html>
-   <head>
-      <meta charset="UTF-8">
-      <title>PJC</title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.css">
-      <link rel="stylesheet" href="css/pjc.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src='js/intense.js'></script>
-      <script src="js/controller.js"></script>
-   </head>
-   <body>
-      <div id="initial-ordering" class="hide cover">
-         <div class="popup order-popup">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PJC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.css">
+    <link rel="stylesheet" href="css/pjc.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src='js/intense.js'></script>
+    <script src="js/controller.js"></script>
+</head>
+
+<body>
+    <div id="initial-ordering" class="hide cover">
+        <div class="popup order-popup">
             <button class="nobutton">
-            <img src="!assets/X.png" onclick="toggle('initial-ordering');" alt="">
+                <img src="!assets/X.png" onclick="toggle('initial-ordering');" alt="">
             </button>
             <h2>Cookies are coming!</h2>
             <p>Our cookies are avaliable for pickup in NYC, we cannot ship them.</p>
             <input class="input" type="text" placeholder="What is your name?" />
             <input class="input" type="text" placeholder="What is your email?" />
             <select class="input">
-               <option value="0">How many cookies do you want?</option>
-               <option value="1">A dozen</option>
-               <option value="2">Two dozen</option>
-               <option value="3">Three dozen or more</option>
-               <option value="4">I'm not sure</option>
+                <option value="0">How many cookies do you want?</option>
+                <option value="1">A dozen</option>
+                <option value="2">Two dozen</option>
+                <option value="3">Three dozen or more</option>
+                <option value="4">I'm not sure</option>
             </select>
             <select class="input">
-               <option value="0">What occasion are they for?</option>
-               <option value="1">Birthday party</option>
-               <option value="2">Wedding</option>
-               <option value="3">Other</option>
+                <option value="0">What occasion are they for?</option>
+                <option value="1">Birthday party</option>
+                <option value="2">Wedding</option>
+                <option value="3">Other</option>
             </select>
             <input class="input" type="text" placeholder="Anything else we should know?">
             <button onclick="toggle('initial-ordering'); toggle('thankyou-order')" class="red-background-button Link">Submit my order</button>
-         </div>
-      </div>
-      <div id="initial-class" class="hide cover">
-         <div class="popup class-popup">
+        </div>
+    </div>
+    <div id="initial-class" class="hide cover">
+        <div class="popup class-popup">
             <button class="nobutton">
-            <img src="!assets/X.png" onclick="toggle('initial-class');" alt="">
+                <img src="!assets/X.png" onclick="toggle('initial-class');" alt="">
             </button>
             <h2>Our classes</h2>
             <p>We love to teach others how to make cookies!</p>
             <div id="booking-buttons-container">
-               <button id="purple-background-button" class="booking-buttons Link" onclick="toggle('booking-window'); toggle('initial-class');">Book a class</button>
-               <button id="white-background-purple-border-button" class="booking-buttons Link" onclick="toggle('joining-window'); toggle('initial-class')">Join a class</button>
+                <button id="purple-background-button" class="booking-buttons Link" onclick="toggle('booking-window'); toggle('initial-class');">Book a class</button>
+                <button id="white-background-purple-border-button" class="booking-buttons Link" onclick="toggle('joining-window'); toggle('initial-class')">Join a class</button>
             </div>
-         </div>
-      </div>
-      <div id="booking-window" class="hide cover">
-         <div class="popup class-popup">
+        </div>
+    </div>
+    <div id="booking-window" class="hide cover">
+        <div class="popup class-popup">
             <button class="nobutton">
-            <img src="!assets/X.png" onclick="toggle('booking-window');" alt="">
+                <img src="!assets/X.png" onclick="toggle('booking-window');" alt="">
             </button>
             <h2>Book a class!</h2>
             <p>We're always open to new class opportunities.</p>
             <input class="input" type="text" placeholder="What is your name?" />
             <input class="input" type="text" placeholder="What is your email?" />
             <button onclick="toggle('booking-window'); toggle('thankyou-class')" class="booking-buttons Link" id="purple-background-button">Get in touch</button>
-         </div>
-      </div>
-      <div id="joining-window" class="hide cover">
-         <div class="popup class-popup">
+        </div>
+    </div>
+    <div id="joining-window" class="hide cover">
+        <div class="popup class-popup">
             <button class="nobutton">
-            <img src="!assets/X.png" onclick="toggle('booking-window');" alt="">
+                <img src="!assets/X.png" onclick="toggle('booking-window');" alt="">
             </button>
             <h2>Join our classes!</h2>
             <p>We'll let you know when our next class is:</p>
             <input class="input" type="text" placeholder="What is your name?" />
             <input class="input" type="text" placeholder="What is your email?" />
             <button onclick="toggle('joining-window'); toggle('thankyou-class')" class="booking-buttons Link" id="purple-background-button">Notify me</button>
-         </div>
-      </div>
-      <div id="thankyou-class" class="hide cover" onclick="toggle('thankyou-class')">
-         <div class="popup class-popup thankyou-popup">
+        </div>
+    </div>
+    <div id="thankyou-class" class="hide cover" onclick="toggle('thankyou-class')">
+        <div class="popup class-popup thankyou-popup">
             <h2>We'll be in
-               <br> touch soon!
+                <br> touch soon!
             </h2>
-         </div>
-      </div>
-      <div id="thankyou-order" class="hide cover" onclick="toggle('thankyou-order')">
-         <div class="popup order-popup thankyou-popup">
+        </div>
+    </div>
+    <div id="Email" class="hide cover" onclick="toggle('Email')">
+            <div class="popup class-popup thankyou-popup">
+                <h2>Get in touch</h2>
+                <p>pennyjanescookies@gmail.com</p>
+            </div>
+        </div>
+    <div id="thankyou-order" class="hide cover" onclick="toggle('thankyou-order')">
+        <div class="popup order-popup thankyou-popup">
             <h2>We're firing up the oven
-               <br> & will be in touch soon!
+                <br> & will be in touch soon!
             </h2>
-         </div>
-      </div>
-      <nav class="hide">
-         <div class="subnav">
+        </div>
+    </div>
+    <nav class="hide">
+        <div class="subnav">
             <ul class="left">
-               <li>
-                  <a href="#MainBlock" class="Link">
-                  <img src="!assets/PJCNoText.png" width="30px" style="margin-left:10px;" alt="" />
-                  </a>
-               </li>
-               <li>
-                  <img src="!assets/Email.png" onclick="toggle('Email');" class="Link" width="38px" style="margin:15px;margin-left:12px; margin-top: 0px"
-                     alt="" />
-               </li>
-               <li>
-                  <a href="http://www.instagram.com/pennyjanescookies" target="_blank" class="Link">
-                  <img src="!assets/SocialInstaB.png" width="30px" style="margin:15px; margin-left: 5px;margin-top: 0px;" alt="" />
-                  </a>
-               </li>
+                <li>
+                    <a href="#MainBlock" class="Link">
+                        <img src="!assets/PJCNoText.png" width="30px" style="margin-left:10px;" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <img src="!assets/Email.png" onclick="toggle('Email');" class="Link" width="38px" style="margin:15px;margin-left:12px; margin-top: 0px"
+                        alt="" />
+                </li>
+                <li>
+                    <a href="http://www.instagram.com/pennyjanescookies" target="_blank" class="Link">
+                        <img src="!assets/SocialInstaB.png" width="30px" style="margin:15px; margin-left: 5px;margin-top: 0px;" alt="" />
+                    </a>
+                </li>
             </ul>
-         </div>
-         <div class="right">
+        </div>
+        <div class="right">
             <a href="#MainBlock" class="Link brand">
-            <img src="!assets/PJCTextA.png" height="45px" alt="" />
+                <img src="!assets/PJCTextA.png" height="45px" alt="" />
             </a>
-         </div>
-         <div class="subnav-right">
+        </div>
+        <div class="subnav-right">
             <ul class="right">
-               <li>
-                  <button id="nav-button" onclick="toggle('initial-ordering');">
-                  Place an order
-                  </button>
-               </li>
+                <li>
+                    <button id="nav-button" onclick="toggle('initial-ordering');">
+                        Place an order
+                    </button>
+                </li>
             </ul>
-         </div>
-      </nav>
-      <div class="swiper-container">
-         <div class="swiper-wrapper">
+        </div>
+    </nav>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
             <div class="swiper-slide" id="slide1"></div>
             <div class="swiper-slide" id="slide2"></div>
             <div class="swiper-slide" id="slide3"></div>
-         </div>
-         <!-- Add Pagination -->
-         <div class="swiper-pagination"></div>
-      </div>
-      <div id="top-landing">
-         <h1>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <div id="top-landing">
+        <h1>
             Cookies made with love by a mother and daughter locally in New York City
-         </h1>
-         <img src="!assets/Email.png" onclick="toggle('Email');" class="Link" width="38px" style="margin:5px;margin-left:12px;" alt=""
-            />
-         <a href="http://www.instagram.com/pennyjanescookies" target="_blank" class="Link">
-         <img src="!assets/SocialInstaB.png" width="30px" style="margin:5px;" alt="" />
-         </a>
-         <img src="!assets/PJCb.png" id="logo-text" alt="" />
-      </div>
-      <div id="bottom-landing">
-         <button class="main-button" id="browse-button">BROWSE OUR COOKIES</button>
-         <button class="main-button toggle" onclick="toggle('initial-class')" id="book-button">JOIN OR BOOK A CLASS</button>
-         <button class="main-button toggle" onclick="toggle('initial-ordering')" style="height: 34%" id="order-button">PLACE AN ORDER</button>
-      </div>
-      <div class="info-box red">
-         <img src="!assets/PennCirc.png" alt="" />
-         <h3>Hi, I'm Penny Jane May!</h3>
-         <p> Me and mom are always ready to make cookies to spread love to classmates or strangers. We bake them ourselves but
+        </h1>
+        <img src="!assets/Email.png" onclick="toggle('Email');" class="Link" width="38px" style="margin:5px;margin-left:12px;" alt=""
+        />
+        <a href="http://www.instagram.com/pennyjanescookies" target="_blank" class="Link">
+            <img src="!assets/SocialInstaB.png" width="30px" style="margin:5px;" alt="" />
+        </a>
+        <img src="!assets/PJCb.png" id="logo-text" alt="" />
+    </div>
+    <div id="bottom-landing">
+
+        <button class="main-button" id="browse-button">
+            <a href="#MainBlock" id="browser-anchor-link">BROWSE OUR COOKIES</a>
+        </button>
+        <button class="main-button toggle" onclick="toggle('initial-class')" id="book-button">JOIN OR BOOK A CLASS</button>
+        <button class="main-button toggle" onclick="toggle('initial-ordering')" style="height: 34%" id="order-button">PLACE AN ORDER</button>
+    </div>
+    <div class="info-box red" id="MainBlock">
+        <img src="!assets/PennCirc.png" alt="" />
+        <h3>Hi, I'm Penny Jane May!</h3>
+        <p> Me and mom are always ready to make cookies to spread love to classmates or strangers. We bake them ourselves but
             I like the decorating part better. Every holiday we make a fresh batch or whenever one of my or mom's friends
             have an event. Santa loved my reindeer cookies so maybe you'll like them too! I laugh everytime I get to hand
             out the cookies and see frowns turn upside down.
-         </p>
-      </div>
-      <div class="portfolio-wrapper">
-         <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
-         <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
-         <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
-         <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
-      </div>
-      <div class="info-box purple">
-         <img src="!assets/Ma.png" alt="" />
-         <h3>Hi, I'm Julie May!</h3>
-         <p> Me and my daughter started handing out cookies in the park to inspire joy and spread positivity. We called our project
+        </p>
+    </div>
+    <div class="portfolio-wrapper">
+        <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
+        <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
+        <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
+        <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
+    </div>
+    <div class="info-box purple">
+        <img src="!assets/Ma.png" alt="" />
+        <h3>Hi, I'm Julie May!</h3>
+        <p> Me and my daughter started handing out cookies in the park to inspire joy and spread positivity. We called our project
             Cookies For Love. Then people started asking for batches, so we created this cookie company where they could
             order from. Each order keeps Cookies For Love going!
-         </p>
-      </div>
-      <div class="portfolio-wrapper">
-         <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
-         <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
-         <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
-         <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
-      </div>
-      <div class="info-box red">
-         <img src="!assets/ClassCirc.png" alt="" />
-         <h3>We do classes!</h3>
-         <p> After giving out 1,000s of cookies we decided to start teaching others how to make them. We love seeing their delight
+        </p>
+    </div>
+    <div class="portfolio-wrapper">
+        <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
+        <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
+        <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
+        <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
+    </div>
+    <div class="info-box red">
+        <img src="!assets/ClassCirc.png" alt="" />
+        <h3>We do classes!</h3>
+        <p> After giving out 1,000s of cookies we decided to start teaching others how to make them. We love seeing their delight
             when creating something beautiful they can eat or give to friends and family. Anybody can join our classes, just
             sign up for our email list to learn when the next one is.
-         </p>
-         <button class="whiteghostbutton">Join a class</button>
-      </div>
-      <div class="portfolio-wrapper">
-         <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
-         <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
-         <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
-         <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
-      </div>
-      <div class="info-box purple">
-         <img src="!assets/Ma.png" alt="" />
-         <h3>Decorate your event</h3>
-         <p> We make custom cookies for all occasions. We work with you to create the perfect set custom designed and baked for
+        </p>
+        <button class="whiteghostbutton">Join a class</button>
+    </div>
+    <div class="portfolio-wrapper">
+        <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
+        <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
+        <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
+        <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
+    </div>
+    <div class="info-box purple">
+        <img src="!assets/Ma.png" alt="" />
+        <h3>Decorate your event</h3>
+        <p> We make custom cookies for all occasions. We work with you to create the perfect set custom designed and baked for
             your individual needs and preferences.
-         </p>
-         <button class="whiteghostbutton">Ask for an estimate</button>
-      </div>
-      <div class="portfolio-wrapper">
-         <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
-         <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
-         <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
-         <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
-      </div>
-      <div id="footer">
-         <div id="newsletter">
+        </p>
+        <button class="whiteghostbutton">Ask for an estimate</button>
+    </div>
+    <div class="portfolio-wrapper">
+        <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
+        <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
+        <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
+        <img class="portfolio-image intense" src="!assets/Photo1.jpg" />
+    </div>
+    <div id="footer">
+        <div id="newsletter">
             <h4>Get fresh news about our cookies and classes delievered to your inbox:</h4>
             <form action="https://github.us18.list-manage.com/subscribe/post?u=001fc7f8967d5959dddfc1b01&amp;id=a40c44d50d" method="post"
-               id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-               <input class="input" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="What is your email?" required>
-               <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-               <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                  <input type="text" name="b_001fc7f8967d5959dddfc1b01_a40c44d50d" tabindex="-1" value="">
-               </div>
-               <div class="clear">
-                  <input type="submit" value="Add my email address" name="subscribe" id="mc-embedded-subscribe" class="button">
-               </div>
+                id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <input class="input" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="What is your email?" required>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                    <input type="text" name="b_001fc7f8967d5959dddfc1b01_a40c44d50d" tabindex="-1" value="">
+                </div>
+                <div class="clear">
+                    <input type="submit" value="Add my email address" name="subscribe" id="mc-embedded-subscribe" class="button">
+                </div>
             </form>
-         </div>
-         <div id="credits">
+        </div>
+        <div id="credits">
             <p> This site was made by Julie's sons / Penny's brothers. </p>
             <p>Designed by
-               <a href="http://www.maximillian.nyc" target="_blank">Maximillian Piras</a> and developed by
-               <a href="http://www.crumrinecoder.com" target="_blank">Nicolas Crumrine</a>
+                <a href="http://www.maximillian.nyc" target="_blank">Maximillian Piras</a> and developed by
+                <a href="http://www.crumrinecoder.com" target="_blank">Nicolas Crumrine</a>
             </p>
-         </div>
-      </div>
-   </body>
+        </div>
+    </div>
+</body>
+
 </html>

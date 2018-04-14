@@ -433,23 +433,27 @@ h1{
  #credits p{
      margin: 0px;
 }
- a:link {
+ a:link:not(#browser-anchor-link) {
      text-decoration: none;
      color: #6D02D8;
 }
- a:visited {
+ a:visited:not(#browser-anchor-link) {
      text-decoration: none;
      color: #6D02D8;
 }
- a:hover {
+ a:hover:not(#browser-anchor-link) {
      text-decoration: none;
      color: #6D02D8;
 }
- a:active {
+ a:active:not(#browser-anchor-link) {
      text-decoration: none;
      color: #6D02D8;
 }
 .intense:hover {
     cursor: url('../js/IntenseImages/plus_cursor.png'), auto;
     opacity: 0.75;
+}
+#browser-anchor-link{
+    color: white; 
+    text-decoration: none; 
 }

@@ -2,7 +2,7 @@
 
 $(document).scroll(function () {
     var y = $(this).scrollTop();
-    if (y > 500) {
+    if (y > 700) {
         $('nav').fadeIn();
         $('nav').removeClass("hide");
     } else {
@@ -21,15 +21,18 @@ window.onload = function() {
         var elements = document.querySelectorAll('.intense');
         Intense(elements);
     
-    $("a").on('click', function(event) {
-        if (this.hash !== "") {
-          event.preventDefault();
-          var hash = this.hash;
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 1500, function(){
-            window.location.hash = hash;
-          });
-        } 
-      });
+    
 }
+$(document).ready(function(){
+    $("a").on('click', function(event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 1500, function(){
+          window.location.hash = hash;
+        });
+      } 
+    });
+  });	
