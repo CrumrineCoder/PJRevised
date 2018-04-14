@@ -13,8 +13,10 @@
 
 <body>
 
-    
-    <div id="OrderWindow" class="popup order-popup hide">
+
+    <div id="OrderWindow" class="hide">
+        <div class="popup order-popup">
+
             <button class="nobutton">
                 <img src="!assets/X.png" onclick="toggle('OrderWindow');" height="25" style="margin:10px;" alt="">
             </button>
@@ -42,49 +44,22 @@
         </div>
     </div>
 
+
     <div id="OrderWindow2" class="popup hide">
-            <button class="nobutton">
-                <img src="!assets/X.png" onclick="toggle('OrderWindow2');" height="25" style="margin:10px;" alt="">
-            </button>
+        <button class="nobutton">
+            <img src="!assets/X.png" onclick="toggle('OrderWindow2');" height="25" style="margin:10px;" alt="">
+        </button>
 
-            <h2>Our classes</h2>
-            <p>We love to teach others how to make cookies!</p>
+        <h2>Our classes</h2>
+        <p>We love to teach others how to make cookies!</p>
 
-            <div id="booking-buttons">
-                <button id="purple-background-button" class="booking-buttons Link" onclick="toggle('ClassWindow3'); toggle('ClassWindow');">Book a class</button>
+        <div id="booking-buttons">
+            <button id="purple-background-button" class="booking-buttons Link" onclick="toggle('ClassWindow3'); toggle('ClassWindow');">Book a class</button>
 
-                <button id="white-background-purple-border-button" class="booking-buttons Link" onclick="toggle('ClassWindow3')">Join a class</button>
-            </div>
-    </div>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide" id="slide1"></div>
-            <div class="swiper-slide" id="slide2"></div>
-            <div class="swiper-slide" id="slide3"></div>
+            <button id="white-background-purple-border-button" class="booking-buttons Link" onclick="toggle('ClassWindow3')">Join a class</button>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
     </div>
-    <div id="top-landing">
-        <h2>
-            Cookies made with love by a mother and daughter locally in New York City
-        </h2>
-        <img src="!assets/Email.png" onclick="toggle('Email');" class="Link" width="38px" style="margin:15px;margin-left:12px;" alt=""
-        />
-        <a href="http://www.instagram.com/pennyjanescookies" target="_blank" class="Link">
-            <img src="!assets/SocialInstaB.png" width="30px" style="margin:0px;" alt="" />
-        </a>
-        <img src="!assets/PJCb.png" id="logo-text" alt="" />
-    </div>
-    <div id="bottom-landing">
-        <button class="main-button" id="browse-button">BROWSE OUR COOKIES</button>
-        <button class="main-button toggle" 
-         onclick="toggle('OrderWindow2')"  
-       id="book-button">JOIN OR BOOK A CLASS</button>
-        <button class="main-button toggle"   onclick="toggle('OrderWindow')"  style="height: 34%" id="order-button">PLACE AN ORDER</button>
-    </div>
-
-    <nav>
+    <nav class="hide">
         <div class="subnav">
             <ul class="left">
                 <li>
@@ -112,13 +87,40 @@
         <div class="subnav-right">
             <ul class="right">
                 <li>
-                    <button onclick="toggle('OrderWindow');">
+                    <button id="nav-button" onclick="toggle('OrderWindow');">
                         Place an order
                     </button>
                 </li>
             </ul>
         </div>
     </nav>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" id="slide1"></div>
+            <div class="swiper-slide" id="slide2"></div>
+            <div class="swiper-slide" id="slide3"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <div id="top-landing">
+        <h2>
+            Cookies made with love by a mother and daughter locally in New York City
+        </h2>
+        <img src="!assets/Email.png" onclick="toggle('Email');" class="Link" width="38px" style="margin:15px;margin-left:12px;" alt=""
+        />
+        <a href="http://www.instagram.com/pennyjanescookies" target="_blank" class="Link">
+            <img src="!assets/SocialInstaB.png" width="30px" style="margin:0px;" alt="" />
+        </a>
+        <img src="!assets/PJCb.png" id="logo-text" alt="" />
+    </div>
+    <div id="bottom-landing">
+        <button class="main-button" id="browse-button">BROWSE OUR COOKIES</button>
+        <button class="main-button toggle" onclick="toggle('OrderWindow2')" id="book-button">JOIN OR BOOK A CLASS</button>
+        <button class="main-button toggle" onclick="toggle('OrderWindow')" style="height: 34%" id="order-button">PLACE AN ORDER</button>
+    </div>
+
+
 
     <div class="info-box red">
         <img src="!assets/PennCirc.png" alt="" />

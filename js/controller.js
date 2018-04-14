@@ -19,22 +19,13 @@ $(document).scroll(function () {
     var y = $(this).scrollTop();
     if (y > 500) {
         $('nav').fadeIn();
+        $('nav').removeClass("hide");
     } else {
         $('nav').fadeOut();
     }
 
 });	
-    
-$("nav").toggle();
 	
 function toggle(id) {
-    console.log("er");
     $("#" + id).toggleClass("hide");
 }
-    /*
-    
-	
-$(".toggle").click(function(){
-    var target = "#" + $(this).attr("toggle-target");
-    $(target).toggleClass("hide");
-  }); */
