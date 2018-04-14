@@ -170,7 +170,8 @@
     /* Mobile only */
      padding: 0px;
 }
- .subnav{
+
+.subnav{
      -ms-flex-order: 0;
      order: 0;
 }
@@ -328,6 +329,8 @@ h1{
      background-image: url("../!assets/IMG_0085.JPG");
 }
 /** Boxes of information next to portfolio images **/
+
+
  .info-box{
      text-align: center;
      padding: 10px;
@@ -462,5 +465,62 @@ h1{
     }
     .brand{
         display: inline-block;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .row{
+        display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      overflow: hidden;
+    }
+    .info-box, .portfolio-wrapper{
+        flex: 1;
+        width: 50%; 
+        padding: 0px; 
+    }
+    .info-box{
+        position: relative; 
+        width: 100%;
+    }
+    .info-box p {
+     width: 90%;
+    }
+    .info-box img{
+        width: 100px;
+    }
+    .inner-wrapper-info{
+        position: absolute;
+         top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+    }
+    .red{
+        order: 2;
+    }
+    .purple{
+        order: 0;
+    }
+    .portfolio-wrapper{
+        order: 1; 
+    }
+    h3{
+        margin: 5px; 
+    }
+
+    #top-landing{
+        float: left; 
+        width: 50%;
+        height: 100%;
+    }
+    #bottom-landing{
+        float: left;
+        width: 50%;  
+        height: 100%;
+    }
+    #clear{
+        clear: both; 
     }
 }
