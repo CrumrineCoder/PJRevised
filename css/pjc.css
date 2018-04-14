@@ -523,4 +523,8 @@ h1{
     #clear{
         clear: both; 
     }
+
+    .swiper-container {
+        height: 100%;
+    }
 }
