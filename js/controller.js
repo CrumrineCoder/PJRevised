@@ -17,7 +17,7 @@ var swiper = new Swiper('.swiper-container', {
 
 $(document).scroll(function () {
     var y = $(this).scrollTop();
-    if (y > 700) {
+    if (y > 500) {
         $('nav').fadeIn();
         $('nav').removeClass("hide");
     } else {
@@ -31,23 +31,19 @@ function toggle(id) {
 }
 
 window.onload = function() {
- 
-        // Intensify all images with the 'intense' classname.
-        var elements = document.querySelectorAll('.intense');
-        Intense(elements);
+	// Intensify all images with the 'intense' classname.
+    var elements = document.querySelectorAll( '.intense' );
+    Intense( elements );
     
-    
-}
-$(document).ready(function(){
     $("a").on('click', function(event) {
-      if (this.hash !== "") {
-        event.preventDefault();
-        var hash = this.hash;
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 1500, function(){
-          window.location.hash = hash;
-        });
-      } 
-    });
-  });	
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 1500, function(){
+            window.location.hash = hash;
+          });
+        } 
+      });
+}
