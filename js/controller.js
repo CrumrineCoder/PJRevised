@@ -29,3 +29,21 @@ $(document).scroll(function () {
 function toggle(id) {
     $("#" + id).toggleClass("hide");
 }
+
+window.onload = function() {
+	// Intensify all images with the 'intense' classname.
+    var elements = document.querySelectorAll( '.intense' );
+    Intense( elements );
+    
+    $("a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 1500, function(){
+            window.location.hash = hash;
+          });
+        } 
+      });
+}
