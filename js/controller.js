@@ -16,7 +16,11 @@ function toggle(id) {
 }
 
 window.onload = function() {
-    
+    window.onload = function () {
+        // Intensify all images with the 'intense' classname.
+        var elements = document.querySelectorAll('.intense');
+        Intense(elements);
+    }
     $("a").on('click', function(event) {
         if (this.hash !== "") {
           event.preventDefault();

@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /** CSS Document **/
-
  html, body{
      height: 100%;
      width: 100%;
@@ -8,171 +7,155 @@
      position: relative;
      color: white;
 }
-
-button:not(.main-button):not(.nobutton){
-	padding: 10px 20px;
-	margin-bottom: 15px;
-	border-radius: 100px;
-	font: Helvetica;
-	font-weight: bold;
-	font-size: 16px;
-	color: #ffffff;
-	cursor: pointer;
+ button:not(.main-button):not(.nobutton){
+     padding: 10px 20px;
+     margin-bottom: 15px;
+     border-radius: 100px;
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: bold;
+     font-size: 16px;
+     color: #ffffff;
+     cursor: pointer;
 }
-
-button:focus {outline:0;}
-
-.input{
-	background-color: #ffffff;
-	border: 2px solid #f5f5f5;
-	width: 90%;
-	height: 45px;
-	padding-left: 10px;
-	padding-top: 0px;
-	font-family: 'Helvetica';
-	color: #8f8f8f;
-	font-size: 18px;
-	vertical-align: top;
-	text-align: left;
+ button:focus {
+    outline:0;
 }
-.input:focus + label {
-	margin-top: 0px;
-	font-size: 10px;
-	margin-left: 9px;
-	outline: none;
+ .input{
+     background-color: #ffffff;
+     border: 2px solid #f5f5f5;
+     width: 90%;
+     height: 45px;
+     padding-left: 10px;
+     padding-top: 0px;
+     font-family: Arial, Helvetica, sans-serif;
+     color: #8f8f8f;
+     font-size: 18px;
+     text-align: left;
+     display: block;
+     margin: 0 auto;
 }
-label {
-	font-size: 18px;
-	color: #8f8f8f;
-	font-family: 'Helvetica';
-	position: absolute;
-	margin-top: 10px;
-	margin-left: 15px;
-	-webkit-transition: width 1s, height 1s;
-	transition: width 1s, height 1s;
-	white-space: nowrap;
+ .input:focus + label {
+     margin-top: 0px;
+     font-size: 10px;
+     margin-left: 9px;
+     outline: none;
 }
-
+ label {
+     font-size: 18px;
+     color: #8f8f8f;
+     font-family: Arial, Helvetica, sans-serif;
+     position: absolute;
+     margin-top: 10px;
+     margin-left: 15px;
+     -webkit-transition: width 1s, height 1s;
+     transition: width 1s, height 1s;
+     white-space: nowrap;
+}
 /** Popups **/
-
 /* Popup background and headers */
-.popup{
-	position: absolute; 
-	left: 0px; 
-	z-index: 900; 
-	width: 100%;
-	max-height: 90%;
-	right: -100%;
-	border: 0px solid #ffffff;
-	border-radius: 15px;
-    background-color: #ffffff;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+ .popup{
+     position: absolute;
+     left: 0px;
+     z-index: 900;
+     width: 100%;
+     max-height: 90%;
+     right: -100%;
+     border: 0px solid #ffffff;
+     border-radius: 15px;
+     background-color: #ffffff;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
 }
-
-.cover{
-    width: 100%;
-    height: 100%;
-    left: 0px;
-    position: fixed;
-    z-index: 1000;
-   background: rgba(0, 0, 0, 0.6); 
+ .cover{
+     width: 100%;
+     height: 100%;
+     left: 0px;
+     position: fixed;
+     z-index: 1000;
+     background: rgba(0, 0, 0, 0.6);
 }
-
-.book-popup{
-    width: 50%;
-    left: 25%;
+ .book-popup{
+     width: 50%;
+     left: 25%;
     /* Mobile only */
-    width: 100%;
-    left: 0%;
+     width: 100%;
+     left: 0%;
 }
-
-.thankyou-popup{
-    
-    width: 50%;
-    padding: 25px;
+ .thankyou-popup{
+     width: 50%;
+     padding: 25px;
 }
-.order-popup h2{
-	color: rgb(221, 89, 88);
+ .order-popup h2{
+     color: rgb(221, 89, 88);
 }
-.class-popup h2{
-    color: #6D02D8; 
+ .class-popup h2{
+     color: #6D02D8;
 }
-.popup h2{
-	font-weight: 500;
-	font-family: futura;
-	font-size: xx-large;
-	text-align: center; 
-	margin: 0; 
+ .popup h2{
+     font-weight: 500;
+     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+     font-size: xx-large;
+     text-align: center;
+     margin: 0;
 }
-
-.popup p{
-	font-weight: bold; 
-	color: black; 
-	font-size: medium; 
-	text-align: center; 
-	font-family: helvetica;
+ .popup p{
+     font-weight: bold;
+     color: black;
+     font-size: medium;
+     text-align: center;
+     font-family: Arial, Helvetica, sans-serif;
 }
-
-.popup button:not(.nobutton){
-    font-family: Helvetica; 
-    font-size: 3; 	
-    margin: 10px auto; 
-	display: block; 
+ .popup button:not(.nobutton){
+    font-family: Arial, Helvetica, sans-serif;
+     font-size: 3;
+     margin: 10px auto;
+     display: block;
 }
-
 /* For showing and hiding the popups */
-.hide{
-	display: none; 
+ .hide{
+     display: none;
 }
-
 /* Top-left button */
-.nobutton {
-	border-radius: 0px;
-	padding: 0px;
-	background: Transparent;
-	border: 0px solid #ffffff;
-	cursor: pointer;
-    vertical-align:middle;
+ .nobutton {
+     border-radius: 0px;
+     padding: 0px;
+     background: Transparent;
+     border: 0px solid #ffffff;
+     cursor: pointer;
+     vertical-align:middle;
 }
-.nobutton *{
-    height: 25px;
-    margin: 10px;
+ .nobutton *{
+     height: 25px;
+     margin: 10px;
 }
 /* Inputs for Ordering popups */
-.popup .input{
-	box-sizing: border-box;
-	margin: 10px auto 0px; 
-	display: block; 
+ .popup .input{
+     box-sizing: border-box;
+     margin: 10px auto 0px;
 }
-
 /* Inputs for Booking popups */
-#booking-buttons-container{
-    display: block;
-    text-align: center; 
+ #booking-buttons-container{
+     display: block;
+     text-align: center;
 }
-#booking-buttons-container button{
-    display: inline-block; 
+ #booking-buttons-container button{
+     display: inline-block;
 }
-.booking-buttons{
-    border:2px solid #6D02D8;
+ .booking-buttons{
+     border:2px solid #6D02D8;
 }
-
-#purple-background-button{
-	background-color:transparent;
-	color: #6D02D8; 
+ #purple-background-button{
+     background-color:transparent;
+     color: #6D02D8;
 }
-#white-background-purple-border-button{
-	background-color:#6D02D8;
+ #white-background-purple-border-button{
+     background-color:#6D02D8;
 }
-
-.red-background-button{
-    background: #DD5958;
-    border: 2px solid #DD5958;
+ .red-background-button{
+     background: #DD5958;
+     border: 2px solid #DD5958;
 }
-
-
 /** Nav **/
  nav{
      position: fixed;
@@ -192,8 +175,7 @@ label {
      justify-content: flex-start;
      box-sizing: border-box;
     /* Mobile only */
-	 padding: 0px;
-
+     padding: 0px;
 }
  .subnav{
      -ms-flex-order: 0;
@@ -236,19 +218,17 @@ label {
     /* Mobile only */
      padding: 0px;
 }
-#nav-button, #submit-order-button{
+ #nav-button, #submit-order-button{
      background: #DD5958;
      border: 2px solid #DD5958;
 }
-#nav-button{
+ #nav-button{
     /* Mobile only */
-    font-size: 14px;
-    border-radius: 0px;
-    height: 60px;
-    margin-bottom: 16px;
+     font-size: 14px;
+     border-radius: 0px;
+     height: 60px;
+     margin-bottom: 16px;
 }
-
-
  ul{
      padding: 0px;
 }
@@ -273,8 +253,12 @@ label {
     /* Mobile only */
      display: none;
 }
-
 /** Landing **/
+h1{
+    margin: 0px; 
+    font-size: 18px; 
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
  #top-landing{
      height: 50%;
      background: rgba(173, 113, 0, 0.644) ;
@@ -317,7 +301,7 @@ label {
      overflow: hidden;
      font-weight: 300;
      letter-spacing: 4px;
-     font-family: futura;
+     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
      font-size: large;
      color: rgb(255, 255, 255);
 }
@@ -388,12 +372,12 @@ label {
  .info-box p{
      max-width: 435px;
      white-space: normal;
-     font-family: Helvetica;
+     font-family: Arial, Helvetica, sans-serif;
      font-size: 16px;
      margin: 0 auto;
 }
  .info-box button{
-     font-family: Helvetica;
+    font-family: Arial, Helvetica, sans-serif;
      font-weight: bold;
      font-size: 16px;
 }
@@ -403,24 +387,26 @@ label {
      padding: 20px 30px;
      margin: 10px;
      border-radius: 100px;
-     font: Futura;
+     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
      font-weight: 700;
      font-size: 12pt;
      color: white;
      cursor: pointer;
 }
 /** Portfolio **/
-.portfolio-image{
-	width: 50%;
-	margin: 0px;
-	float: left;
+ .portfolio-image{
+     width: 50%;
+     margin: 0px;
+     float: left;
 }
-
 /** Newsletter and footer **/
  #newsletter{
+     padding: 30px 0px;
+     clear: both;
+}
+ #footer{
      background: #18788C;
 }
- 
  #mc-embedded-subscribe {
      background-color: #6D02D8;
      border: #6D02D8;
@@ -432,12 +418,12 @@ label {
      border-radius: 40px;
      margin: 10px auto;
      display: block;
-	 outline: none;
-	 cursor: pointer;
+     outline: none;
+     cursor: pointer;
 }
-#mc-embedded-subscribe:hover{
-	background-color:rgb(72, 0, 145);
-	border:rgb(72, 0, 145);
+ #mc-embedded-subscribe:hover{
+     background-color:rgb(72, 0, 145);
+     border:rgb(72, 0, 145);
 }
  #credits{
      width: 100%;
@@ -463,72 +449,7 @@ label {
      text-decoration: none;
      color: #6D02D8;
 }
-
-/*
-
- .intense:hover {
-     cursor: url('../js/IntenseImages/plus_cursor.png'), auto;
-     opacity: 0.75;
+.intense:hover {
+    cursor: url('../js/IntenseImages/plus_cursor.png'), auto;
+    opacity: 0.75;
 }
-
- .MainBlock {
-     position: absolute;
-     left: 0px;
-     top: 0px;
-     width: 100%;
-     height: 100%;
-     z-index: 850;
-     overflow: hidden;
-}
- .MainBlockTransBG {
-     background-color: #009FE2;
-     position: absolute;
-     left: 0px;
-     top: 0px;
-     width: 100%;
-     height: 100%;
-     z-index: 800;
-     opacity: 0.75;
-     overflow: hidden;
-}
- .MainSlide {
-     position: absolute;
-     left: 0px;
-     top: 0px;
-     height: 100%;
-     overflow: hidden;
-     z-index: 500;
-     opacity: 1;
-     background-color: #59CCE2;
-}
- .BelowFold {
-     position: absolute;
-     top: 100%;
-     left: -7px;
-     width: 101%;
-     overflow: hidden;
-     background-color: #59CCE2;
-     z-index: 850;
-}
- .HiNicThisIsASecretMessageFromTheGovernment {
-     position: fixed;
-     top: 0px;
-     left: 0px;
-     width: 100%;
-     height: 60px;
-     display: none;
-     background-color: #59CCE2;
-     z-index: 890;
-}
- .MailingListFooterBlock {
-     position: fixed;
-     bottom: 0px;
-     left: 0px;
-     width: 100%;
-     height: 70px;
-     display: none;
-     background-color: #59CCE2;
-     z-index: 100;
-}
- */
- 
