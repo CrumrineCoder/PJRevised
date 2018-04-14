@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /** CSS Document **/
+
  html, body{
      height: 100%;
      width: 100%;
@@ -65,8 +66,9 @@ label {
 	border: 0px solid #ffffff;
 	border-radius: 15px;
     background-color: #ffffff;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
 }
 
 .cover{
@@ -87,9 +89,7 @@ label {
 }
 
 .thankyou-popup{
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    
     width: 50%;
     padding: 25px;
 }
