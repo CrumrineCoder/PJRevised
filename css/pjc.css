@@ -360,14 +360,21 @@ h1{
 }
 /** Boxes of information next to portfolio images **/
 
+.inner-wrapper-info{
+  
+}
 
  .info-box{
      text-align: center;
      padding: 10px;
-     height: 500px;
+     height: 550px;
+     clear: both; 
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
 .portfolio-wrapper{
-    max-height: 500px;
+    max-height: 550px;
 }
  .purple{
      background: #6D02D8;
@@ -422,8 +429,7 @@ h1{
      width: 50%;
      margin: 0px;
      float: left;
-     height: 50%;
-     cursor: pointer; 
+     height: 200px;
 }
 /** Newsletter and footer **/
  #newsletter{
@@ -476,7 +482,7 @@ h1{
      color: #6D02D8;
 }
 .intense:hover {
-    cursor: url('../js/IntenseImages/plus_cursor.png'), auto;
+    cursor: url('../!assets/plus_cursor.png'), auto;
     opacity: 0.75;
 }
 #browser-anchor-link{
@@ -495,6 +501,9 @@ h1{
 }
 
 @media screen and (min-width: 600px) {
+    .portfolio-image{
+        height: 300px;
+    }
     .class-popup{
         width: 60%;
     }
@@ -528,13 +537,7 @@ h1{
     .info-box img{
         width: 150px;
     }
-    .inner-wrapper-info{
-        position: absolute;
-         top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 100%;
-    }
+    
     .red{
         order: 2;
     }
@@ -572,6 +575,7 @@ h1{
         height: auto; 
         max-height: none; 
     }
+
 }
 
 @media screen and (min-width: 1000px) {
@@ -580,5 +584,8 @@ h1{
     }
     h3{
         margin: 15px; 
-    }   
+    }  
+    .portfolio-image{
+        height: 50%;
+    } 
 }
