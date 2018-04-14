@@ -5,19 +5,19 @@ var swiper = new Swiper('.swiper-container', {
         delay: 2500,
         disableOnInteraction: false,
     },
-    pagination: {
+  /*  pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-    },
+    }, */
 });
 
 $(document).scroll(function () {
     var y = $(this).scrollTop();
-    if (y > 500) {
+    if (y > 700) {
         $('nav').fadeIn();
         $('nav').removeClass("hide");
     } else {
