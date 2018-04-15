@@ -58,11 +58,11 @@
      position: absolute;
      left: 0px;
      z-index: 900;
-     width: 100%;
+     width: 95%;
      max-height: 90%;
      right: -100%;
      border: 0px solid #ffffff;
-     border-radius: 15px;
+     border-radius: 30px;
      background-color: #ffffff;
      left: 50%;
      top: 50%;
@@ -429,7 +429,7 @@ h1{
      width: 50%;
      margin: 0px;
      float: left;
-     height: 200px;
+     height: 50%;
 }
 /** Newsletter and footer **/
  #newsletter{
@@ -501,9 +501,6 @@ h1{
 }
 
 @media screen and (min-width: 600px) {
-    .portfolio-image{
-        height: 300px;
-    }
     .class-popup{
         width: 60%;
     }
@@ -585,7 +582,4 @@ h1{
     h3{
         margin: 15px; 
     }  
-    .portfolio-image{
-        height: 50%;
-    } 
 }
