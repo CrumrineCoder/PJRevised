@@ -15,28 +15,30 @@
 <body>
     <div id="initial-ordering" class="hide cover">
         <div class="popup order-popup">
-            <button class="nobutton">
-                <img src="!assets/X.png" onclick="toggle('initial-ordering');" alt="">
-            </button>
-            <h2>Cookies are coming!</h2>
-            <p>Our cookies are avaliable for pickup in NYC, we cannot ship them.</p>
-            <input class="input" type="text" placeholder="What is your name?" />
-            <input class="input" type="text" placeholder="What is your email?" />
-            <select class="input">
-                <option value="0">How many cookies do you want?</option>
-                <option value="1">A dozen</option>
-                <option value="2">Two dozen</option>
-                <option value="3">Three dozen or more</option>
-                <option value="4">I'm not sure</option>
-            </select>
-            <select class="input">
-                <option value="0">What occasion are they for?</option>
-                <option value="1">Birthday party</option>
-                <option value="2">Wedding</option>
-                <option value="3">Other</option>
-            </select>
-            <input class="input" type="text" placeholder="Anything else we should know?">
-            <button onclick="toggle('initial-ordering'); toggle('thankyou-order')" class="red-background-button Link">Submit my order</button>
+            <form name="theform" action="scripts/email.php" method="post">
+                <button class="nobutton">
+                    <img src="!assets/X.png" onclick="toggle('initial-ordering');" alt="">
+                </button>
+                <h2>Cookies are coming!</h2>
+                <p>Our cookies are avaliable for pickup in NYC, we cannot ship them.</p>
+                <input class="input" type="text" placeholder="What is your name?" name="name"/>
+                <input class="input" type="text" placeholder="What is your email?" name="email"/>
+                <select class="input" name="number">
+                    <option value="0">How many cookies do you want?</option>
+                    <option value="1">A dozen</option>
+                    <option value="2">Two dozen</option>
+                    <option value="3">Three dozen or more</option>
+                    <option value="4">I'm not sure</option>
+                </select>
+                <select class="input" name="occasion">
+                    <option value="0">What occasion are they for?</option>
+                    <option value="1">Birthday party</option>
+                    <option value="2">Wedding</option>
+                    <option value="3">Other</option>
+                </select>
+                <input class="input" type="text" placeholder="Anything else we should know?" name="other">
+                <button onclick="toggle('initial-ordering'); toggle('thankyou-order')" class="red-background-button Link">Submit my order</button>
+            </form>
         </div>
     </div>
     <div id="initial-class" class="hide cover">
