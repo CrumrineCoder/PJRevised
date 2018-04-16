@@ -48,3 +48,23 @@ window.onload = function() {
         } 
       });
 }
+
+
+function sendOrder() {
+    var name = $("#form-name").val();
+    var email = $('#form-email').val();
+    var number = $("#form-number").val();
+    var occasion = $('#form-occasion').val();
+    var extra = $("#form-extra").val();
+
+    console.log(name);
+    console.log(email);
+    console.log(number);
+    console.log(occasion);
+    console.log(extra);
+    console.log('mailto:crumrinecoding@gmail.com?subject=Order for  ' + number + ' cookies for a ' + occasion + " event, from " + name + '(' + email + ')' + '&body=' + extra);
+
+    window.location = 'mailto:crumrinecoding@gmail.com?subject=Order for  ' + number + ' cookies for a ' + occasion + " event, from " + name + '(' + email + ')' + '&body=' + extra;
+
+    console.log("Hi");
+};

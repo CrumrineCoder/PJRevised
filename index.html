@@ -15,29 +15,29 @@
 <body>
     <div id="initial-ordering" class="hide cover">
         <div class="popup order-popup">
-            <form name="theform" action="mailto:crumrinecoding@gmail.com" method="get">
+            <form name="theform">
                 <button class="nobutton">
                     <img src="!assets/X.png" onclick="toggle('initial-ordering');" alt="">
                 </button>
                 <h2>Cookies are coming!</h2>
                 <p>Our cookies are avaliable for pickup in NYC, we cannot ship them.</p>
-                <input class="input" type="text" placeholder="What is your name?" name="name"/>
-     <!--             <input class="input" type="text" placeholder="What is your email?" name="email"/>
-              <select class="input" name="number">
-                    <option value="0">How many cookies do you want?</option>
-                    <option value="1">A dozen</option>
-                    <option value="2">Two dozen</option>
-                    <option value="3">Three dozen or more</option>
-                    <option value="4">I'm not sure</option>
+                <input class="input" type="text" placeholder="What is your name?" id= "form-name" name="name"/>
+                <input class="input" type="text" placeholder="What is your email?" id= "form-email" name="email"/>
+                <select class="input" name="number" id= "form-number">
+                    <option value="" disabled selected>How many cookies do you want?</option>
+                    <option value="A dozen">A dozen</option>
+                    <option value="Two dozen">Two dozen</option>
+                    <option value="Three dozen or more">Three dozen or more</option>
+                    <option value="Unsure">I'm not sure</option>
                 </select>
-                <select class="input" name="occasion">
-                    <option value="0">What occasion are they for?</option>
-                    <option value="1">Birthday party</option>
-                    <option value="2">Wedding</option>
-                    <option value="3">Other</option>
-                </select> -->
-                <input class="input" type="text" placeholder="Anything else we should know?" name="other">
-                <button onclick="toggle('initial-ordering'); toggle('thankyou-order')" class="red-background-button Link">Submit my order</button>
+                <select class="input" name="occasion" id="form-occasion">
+                    <option value="" disabled selected>What occasion are they for?</option>
+                    <option value="Birthday party">Birthday party</option>
+                    <option value="Wedding">Wedding</option>
+                    <option value="Unspecified">Other</option>
+                </select>
+                <input class="input" type="text" placeholder="Anything else we should know?" name="extra" id="form-extra">
+                <button onclick="toggle('initial-ordering'); toggle('thankyou-order'); sendOrder()" class="red-background-button Link">Submit my order</button>
             </form>
         </div>
     </div>
