@@ -33,7 +33,6 @@
      text-align: left;
      display: block;
      margin: 0 auto;
-     max-width: 300px;
 }
  .input:focus + label {
      margin-top: 0px;
@@ -84,6 +83,9 @@
     width: 80%;
     padding: 15px;
 }
+.order-popup{
+    max-width: 600px; 
+}
  .order-popup h2{
      color: rgb(221, 89, 88);
 }
@@ -95,7 +97,7 @@
      font-family: Futura, "Trebuchet MS", Arial, sans-serif;
      font-size: xx-large;
      text-align: center;
-     margin: 0;
+     margin: 20px 0px;
 }
  .popup p, #email-link{
      font-weight: bold;
@@ -133,7 +135,7 @@
 /* Inputs for Ordering popups */
  .popup .input{
      box-sizing: border-box;
-     margin: 10px auto 0px;
+     margin: 20px auto 0px;
 }
 /* Inputs for Booking popups */
  #booking-buttons-container{
@@ -153,9 +155,10 @@
  #white-background-purple-border-button{
      background-color:#6D02D8;
 }
- .red-background-button{
+ #red-background-button{
      background: #DD5958;
      border: 2px solid #DD5958;
+     margin: 30px auto;
 }
 /** Nav **/
  nav{
@@ -516,6 +519,9 @@ h1{
 }
 
 @media screen and (min-width: 800px) {
+    #order-popup-copy{
+        padding: 0px 30px;
+    }
     .row{
         display: -webkit-flex;
       display: -ms-flexbox;
