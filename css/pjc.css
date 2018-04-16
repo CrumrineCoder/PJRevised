@@ -86,6 +86,9 @@
 .order-popup{
     max-width: 600px; 
 }
+#join-container-hub-popup{
+    max-width: 424px; 
+}
  .order-popup h2{
      color: rgb(221, 89, 88);
 }
@@ -141,9 +144,13 @@
  #booking-buttons-container{
      display: block;
      text-align: center;
+     margin: 20px auto; 
+     width: 100%;
 }
  #booking-buttons-container button{
      display: inline-block;
+     padding: 20px 30px; 
+     margin: 10px;
 }
  .booking-buttons{
      border:2px solid #6D02D8;
@@ -519,7 +526,7 @@ h1{
 }
 
 @media screen and (min-width: 800px) {
-    #order-popup-copy{
+    .popup-copy{
         padding: 0px 30px;
     }
     .row{

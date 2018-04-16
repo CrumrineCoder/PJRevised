@@ -15,11 +15,11 @@
 <body>
     <div id="initial-ordering" class="hide cover">
         <div class="popup order-popup">
-            <form name="theform" action="scripts/order.php" method="post">
-                <button class="nobutton">
-                    <img src="!assets/X.png" onclick="toggle('initial-ordering');" alt="">
-                </button>
-                <div id="order-popup-copy">
+            <button class="nobutton">
+                <img src="!assets/X.png" onclick="toggle('initial-ordering');" alt="">
+            </button>
+            <form name="theform" action="scripts/order.php" method="post">   
+                <div class="popup-copy">
                     <h2>Cookies are coming!</h2>
                     <p>Our cookies are avaliable for pickup in NYC, we cannot ship them.</p>
                     <input class="input" type="text" placeholder="What is your name?" id="form-name" name="name" />
@@ -44,16 +44,18 @@
         </div>
     </div>
     <div id="initial-class" class="hide cover">
-        <div class="popup class-popup">
+        <div class="popup class-popup" id="join-container-hub-popup">
             <button class="nobutton">
                 <img src="!assets/X.png" onclick="toggle('initial-class');" alt="">
             </button>
-            <h2>Our classes</h2>
-            <p>We love to teach others how to make cookies!</p>
-            <div id="booking-buttons-container">
-                <button id="purple-background-button" class="booking-buttons Link" onclick="toggle('booking-window'); toggle('initial-class');">Book a class</button>
-                <button id="white-background-purple-border-button" class="booking-buttons Link" onclick="toggle('joining-window'); toggle('initial-class')">Join a class</button>
-            </div>
+            <div class="popup-copy">
+                <h2>Our classes</h2>
+                <p>We love to teach others how to make cookies!</p>
+                <div id="booking-buttons-container">
+                    <button id="purple-background-button" class="booking-buttons Link" onclick="toggle('booking-window'); toggle('initial-class');">Book a class</button>
+                    <button id="white-background-purple-border-button" class="booking-buttons Link" onclick="toggle('joining-window'); toggle('initial-class')">Join a class</button>
+                </div>
+          </div>
         </div>
     </div>
     <div id="booking-window" class="hide cover">
@@ -61,13 +63,15 @@
             <button class="nobutton">
                 <img src="!assets/X.png" onclick="toggle('booking-window');" alt="">
             </button>
-            <form name="theform" action="scripts/book.php" method="post">
-                <h2>Book a class!</h2>
-                <p>We're always open to new class opportunities.</p>
-                <input class="input" type="text" placeholder="What is your name?" name="name"/>
-                <input class="input" type="text" placeholder="What is your email?" name="email"/>
-                <button onclick="toggle('booking-window'); toggle('thankyou-class')" class="booking-buttons Link" id="purple-background-button">Get in touch</button>
-            </form>
+            <div class="popup-copy">
+                <form name="theform" action="scripts/book.php" method="post">
+                    <h2>Book a class!</h2>
+                    <p>We're always open to new class opportunities.</p>
+                    <input class="input" type="text" placeholder="What is your name?" name="name"/>
+                    <input class="input" type="text" placeholder="What is your email?" name="email"/>
+                    <button onclick="toggle('booking-window'); toggle('thankyou-class')" class="booking-buttons Link" id="purple-background-button">Get in touch</button>
+                </form>
+          </div>
         </div>
     </div>
 
@@ -77,13 +81,15 @@
             <button class="nobutton">
                 <img src="!assets/X.png" onclick="toggle('joining-window');" alt="">
             </button>
-            <form name="theform" action="scripts/join.php" method="post">
-                <h2>Join our classes!</h2>
-                <p>We'll let you know when our next class is:</p>
-                <input class="input" type="text" placeholder="What is your name?" name="name"/>
-                <input class="input" type="text" placeholder="What is your email?" name="email"/>
-                <button onclick="toggle('joining-window'); toggle('thankyou-class')" class="booking-buttons Link" id="purple-background-button">Notify me</button>
-            </form>
+            <div class="popup-copy">
+                <form name="theform" action="scripts/join.php" method="post">
+                    <h2>Join our classes!</h2>
+                    <p>We'll let you know when our next class is:</p>
+                    <input class="input" type="text" placeholder="What is your name?" name="name"/>
+                    <input class="input" type="text" placeholder="What is your email?" name="email"/>
+                    <button onclick="toggle('joining-window'); toggle('thankyou-class')" class="booking-buttons Link" id="purple-background-button">Notify me</button>
+                </form>
+            </div>
         </div>
     </div>
     <div id="thankyou-class" class="hide cover" onclick="toggle('thankyou-class')">
