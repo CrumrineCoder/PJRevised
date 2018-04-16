@@ -9,21 +9,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src='js/intense.js'></script>
-    
+
 </head>
 
 <body>
     <div id="initial-ordering" class="hide cover">
         <div class="popup order-popup">
-            <form name="theform">
+            <form name="theform" action="scripts/order.php" method="post">
                 <button class="nobutton">
                     <img src="!assets/X.png" onclick="toggle('initial-ordering');" alt="">
                 </button>
                 <h2>Cookies are coming!</h2>
                 <p>Our cookies are avaliable for pickup in NYC, we cannot ship them.</p>
-                <input class="input" type="text" placeholder="What is your name?" id= "form-name" name="name"/>
-                <input class="input" type="text" placeholder="What is your email?" id= "form-email" name="email"/>
-                <select class="input" name="number" id= "form-number">
+                <input class="input" type="text" placeholder="What is your name?" id="form-name" name="name" />
+                <input class="input" type="text" placeholder="What is your email?" id="form-email" name="email" />
+                <select class="input" name="number" id="form-number">
                     <option value="" disabled selected>How many cookies do you want?</option>
                     <option value="A dozen">A dozen</option>
                     <option value="Two dozen">Two dozen</option>
@@ -34,10 +34,10 @@
                     <option value="" disabled selected>What occasion are they for?</option>
                     <option value="Birthday party">Birthday party</option>
                     <option value="Wedding">Wedding</option>
-                    <option value="Unspecified">Other</option>
+                    <option value="Other">Other</option>
                 </select>
                 <input class="input" type="text" placeholder="Anything else we should know?" name="extra" id="form-extra">
-                <button onclick="toggle('initial-ordering'); toggle('thankyou-order'); sendOrder()" class="red-background-button Link">Submit my order</button>
+                <button onclick="toggle('initial-ordering'); toggle('thankyou-order');" class="red-background-button Link">Submit my order</button>
             </form>
         </div>
     </div>
@@ -59,23 +59,29 @@
             <button class="nobutton">
                 <img src="!assets/X.png" onclick="toggle('booking-window');" alt="">
             </button>
-            <h2>Book a class!</h2>
-            <p>We're always open to new class opportunities.</p>
-            <input class="input" type="text" placeholder="What is your name?" />
-            <input class="input" type="text" placeholder="What is your email?" />
-            <button onclick="toggle('booking-window'); toggle('thankyou-class')" class="booking-buttons Link" id="purple-background-button">Get in touch</button>
+            <form name="theform" action="scripts/book.php" method="post">
+                <h2>Book a class!</h2>
+                <p>We're always open to new class opportunities.</p>
+                <input class="input" type="text" placeholder="What is your name?" name="name"/>
+                <input class="input" type="text" placeholder="What is your email?" name="email"/>
+                <button onclick="toggle('booking-window'); toggle('thankyou-class')" class="booking-buttons Link" id="purple-background-button">Get in touch</button>
+            </form>
         </div>
     </div>
+
+
     <div id="joining-window" class="hide cover">
         <div class="popup class-popup">
             <button class="nobutton">
                 <img src="!assets/X.png" onclick="toggle('joining-window');" alt="">
             </button>
-            <h2>Join our classes!</h2>
-            <p>We'll let you know when our next class is:</p>
-            <input class="input" type="text" placeholder="What is your name?" />
-            <input class="input" type="text" placeholder="What is your email?" />
-            <button onclick="toggle('joining-window'); toggle('thankyou-class')" class="booking-buttons Link" id="purple-background-button">Notify me</button>
+            <form name="theform" action="scripts/join.php" method="post">
+                <h2>Join our classes!</h2>
+                <p>We'll let you know when our next class is:</p>
+                <input class="input" type="text" placeholder="What is your name?" name="name"/>
+                <input class="input" type="text" placeholder="What is your email?" name="email"/>
+                <button onclick="toggle('joining-window'); toggle('thankyou-class')" class="booking-buttons Link" id="purple-background-button">Notify me</button>
+            </form>
         </div>
     </div>
     <div id="thankyou-class" class="hide cover" onclick="toggle('thankyou-class')">
@@ -88,7 +94,7 @@
     <div id="Email" class="hide cover" onclick="toggle('Email')">
         <div class="popup class-popup email-popup">
             <h2>Get in touch</h2>
-            <a id="email-link" href="mailto:pennyjanescookies@gmail.com">pennyjanescookies@gmail.com</a>  
+            <a id="email-link" href="mailto:pennyjanescookies@gmail.com">pennyjanescookies@gmail.com</a>
         </div>
     </div>
     <div id="thankyou-order" class="hide cover" onclick="toggle('thankyou-order')">
@@ -141,19 +147,18 @@
             <div class="swiper-slide" id="slide5"></div>
         </div>
         <!-- Add Pagination -->
-    <!--    <div class="swiper-pagination"></div> -->
+        <!--    <div class="swiper-pagination"></div> -->
     </div>
     <div id="top-landing">
         <h1>
             Cookies made with love by a mother and daughter locally in New York City
         </h1>
         <div id="landing-links">
-            <img src="!assets/Email.png" onclick="toggle('Email');" class="Link" width="38px" style="margin-left:12px;" alt=""
-            />
+            <img src="!assets/Email.png" onclick="toggle('Email');" class="Link" width="38px" style="margin-left:12px;" alt="" />
             <a href="http://www.instagram.com/pennyjanescookies" target="_blank" class="Link">
                 <img src="!assets/SocialInstaB.png" width="30px" alt="" />
             </a>
-      </div>
+        </div>
         <img src="!assets/PJCb.png" id="logo-text" alt="" />
     </div>
     <div id="bottom-landing">
@@ -170,16 +175,17 @@
                 <img src="!assets/PennCirc.png" alt="" />
                 <h3>Hi, I'm Penny Jane May!</h3>
                 <p> Me and mom are always ready to make cookies to spread love to friends and strangers. We bake them ourselves
-                    but I like the decorating part better. Every holiday or when one of my or mom's friends have a party we make a fresh batch. Santa loved my reindeer cookies so maybe you'll like them too! I laugh everytime
+                    but I like the decorating part better. Every holiday or when one of my or mom's friends have a party
+                    we make a fresh batch. Santa loved my reindeer cookies so maybe you'll like them too! I laugh everytime
                     I get to hand out the cookies and see frowns turn upside down.
                 </p>
             </div>
         </div>
         <div class="portfolio-wrapper">
-                <img class="portfolio-image intense" src="!assets/portfolio images/1/christmas.jpg" />
-                <img class="portfolio-image intense" src="!assets/portfolio images/1/unicorn.png" />
-                <img class="portfolio-image intense" src="!assets/portfolio images/1/thanksgiving.png" />
-                <img class="portfolio-image intense" src="!assets/portfolio images/1/st patty.png" />
+            <img class="portfolio-image intense" src="!assets/portfolio images/1/christmas.jpg" />
+            <img class="portfolio-image intense" src="!assets/portfolio images/1/unicorn.png" />
+            <img class="portfolio-image intense" src="!assets/portfolio images/1/thanksgiving.png" />
+            <img class="portfolio-image intense" src="!assets/portfolio images/1/st patty.png" />
         </div>
     </div>
     <div class="row">
@@ -194,10 +200,10 @@
             </div>
         </div>
         <div class="portfolio-wrapper">
-                <img class="portfolio-image intense" src="!assets/portfolio images/2/porcupine.png" />
-                <img class="portfolio-image intense" src="!assets/portfolio images/2/ice cream.png" />
-                <img class="portfolio-image intense" src="!assets/portfolio images/2/arctic.png" />
-                <img class="portfolio-image intense" src="!assets/portfolio images/2/princess.png" />
+            <img class="portfolio-image intense" src="!assets/portfolio images/2/porcupine.png" />
+            <img class="portfolio-image intense" src="!assets/portfolio images/2/ice cream.png" />
+            <img class="portfolio-image intense" src="!assets/portfolio images/2/arctic.png" />
+            <img class="portfolio-image intense" src="!assets/portfolio images/2/princess.png" />
         </div>
     </div>
     <div class="row">
@@ -213,10 +219,10 @@
             </div>
         </div>
         <div class="portfolio-wrapper">
-                <img class="portfolio-image intense" src="!assets/portfolio images/3/animals.png" />
-                <img class="portfolio-image intense" src="!assets/portfolio images/3/birthday.png" />
-                <img class="portfolio-image intense" src="!assets/portfolio images/3/frozen.png" />
-                <img class="portfolio-image intense" src="!assets/portfolio images/3/llama.png" />
+            <img class="portfolio-image intense" src="!assets/portfolio images/3/animals.png" />
+            <img class="portfolio-image intense" src="!assets/portfolio images/3/birthday.png" />
+            <img class="portfolio-image intense" src="!assets/portfolio images/3/frozen.png" />
+            <img class="portfolio-image intense" src="!assets/portfolio images/3/llama.png" />
         </div>
     </div>
     <div class="row">
@@ -231,10 +237,10 @@
             </div>
         </div>
         <div class="portfolio-wrapper">
-                <img class="portfolio-image intense" src="!assets/portfolio images/4/bunny.png" />
-                <img class="portfolio-image intense" src="!assets/portfolio images/4/dogs.png" />
-                <img class="portfolio-image intense" src="!assets/portfolio images/4/on the farm.png" />
-                <img class="portfolio-image intense" src="!assets/portfolio images/4/snacks.png" />
+            <img class="portfolio-image intense" src="!assets/portfolio images/4/bunny.png" />
+            <img class="portfolio-image intense" src="!assets/portfolio images/4/dogs.png" />
+            <img class="portfolio-image intense" src="!assets/portfolio images/4/on the farm.png" />
+            <img class="portfolio-image intense" src="!assets/portfolio images/4/snacks.png" />
         </div>
     </div>
     <div id="footer">
