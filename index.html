@@ -15,15 +15,15 @@
 <body>
     <div id="initial-ordering" class="hide cover">
         <div class="popup order-popup">
-            <form name="theform" action="scripts/email.php" method="post">
+            <form name="theform" action="mailto:crumrinecoding@gmail.com" method="get">
                 <button class="nobutton">
                     <img src="!assets/X.png" onclick="toggle('initial-ordering');" alt="">
                 </button>
                 <h2>Cookies are coming!</h2>
                 <p>Our cookies are avaliable for pickup in NYC, we cannot ship them.</p>
                 <input class="input" type="text" placeholder="What is your name?" name="name"/>
-                <input class="input" type="text" placeholder="What is your email?" name="email"/>
-                <select class="input" name="number">
+     <!--             <input class="input" type="text" placeholder="What is your email?" name="email"/>
+              <select class="input" name="number">
                     <option value="0">How many cookies do you want?</option>
                     <option value="1">A dozen</option>
                     <option value="2">Two dozen</option>
@@ -35,7 +35,7 @@
                     <option value="1">Birthday party</option>
                     <option value="2">Wedding</option>
                     <option value="3">Other</option>
-                </select>
+                </select> -->
                 <input class="input" type="text" placeholder="Anything else we should know?" name="other">
                 <button onclick="toggle('initial-ordering'); toggle('thankyou-order')" class="red-background-button Link">Submit my order</button>
             </form>
@@ -88,7 +88,7 @@
     <div id="Email" class="hide cover" onclick="toggle('Email')">
         <div class="popup class-popup email-popup">
             <h2>Get in touch</h2>
-            <p>pennyjanescookies@gmail.com</p>
+            <a id="email-link" href="mailto:pennyjanescookies@gmail.com">pennyjanescookies@gmail.com</a>  
         </div>
     </div>
     <div id="thankyou-order" class="hide cover" onclick="toggle('thankyou-order')">

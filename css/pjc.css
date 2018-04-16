@@ -97,12 +97,15 @@
      text-align: center;
      margin: 0;
 }
- .popup p{
+ .popup p, #email-link{
      font-weight: bold;
      color: black;
      font-size: medium;
      text-align: center;
      font-family: Arial, Helvetica, sans-serif;
+}
+#email-link{
+   display: block; 
 }
  .popup button:not(.nobutton){
     font-family: Arial, Helvetica, sans-serif;
@@ -471,15 +474,15 @@ h1{
 }
  a:visited:not(#browser-anchor-link) {
      text-decoration: none;
-     color: #6D02D8;
+     color: rgb(30, 0, 59);
 }
  a:hover:not(#browser-anchor-link) {
      text-decoration: none;
-     color: #6D02D8;
+     color: rgb(75, 0, 150);
 }
  a:active:not(#browser-anchor-link) {
      text-decoration: none;
-     color: #6D02D8;
+     color: rgb(75, 0, 150);
 }
 .intense:hover {
     cursor: url('../!assets/plus_cursor.png'), auto;
