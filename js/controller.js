@@ -49,20 +49,3 @@ window.onload = function() {
       });
 }
 
-$('#order-form').submit(function() {
-    var post_data = $('#order-form').serialize();
-    $.post('../scripts/order.php', post_data, function(data) {
-    });
-  });
-
-  $('#join-form').submit(function() {
-    var post_data = $('#join-form').serialize();
-    $.post('../scripts/join.php', post_data, function(data) {
-    });
-  });
-
-  $('#book-form').submit(function() {
-    var post_data = $('#book-form').serialize();
-    $.post('../scripts/book.php', post_data, function(data) {
-    });
-  });

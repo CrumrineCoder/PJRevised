@@ -20,4 +20,6 @@ $headers = 'From: '.$field_email."\r\n";
 $headers .= 'Reply-To: '.$field_email."\r\n";
 
 $mail_status = mail($mail_to, $subject, $body_message, $headers);
- ?>
+
+header( "Location: http://mxmlln.com/PJC/PJRevised/index.html" );	
+?>

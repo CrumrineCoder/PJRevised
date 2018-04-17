@@ -15,16 +15,5 @@ $headers .= 'Reply-To: '.$field_email."\r\n";
 
 $mail_status = mail($mail_to, $subject, $body_message, $headers);
 
-if ($mail_status) { ?>
-	<script language="javascript" type="text/javascript">
-		console.log("Email sent!")
-	</script>
-<?php
-}
-else { ?>
-	<script language="javascript" type="text/javascript">
-		alert('Message failed. Please, send an email to crumrinecoding@gmail.com');
-	</script>
-<?php
-}
+header( "Location: http://mxmlln.com/PJC/PJRevised/index.html" );	
 ?>

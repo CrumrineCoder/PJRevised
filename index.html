@@ -18,26 +18,27 @@
             <button class="nobutton">
                 <img src="!assets/X.png" onclick="toggle('initial-ordering');" alt="">
             </button>
-            <form name="theform" id="order-form">   
+
+            <form name="theform" target="_self" action="scripts/order.php" method="post">
                 <div class="popup-copy">
                     <h2>Cookies are coming!</h2>
                     <p>Our cookies are avaliable for pickup in NYC, we cannot ship them.</p>
-                    <input class="input" type="text" placeholder="What is your name?" id="form-name" name="name" />
-                    <input class="input" type="text" placeholder="What is your email?" id="form-email" name="email" />
-                    <select class="input" name="number" id="form-number">
+                    <input class="input" type="text" placeholder="What is your name?" name="name" />
+                    <input class="input" type="text" placeholder="What is your email?" name="email" />
+                    <select class="input" name="number">
                         <option value="" disabled selected>How many cookies do you want?</option>
                         <option value="A dozen">A dozen</option>
                         <option value="Two dozen">Two dozen</option>
                         <option value="Three dozen or more">Three dozen or more</option>
                         <option value="Unsure">I'm not sure</option>
                     </select>
-                    <select class="input" name="occasion" id="form-occasion">
+                    <select class="input" name="occasion">
                         <option value="" disabled selected>What occasion are they for?</option>
                         <option value="Birthday party">Birthday party</option>
                         <option value="Wedding">Wedding</option>
                         <option value="Other">Other</option>
                     </select>
-                    <input class="input" type="text" placeholder="Anything else we should know?" name="extra" id="form-extra">
+                    <input class="input" type="text" placeholder="Anything else we should know?" name="other">
                     <button onclick="toggle('initial-ordering'); toggle('thankyou-order');" id="red-background-button" class="Link">Submit my order</button>
                </div>
             </form>
@@ -64,7 +65,7 @@
                 <img src="!assets/X.png" onclick="toggle('booking-window');" alt="">
             </button>
             <div class="popup-copy">
-                <form name="theform" id="book-form">
+                <form name="theform" target="_self" action="scripts/book.php" method="post">
                     <h2>Book a class!</h2>
                     <p>We're always open to new class opportunities.</p>
                     <input class="input" type="text" placeholder="What is your name?" name="name"/>
@@ -82,7 +83,7 @@
                 <img src="!assets/X.png" onclick="toggle('joining-window');" alt="">
             </button>
             <div class="popup-copy">
-                <form name="theform">
+                <form name="theform" target="_self" action="scripts/join.php" method="post">
                     <h2>Join our classes!</h2>
                     <p>We'll let you know when our next class is:</p>
                     <input class="input" type="text" placeholder="What is your name?" name="name"/>
@@ -158,16 +159,18 @@
         <!--    <div class="swiper-pagination"></div> -->
     </div>
     <div id="top-landing">
-        <h1>
-            Cookies made with love by a mother and daughter locally in New York City
-        </h1>
-        <div id="landing-links">
-            <img src="!assets/Email.png" onclick="toggle('Email');" class="Link" width="38px" style="margin-left:12px;" alt="" />
-            <a href="http://www.instagram.com/pennyjanescookies" target="_blank" class="Link">
-                <img src="!assets/SocialInstaB.png" width="30px" alt="" />
-            </a>
+       <div id="top-landing-wrapper">
+            <img src="!assets/PJCb.png" id="logo-text" alt="" />
+            <h1>
+                Cookies made with love <br> by a mother and daughter <br> locally in New York City
+            </h1>
+            <div id="landing-links">
+                <img src="!assets/Email.png" onclick="toggle('Email');" class="Link" width="38px" style="margin-left:12px;" alt="" />
+                <a href="http://www.instagram.com/pennyjanescookies" target="_blank" class="Link">
+                    <img src="!assets/SocialInstaB.png" width="30px" alt="" />
+                </a>
+            </div>
         </div>
-        <img src="!assets/PJCb.png" id="logo-text" alt="" />
     </div>
     <div id="bottom-landing">
         <button class="main-button" id="browse-button">
