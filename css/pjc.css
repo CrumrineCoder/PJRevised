@@ -370,19 +370,19 @@ h1{
      align-items: center;
 }
  #slide1{
-     background-image: url("../!assets/slides/llama.png");
+     background-image: url("../!assets/slides/Llama.png");
 }
  #slide2{
-    background-image: url("../!assets/slides/on the farm.png");
+    background-image: url("../!assets/slides/OnTheFarm.png");
 }
 #slide3{
-    background-image: url("../!assets/slides/Popcorn and Pineapple.png");
+    background-image: url("../!assets/slides/Pineapple.png");
 }
 #slide4{
-    background-image: url("../!assets/slides/Super Heroes 2.png");
+    background-image: url("../!assets/slides/SuperHeroes.png");
 }
 #slide5{
-    background-image: url("../!assets/slides/thanksgiving.png");
+    background-image: url("../!assets/slides/thanks.png");
 }
 /** Boxes of information next to portfolio images **/
 
