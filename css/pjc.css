@@ -238,6 +238,10 @@
      background: #DD5958;
      border: 2px solid #DD5958;
 }
+#nav-button{
+    padding: 10px 20px;
+    margin: 0px 0px 15px 0px;
+}
 
  ul{
      padding: 0px;
@@ -455,6 +459,9 @@ h1{
 }
  #footer{
      background: #18788C;
+}
+#mce-EMAIL{
+    max-width: 400px;
 }
  #mc-embedded-subscribe {
      background-color: #6D02D8;
