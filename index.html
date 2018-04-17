@@ -40,7 +40,7 @@
                     </select>
                     <input class="input" type="text" placeholder="Anything else we should know?" name="other">
                     <button onclick="toggle('initial-ordering'); toggle('thankyou-order');" id="red-background-button" class="Link">Submit my order</button>
-               </div>
+                </div>
             </form>
         </div>
     </div>
@@ -53,10 +53,10 @@
                 <h2>Our classes</h2>
                 <p>We love to teach others how to make cookies!</p>
                 <div id="booking-buttons-container">
-                    <button id="purple-background-button" class="booking-buttons Link" onclick="toggle('booking-window'); toggle('initial-class');">Book a class</button>
-                    <button id="white-background-purple-border-button" class="booking-buttons Link" onclick="toggle('joining-window'); toggle('initial-class')">Join a class</button>
+                    <button id="white-background-purple-border-button" class="booking-buttons Link" onclick="toggle('booking-window'); toggle('initial-class');">Book a class</button>
+                    <button id="purple-background-button" class="booking-buttons Link" onclick="toggle('joining-window'); toggle('initial-class')">Join a class</button>
                 </div>
-          </div>
+            </div>
         </div>
     </div>
     <div id="booking-window" class="hide cover">
@@ -68,11 +68,11 @@
                 <form name="theform" target="_self" action="scripts/book.php" method="post">
                     <h2>Book a class!</h2>
                     <p>We're always open to new class opportunities.</p>
-                    <input class="input" type="text" placeholder="What is your name?" name="name"/>
-                    <input class="input" type="text" placeholder="What is your email?" name="email"/>
+                    <input class="input" type="text" placeholder="What is your name?" name="name" />
+                    <input class="input" type="text" placeholder="What is your email?" name="email" />
                     <button onclick="toggle('booking-window'); toggle('thankyou-class')" class="booking-buttons Link" id="purple-background-button">Get in touch</button>
                 </form>
-          </div>
+            </div>
         </div>
     </div>
 
@@ -86,28 +86,40 @@
                 <form name="theform" target="_self" action="scripts/join.php" method="post">
                     <h2>Join our classes!</h2>
                     <p>We'll let you know when our next class is:</p>
-                    <input class="input" type="text" placeholder="What is your name?" name="name"/>
-                    <input class="input" type="text" placeholder="What is your email?" name="email"/>
-                    <button onclick="toggle('joining-window'); toggle('thankyou-class')" class="booking-buttons Link" id="white-background-purple-border-button">Notify me</button>
+                    <input class="input" type="text" placeholder="What is your name?" name="name" />
+                    <input class="input" type="text" placeholder="What is your email?" name="email" />
+                    <button onclick="toggle('joining-window'); toggle('thankyou-class')" class="booking-buttons Link" id="purple-background-button">Notify me</button>
                 </form>
             </div>
         </div>
     </div>
     <div id="thankyou-class" class="hide cover" onclick="toggle('thankyou-class')">
+
         <div class="popup class-popup thankyou-popup">
+                <button class="nobutton">
+                        <img src="!assets/X.png" onclick="toggle('joining-window');" alt="">
+                    </button>
             <h2>We'll be in
                 <br> touch soon!
             </h2>
         </div>
     </div>
     <div id="Email" class="hide cover" onclick="toggle('Email')">
+        
         <div class="popup class-popup email-popup">
+                <button class="nobutton">
+                        <img src="!assets/X.png" onclick="toggle('joining-window');" alt="">
+                    </button>
             <h2>Get in touch</h2>
             <a id="email-link" href="mailto:pennyjanescookies@gmail.com">pennyjanescookies@gmail.com</a>
         </div>
     </div>
     <div id="thankyou-order" class="hide cover" onclick="toggle('thankyou-order')">
+
         <div class="popup order-popup thankyou-popup">
+                <button class="nobutton">
+                        <img src="!assets/X.png" onclick="toggle('joining-window');" alt="">
+                    </button>
             <h2>We're firing up the oven
                 <br> & will be in touch soon!
             </h2>
@@ -118,7 +130,7 @@
             <ul class="left">
                 <li>
                     <a href="#MainBlock" class="Link">
-                        <img src="!assets/PJCNoText.png" width="30px" style="margin: 5px; padding-bottom: 10px;" alt="" />
+                        <img src="!assets/PJCNoText.png" width="30px" style="margin: 5px; padding-bottom: 10px; margin-left: 0px;" alt="" />
                     </a>
                 </li>
                 <li>
@@ -133,7 +145,7 @@
             </ul>
         </div>
         <div class="right">
-            <a href="#MainBlock" class="Link brand">
+            <a href="#top" class="Link brand">
                 <img src="!assets/PJCTextA.png" height="45px" alt="" />
             </a>
         </div>
@@ -147,7 +159,7 @@
             </ul>
         </div>
     </nav>
-    <div class="swiper-container">
+    <div class="swiper-container" id="top">
         <div class="swiper-wrapper">
             <div class="swiper-slide" id="slide1"></div>
             <div class="swiper-slide" id="slide2"></div>
@@ -159,10 +171,12 @@
         <!--    <div class="swiper-pagination"></div> -->
     </div>
     <div id="top-landing">
-       <div id="top-landing-wrapper">
+        <div id="top-landing-wrapper">
             <img src="!assets/PJCb.png" id="logo-text" alt="" />
             <h1>
-                Cookies made with love <br> by a mother and daughter <br> locally in New York City
+                Cookies made with love
+                <br> by a mother and daughter
+                <br> locally in New York City
             </h1>
             <div id="landing-links">
                 <img src="!assets/Email.png" onclick="toggle('Email');" class="Link" width="38px" style="margin-left:12px;" alt="" />
@@ -256,7 +270,7 @@
     </div>
     <div id="footer">
         <div id="newsletter">
-            <h4>Get fresh news about our cookies and classes delievered to your inbox:</h4>
+            <h4>Get fresh news about our cookies <br> and classes delievered to your inbox:</h4>
             <form action="https://github.us18.list-manage.com/subscribe/post?u=001fc7f8967d5959dddfc1b01&amp;id=a40c44d50d" method="post"
                 id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 <input class="input" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="What is your email?" required>
