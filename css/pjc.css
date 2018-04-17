@@ -8,14 +8,14 @@
      color: white;
 }
  button:not(.main-button):not(.nobutton){
-     padding: 10px 20px;
-     margin-bottom: 15px;
      border-radius: 100px;
      font-family: Arial, Helvetica, sans-serif;
      font-weight: bold;
      font-size: 16px;
      color: #ffffff;
      cursor: pointer;
+     padding: 20px 30px;
+     margin: 30px auto;
 }
  button:focus {
     outline:0;
@@ -86,8 +86,11 @@
 .order-popup{
     max-width: 600px; 
 }
-#join-container-hub-popup{
+#class-container-hub-popup{
     max-width: 424px; 
+}
+.subclass-container-popup{
+    max-width: 414px; 
 }
  .order-popup h2{
      color: rgb(221, 89, 88);
@@ -115,7 +118,6 @@
  .popup button:not(.nobutton){
     font-family: Arial, Helvetica, sans-serif;
      font-size: 3;
-     margin: 10px auto;
      display: block;
 }
 /* For showing and hiding the popups */
@@ -151,21 +153,23 @@
      display: inline-block;
      padding: 20px 30px; 
      margin: 10px;
+     
 }
  .booking-buttons{
      border:2px solid #6D02D8;
 }
  #purple-background-button{
-     background-color:transparent;
-     color: #6D02D8;
+    background-color:#6D02D8;
 }
  #white-background-purple-border-button{
-     background-color:#6D02D8;
+    background-color:transparent;
+    color: #6D02D8;
 }
  #red-background-button{
      background: #DD5958;
      border: 2px solid #DD5958;
-     margin: 30px auto;
+ 
+     
 }
 /** Nav **/
  nav{
