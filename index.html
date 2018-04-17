@@ -18,7 +18,7 @@
             <button class="nobutton">
                 <img src="!assets/X.png" onclick="toggle('initial-ordering');" alt="">
             </button>
-            <form name="theform" action="scripts/order.php" method="post">   
+            <form name="theform" id="order-form">   
                 <div class="popup-copy">
                     <h2>Cookies are coming!</h2>
                     <p>Our cookies are avaliable for pickup in NYC, we cannot ship them.</p>
@@ -64,7 +64,7 @@
                 <img src="!assets/X.png" onclick="toggle('booking-window');" alt="">
             </button>
             <div class="popup-copy">
-                <form name="theform" action="scripts/book.php" method="post">
+                <form name="theform" id="book-form">
                     <h2>Book a class!</h2>
                     <p>We're always open to new class opportunities.</p>
                     <input class="input" type="text" placeholder="What is your name?" name="name"/>
@@ -82,7 +82,7 @@
                 <img src="!assets/X.png" onclick="toggle('joining-window');" alt="">
             </button>
             <div class="popup-copy">
-                <form name="theform" action="scripts/join.php" method="post">
+                <form name="theform">
                     <h2>Join our classes!</h2>
                     <p>We'll let you know when our next class is:</p>
                     <input class="input" type="text" placeholder="What is your name?" name="name"/>
