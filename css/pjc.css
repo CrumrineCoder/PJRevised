@@ -85,6 +85,7 @@
 }
 .order-popup{
     max-width: 600px; 
+    width: 100%;
 }
 #class-container-hub-popup{
     max-width: 424px; 
@@ -210,7 +211,7 @@
  .Link {
      cursor: pointer;
 }
- .Link:hover {
+ .Link:not(#nav-button):hover {
      opacity:0.5;
 }
  .list{
@@ -241,6 +242,10 @@
 #nav-button{
     padding: 10px 20px;
     margin: 0px 0px 15px 0px;
+}
+#nav-button:hover{
+    background: rgb(180, 72, 72);
+    border: 2px solid rgb(180, 72, 72);
 }
 
  ul{
@@ -365,7 +370,7 @@ h1{
      align-items: center;
 }
  #slide1{
-     background-image: url("../!assets/slides/llama.jpg");
+     background-image: url("../!assets/slides/llama.png");
 }
  #slide2{
     background-image: url("../!assets/slides/on the farm.jpg");
