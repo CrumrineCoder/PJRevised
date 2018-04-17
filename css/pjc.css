@@ -6,6 +6,7 @@
      margin: 0px;
      position: relative;
      color: white;
+     background: rgba(48, 117, 131, 0.555);
 }
  button:not(.main-button):not(.nobutton){
      border-radius: 100px;
