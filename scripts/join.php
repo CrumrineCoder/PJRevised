@@ -5,7 +5,7 @@ $field_name = $_POST['name'];
 $field_email = $_POST['email'];
 
 $mail_to = 'crumrinecoding@gmail.com';
-$subject = "Booking a Class";
+$subject = "Joining a Class";
 
 $body_message = 'From: '.$field_name."\n";
 $body_message .= 'E-mail: '.$field_email."\n";
