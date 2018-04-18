@@ -28,11 +28,11 @@ User Story 7: I can go to the Instagram for the business for additional picture 
 
 ## Built With
 
-* [Slider](https://glitch.com/) - Library used for the landing slideshow
-* [MailChimp](https://www.mongodb.com/) - Service used for the newsletter. 
-* [Intense Images](https://mlab.com/) - Used to view images closer upon clicking.
-* [PHP](https://expressjs.com/) - Languaged used to handle email forms.
-* [jQuery](https://angularjs.org/) - Used to shorthand a few expressions and make adding/removing classes easier.
+* [Swiper](http://idangero.us/swiper/) - Library used for the landing slideshow
+* [MailChimp](https://mailchimp.com/) - Service used for the automatic newsletter. 
+* [Intense Images](http://tholman.com/intense-images/) - Used to view images closer upon clicking.
+* [PHP](http://www.php.net/) - Language used to handle email forms.
+* [jQuery](https://jquery.com/) - Used to shorthand a few expressions, making adding/removing classes easier, and other minor things.
 
 ## Authors
 
