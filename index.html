@@ -2,6 +2,21 @@
 <html>
 
 <head>
+        <script>addEventListener('error', window.__e=function f(e){f.q=f.q||[];f.q.push(e)});</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+ <!--   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118660358-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-118660358-1');
+    </script> -->
+     <!-- Adds an event listener to capture uncaught errors. -->
+  <script>addEventListener('error', window.__e=function f(e){f.q=f.q||[];f.q.push(e)});</script>
+
+  <!-- Loads the debug version of analytics.js. **Important!** replace
+  `analytics_debug.js` with `analytics.js` before deploying to production. -->
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
     <meta charset="UTF-8">
     <title>PJC</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.css">
@@ -83,13 +98,18 @@
                 <img src="!assets/X.png" onclick="toggle('joining-window');" alt="">
             </button>
             <div class="popup-copy">
-                <form name="theform" target="_self" action="scripts/join.php" method="post">
-                    <h2>Join our classes!</h2>
-                    <p>We'll let you know when our next class is:</p>
-                    <input class="input" type="text" placeholder="What is your name?" name="name" />
-                    <input class="input" type="text" placeholder="What is your email?" name="email" />
-                    <button onclick="toggle('joining-window'); toggle('thankyou-class')" class="booking-buttons Link" id="purple-background-button">Notify me</button>
-                </form>
+                    <form action="https://github.us18.list-manage.com/subscribe/post?u=001fc7f8967d5959dddfc1b01&amp;id=a40c44d50d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <h2>Join our classes!</h2>
+                        <p>We'll let you know when our next class is:</p>
+                       <input class="input" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="What is your email?" required>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                          <input type="text" name="b_001fc7f8967d5959dddfc1b01_a40c44d50d" tabindex="-1" value="">
+                        </div>
+                        <div class="clear">
+                           <input type="submit" onclick="toggle('joining-window'); toggle('thankyou-class')" value="Notify Me" name="subscribe" id="mc-embedded-subscribe" class="button">
+                         </div>
+                    </form>
             </div>
         </div>
     </div>

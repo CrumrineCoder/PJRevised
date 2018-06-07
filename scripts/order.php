@@ -7,7 +7,7 @@ $field_number = $_POST['number'];
 $field_occasion = $_POST['occasion'];
 $field_other = $_POST['other'];
 
-$mail_to = 'crumrinecoding@gmail.com';
+$mail_to = 'pennyjanescookies@gmail.com';
 $subject = "Order";
 
 $body_message = 'From: '.$field_name."\n";
@@ -21,5 +21,5 @@ $headers .= 'Reply-To: '.$field_email."\r\n";
 
 $mail_status = mail($mail_to, $subject, $body_message, $headers);
 
-header( "Location: http://mxmlln.com/PJC/PJRevised/index.html" );	
+header( "Location: http://pennyjanescookies.com/" );	
 ?>

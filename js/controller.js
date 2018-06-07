@@ -1,3 +1,15 @@
+// index.js
+
+const main = () => {
+    // Load custom tracking code lazily, so it's non-blocking.
+    import('./analytics/base.js').then((analytics) => analytics.init());
+  
+    // Initiate all other code paths here...
+  };
+  
+  // Start the app through its main entry point.
+  main();
+
 var swiper = new Swiper('.swiper-container', {
     spaceBetween: 30,
     centeredSlides: true,
@@ -15,6 +27,8 @@ var swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev',
     }, */
 });
+
+
 
 $(document).scroll(function () {
     var y = $(this).scrollTop();
