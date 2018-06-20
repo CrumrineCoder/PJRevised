@@ -635,28 +635,29 @@ h1{
 	text-transform: uppercase;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    color: black; 
+    display: table;
+    width: 100%; 
 	/*   border-bottom: 1px solid #3c5055; */
 }
 
 .event>div {
-	vertical-align: top;
-}
-
-.date{
-	display: inline-block;
-	margin-right: 35px;
+    vertical-align: top;
+    display: table-cell; 
 }
 
 .date {
-    width: 50px;
     float: left;
+    width: 50px;
+    margin-right: 20px; 
 }
 
 .date .date-day,
 .date .date-desc {
 	font-size: 32px;
 	padding: 5px 0;
-	text-align: center;
+    text-align: center;
+    width: 50px; 
 }
 
 .date .date-month {
@@ -667,10 +668,13 @@ h1{
 	font-size: 16px;
 }
 
-.event-link {
-    color: #CC992C;
+.event-link{    
     line-height: 30px;
 	padding-bottom: 3px;
 	font-size: 24px;
-	font-weight: 700;
+    font-weight: 700;
+    text-align: center; 
+    margin-left: 100px;
+    float: left;
+    width: 100%;
 }
