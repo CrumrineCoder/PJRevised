@@ -636,7 +636,7 @@ h1{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     color: black; 
-    display: table;
+    display: flex;
     width: 100%; 
 	/*   border-bottom: 1px solid #3c5055; */
 }
@@ -646,10 +646,9 @@ h1{
     display: table-cell; 
 }
 
-.date {
-    float: left;
-    width: 50px;
+.date{
     margin-right: 20px; 
+    flex: 0 0 100px;  
 }
 
 .date .date-day,
@@ -657,7 +656,6 @@ h1{
 	font-size: 32px;
 	padding: 5px 0;
     text-align: center;
-    width: 50px; 
 }
 
 .date .date-month {
@@ -672,9 +670,6 @@ h1{
     line-height: 30px;
 	padding-bottom: 3px;
 	font-size: 24px;
-    font-weight: 700;
     text-align: center; 
-    margin-left: 100px;
-    float: left;
-    width: 100%;
+    flex: 1; 
 }
