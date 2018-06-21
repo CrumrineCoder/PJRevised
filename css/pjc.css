@@ -494,7 +494,7 @@ h1{
 }
 
 .inline-submit-button{
-    color: red; 
+    display: inline; 
 }
 
  #credits{
