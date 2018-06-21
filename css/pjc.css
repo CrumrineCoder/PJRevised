@@ -493,8 +493,15 @@ h1{
      border:rgb(72, 0, 145);
 }
 
-.inline-submit-button{
+#inline-submit-button{
     display: inline; 
+    border: none;
+    border-radius: 0px;  
+    margin: 0px; 
+}
+
+select, input, button {
+    border-width: 0px;
 }
 
  #credits{
