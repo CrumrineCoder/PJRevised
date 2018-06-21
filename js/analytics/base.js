@@ -1,4 +1,4 @@
-* global ga */
+/* global ga */
 
 
 /**
