@@ -666,6 +666,9 @@ select, input, button {
     flex: 0 0 100px;  
 }
 
+.date:nth-child(2n){
+    flex: 0 0 150px; 
+}
 .date .date-day,
 .date .date-desc {
 	font-size: 32px;
@@ -722,4 +725,12 @@ select, input, button {
   .searchButton:hover{
       cursor: pointer; 
       background: rgb(67, 106, 149);
+  }
+
+  .event-link{
+      color: black; 
+  }
+
+  .event-link:hover{
+      background: rgb(230, 230, 152); 
   }
