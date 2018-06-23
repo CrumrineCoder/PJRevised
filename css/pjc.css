@@ -7,10 +7,14 @@
      position: relative;
      color: white;
      background: rgba(48, 117, 131, 0.555);
+     font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
  button:not(.main-button):not(.nobutton):not(.searchButton){
      border-radius: 100px;
-     font-family: Arial, Helvetica, sans-serif;
+    
      font-weight: bold;
      font-size: 16px;
      color: #ffffff;
@@ -67,8 +71,6 @@
      left: 50%;
      top: 50%;
      transform: translate(-50%, -50%);
-     overflow-y: scroll;
-     overflow-x: hidden; 
 }
  .cover{
      width: 100%;
@@ -551,7 +553,7 @@ select, input, button {
 }
 
 @media screen and (min-width: 600px) {
-    .class-popup{
+    .class-popup, .order-popup{
         width: 60%;
     }
     nav{
