@@ -10,6 +10,8 @@
      font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Forms: Buttons and Inputs */
+
 .roundButton{
     border-radius: 100px;
     font-weight: bold;
@@ -23,6 +25,7 @@
  button:focus {
     outline:0;
 }
+
  .input{
      background-color: #ffffff;
      border: 2px solid #dfdcdc;
@@ -30,23 +33,23 @@
      height: 45px;
      padding-left: 10px;
      padding-top: 0px;
-     font-family: Arial, Helvetica, sans-serif;
      color: #8f8f8f;
      font-size: 18px;
      text-align: left;
      display: block;
      margin: 0 auto;
 }
+
  .input:focus + label {
      margin-top: 0px;
      font-size: 10px;
      margin-left: 9px;
      outline: none;
 }
+
  label {
      font-size: 18px;
      color: #8f8f8f;
-     font-family: Arial, Helvetica, sans-serif;
      position: absolute;
      margin-top: 10px;
      margin-left: 15px;
@@ -54,8 +57,9 @@
      transition: width 1s, height 1s;
      white-space: nowrap;
 }
+
 /** Popups **/
-/* Popup background and headers */
+/* All Popup background and headers */
  .popup{
      position: absolute;
      left: 0px;
@@ -70,6 +74,29 @@
      top: 50%;
      transform: translate(-50%, -50%);
 }
+.popup h2{
+    font-weight: 500;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: xx-large;
+    text-align: center;
+    margin: 20px 0px;
+}
+.popup p, #email-link{
+    font-weight: bold;
+    color: black;
+    font-size: medium;
+    text-align: center;
+}
+/* Inputs for Ordering popups */
+.popup .input{
+    box-sizing: border-box;
+    margin: 20px auto 0px;
+}
+.popup .roundButton{
+    font-size: 3;
+    display: block;
+}
+
  .cover{
      width: 100%;
      height: 100%;
@@ -78,6 +105,26 @@
      z-index: 1000;
      background: rgba(0, 0, 0, 0.6);
 }
+
+/* For showing and hiding the popups */
+.hide{
+    display: none;
+}
+/* Top-left button */
+.nobutton {
+    border-radius: 0px;
+    padding: 0px;
+    background: Transparent;
+    border: 0px solid #ffffff;
+    cursor: pointer;
+    vertical-align:middle;
+}
+.nobutton *{
+    height: 25px;
+    margin: 10px;
+}
+
+/* Minor popups */
  .thankyou-popup{
      width: 50%;
      max-width: 400px; 
@@ -86,83 +133,32 @@
     width: 80%;
     max-width: 300px; 
 }
+#email-link{
+    display: block; 
+ } 
+.subclass-container-popup{
+    max-width: 414px; 
+}
 .small-popup-copy{
     padding: 0px 0px 20px 0px; 
     margin-top: -10px; 
 }
+
+/* Major popups */
 .order-popup:not(.thankyou-popup){
     max-width: 600px; 
     width: 100%;
 }
-#class-container-hub-popup{
-    max-width: 424px; 
-}
-.subclass-container-popup{
-    max-width: 414px; 
-}
+
  .order-popup h2{
      color: rgb(221, 89, 88);
 }
  .class-popup h2{
      color: #6D02D8;
 }
- .popup h2{
-     font-weight: 500;
-     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-     font-size: xx-large;
-     text-align: center;
-     margin: 20px 0px;
-}
- .popup p, #email-link{
-     font-weight: bold;
-     color: black;
-     font-size: medium;
-     text-align: center;
-     font-family: Arial, Helvetica, sans-serif;
-}
-#email-link{
-   display: block; 
-}
- .popup button:not(.nobutton):not(.searchButton){
-    font-family: Arial, Helvetica, sans-serif;
-     font-size: 3;
-     display: block;
-}
-/* For showing and hiding the popups */
- .hide{
-     display: none;
-}
-/* Top-left button */
- .nobutton {
-     border-radius: 0px;
-     padding: 0px;
-     background: Transparent;
-     border: 0px solid #ffffff;
-     cursor: pointer;
-     vertical-align:middle;
-}
- .nobutton *{
-     height: 25px;
-     margin: 10px;
-}
-/* Inputs for Ordering popups */
- .popup .input{
-     box-sizing: border-box;
-     margin: 20px auto 0px;
-}
+
+
 /* Inputs for Booking popups */
- #booking-buttons-container{
-     display: block;
-     text-align: center;
-     margin: 20px auto; 
-     width: 100%;
-}
- #booking-buttons-container button{
-     display: inline-block;
-     padding: 20px 30px; 
-     margin: 10px;
-     
-}
  .booking-buttons{
      border:2px solid #6D02D8;
 }
@@ -175,10 +171,9 @@
 }
  #red-background-button{
      background: #DD5958;
-     border: 2px solid #DD5958;
- 
-     
+     border: 2px solid #DD5958;  
 }
+
 /** Nav **/
  nav{
      position: fixed;
