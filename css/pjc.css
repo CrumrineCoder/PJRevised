@@ -176,7 +176,7 @@ h4{
     color: white;
     padding: 0.5rem;
     border-radius: 0;
-    flex: 0 0 50px;
+    flex: 0 0 30px;
   }
 
   .searchButton:hover{
@@ -641,6 +641,17 @@ select, input, button {
     }
     .brand{
         display: inline-block;
+    }
+    .date{
+        margin-right: 20px; 
+        flex: 0 0 100px;  
+    }
+    
+    .date:nth-child(2n){
+        flex: 0 0 100px; 
+    }
+    .searchButton {
+        flex: 0 0 60px;     
     }
 }
 
