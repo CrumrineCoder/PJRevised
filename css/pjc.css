@@ -7,20 +7,46 @@
      position: relative;
      color: white;
      background: rgba(48, 117, 131, 0.555);
-}
- button:not(.main-button):not(.nobutton){
-     border-radius: 100px;
      font-family: Arial, Helvetica, sans-serif;
-     font-weight: bold;
-     font-size: 16px;
-     color: #ffffff;
-     cursor: pointer;
-     padding: 20px 30px;
-     margin: 15px auto 30px auto;
 }
+
+/* Headers */
+h1{
+    margin: 0px; 
+    font-size: 18px; 
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+h3, h4{
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0px;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    text-align: center;
+}
+h3{
+    font-size: 32px;
+    margin: 10px; 
+}
+h4{
+    font-size: 20px;
+    padding: 5px;
+}
+/* Forms: Buttons and Inputs */
+
+.roundButton{
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 20px 30px;
+    margin: 15px auto 30px auto;
+}
+
  button:focus {
     outline:0;
 }
+
  .input{
      background-color: #ffffff;
      border: 2px solid #dfdcdc;
@@ -28,23 +54,23 @@
      height: 45px;
      padding-left: 10px;
      padding-top: 0px;
-     font-family: Arial, Helvetica, sans-serif;
      color: #8f8f8f;
      font-size: 18px;
      text-align: left;
      display: block;
      margin: 0 auto;
 }
+
  .input:focus + label {
      margin-top: 0px;
      font-size: 10px;
      margin-left: 9px;
      outline: none;
 }
+
  label {
      font-size: 18px;
      color: #8f8f8f;
-     font-family: Arial, Helvetica, sans-serif;
      position: absolute;
      margin-top: 10px;
      margin-left: 15px;
@@ -52,8 +78,9 @@
      transition: width 1s, height 1s;
      white-space: nowrap;
 }
+
 /** Popups **/
-/* Popup background and headers */
+/* All Popup background and headers */
  .popup{
      position: absolute;
      left: 0px;
@@ -67,9 +94,33 @@
      left: 50%;
      top: 50%;
      transform: translate(-50%, -50%);
-     overflow-y: scroll;
-     overflow-x: hidden; 
 }
+.popup-copy{
+    padding: 0px 5px;
+}
+.popup h2{
+    font-weight: 500;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: xx-large;
+    text-align: center;
+    margin: 20px 0px;
+}
+.popup p, #email-link{
+    font-weight: bold;
+    color: black;
+    font-size: medium;
+    text-align: center;
+}
+/* Inputs for Ordering popups */
+.popup .input{
+    box-sizing: border-box;
+    margin: 20px auto 0px;
+}
+.popup .roundButton{
+    font-size: 3;
+    display: block;
+}
+
  .cover{
      width: 100%;
      height: 100%;
@@ -78,6 +129,115 @@
      z-index: 1000;
      background: rgba(0, 0, 0, 0.6);
 }
+
+/* For showing and hiding the popups */
+.hide{
+    display: none;
+}
+/* Top-left button */
+.nobutton {
+    border-radius: 0px;
+    padding: 0px;
+    background: Transparent;
+    border: 0px solid #ffffff;
+    cursor: pointer;
+    vertical-align:middle;
+}
+.nobutton *{
+    height: 25px;
+    margin: 5px;
+}
+/* Input for Emails */
+.searchContainer {
+    display: flex;
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .searchIcon {
+    padding: 0.5rem;
+  }
+  
+  .searchBox {
+    border: 0;
+    flex: 1;
+    font-size: 18px; 
+    text-align: left;
+    height: 45px;
+    padding-left: 10px;
+    padding-top: 0px;
+  }
+  
+  .searchButton {
+    background: #538AC5;
+    border: 0;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0;
+    flex: 0 0 30px;
+  }
+
+  .searchButton:hover{
+      cursor: pointer; 
+      background: rgb(67, 106, 149);
+  }
+
+
+/* Event */
+.event {
+	padding: 10px;
+	text-transform: uppercase;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black; 
+    display: flex;
+}
+
+.event>div, .event>a {
+    vertical-align: top;
+    display: table-cell; 
+}
+
+.date{
+    margin-right: 20px; 
+    flex: 0 0 50px;  
+}
+
+.date:nth-child(2n){
+    flex: 0 0 50px; 
+}
+.date .date-day,
+.date .date-desc {
+	font-size: 32px;
+	padding: 5px 0;
+    text-align: center;
+}
+
+.date .date-month {
+	text-align: center;
+}
+
+.date .date-year {
+	font-size: 16px;
+}
+
+.event-link{    
+	font-size: 15px;
+    text-align: center; 
+    flex: 1; 
+}
+
+  .event-tassle{
+      color: black; 
+  }
+
+  .event-tassle:hover{
+      background: rgb(254, 254, 191); 
+  }
+
+/* Minor popups */
  .thankyou-popup{
      width: 50%;
      max-width: 400px; 
@@ -86,83 +246,32 @@
     width: 80%;
     max-width: 300px; 
 }
+#email-link{
+    display: block; 
+ } 
+.subclass-container-popup{
+    max-width: 414px; 
+}
 .small-popup-copy{
     padding: 0px 0px 20px 0px; 
     margin-top: -10px; 
 }
+
+/* Major popups */
 .order-popup:not(.thankyou-popup){
     max-width: 600px; 
     width: 100%;
 }
-#class-container-hub-popup{
-    max-width: 424px; 
-}
-.subclass-container-popup{
-    max-width: 414px; 
-}
+
  .order-popup h2{
      color: rgb(221, 89, 88);
 }
  .class-popup h2{
      color: #6D02D8;
 }
- .popup h2{
-     font-weight: 500;
-     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-     font-size: xx-large;
-     text-align: center;
-     margin: 20px 0px;
-}
- .popup p, #email-link{
-     font-weight: bold;
-     color: black;
-     font-size: medium;
-     text-align: center;
-     font-family: Arial, Helvetica, sans-serif;
-}
-#email-link{
-   display: block; 
-}
- .popup button:not(.nobutton){
-    font-family: Arial, Helvetica, sans-serif;
-     font-size: 3;
-     display: block;
-}
-/* For showing and hiding the popups */
- .hide{
-     display: none;
-}
-/* Top-left button */
- .nobutton {
-     border-radius: 0px;
-     padding: 0px;
-     background: Transparent;
-     border: 0px solid #ffffff;
-     cursor: pointer;
-     vertical-align:middle;
-}
- .nobutton *{
-     height: 25px;
-     margin: 10px;
-}
-/* Inputs for Ordering popups */
- .popup .input{
-     box-sizing: border-box;
-     margin: 20px auto 0px;
-}
+
+
 /* Inputs for Booking popups */
- #booking-buttons-container{
-     display: block;
-     text-align: center;
-     margin: 20px auto; 
-     width: 100%;
-}
- #booking-buttons-container button{
-     display: inline-block;
-     padding: 20px 30px; 
-     margin: 10px;
-     
-}
  .booking-buttons{
      border:2px solid #6D02D8;
 }
@@ -175,10 +284,9 @@
 }
  #red-background-button{
      background: #DD5958;
-     border: 2px solid #DD5958;
- 
-     
+     border: 2px solid #DD5958;  
 }
+
 /** Nav **/
  nav{
      position: fixed;
@@ -282,11 +390,7 @@
 #landing-links img{
     margin: 5px; 
 }
-h1{
-    margin: 0px; 
-    font-size: 18px; 
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-}
+
  #top-landing{
      height: 60%;
      text-align: center;
@@ -392,10 +496,6 @@ h1{
 }
 /** Boxes of information next to portfolio images **/
 
-.inner-wrapper-info{
-  
-}
-
  .info-box{
      text-align: center;
      padding: 10px;
@@ -417,30 +517,14 @@ h1{
  .info-box img{
      width: 250px;
 }
- h3, h4{
-     color: white;
-     font-weight: 500;
-     letter-spacing: 0px;
-     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-     text-align: center;
-}
- h3{
-     font-size: 32px;
-     margin: 10px; 
-}
- h4{
-     font-size: 20px;
-     padding: 5px;
-}
+
  .info-box p{
      max-width: 435px;
      white-space: normal;
-     font-family: Arial, Helvetica, sans-serif;
      font-size: 16px;
      margin: 0 auto;
 }
  .info-box button{
-    font-family: Arial, Helvetica, sans-serif;
      font-weight: bold;
      font-size: 16px;
 }
@@ -478,7 +562,6 @@ h1{
      background-color: #6D02D8;
      border: #6D02D8;
      color: white;
-     font-family: Arial, Helvetica, sans-serif;
      font-size: medium;
      font-weight: 700;
      padding: 20px 30px;
@@ -504,6 +587,7 @@ select, input, button {
     border-width: 0px;
 }
 
+
  #credits{
      width: 100%;
      text-align: center;
@@ -512,7 +596,6 @@ select, input, button {
 }
  #credits p{
      margin: 0px;
-     font-family: Arial, Helvetica, sans-serif;
 }
  a:link:not(#browser-anchor-link) {
      text-decoration: none;
@@ -550,7 +633,7 @@ select, input, button {
 }
 
 @media screen and (min-width: 600px) {
-    .class-popup{
+    .class-popup, .order-popup{
         width: 60%;
     }
     nav{
@@ -559,9 +642,29 @@ select, input, button {
     .brand{
         display: inline-block;
     }
+    .date{
+        margin-right: 20px; 
+        flex: 0 0 100px;  
+    }
+    
+    .date:nth-child(2n){
+        flex: 0 0 100px; 
+    }
+    .searchButton {
+        flex: 0 0 60px;     
+    }
 }
 
 @media screen and (min-width: 800px) {
+    .nobutton *{
+        margin: 10px; 
+    }
+    .date:nth-child(2n){
+        flex: 0 0 150px; 
+    }
+    .date{
+        flex: 100px;
+    }
     .popup-copy{
         padding: 0px 30px;
     }
@@ -643,45 +746,3 @@ select, input, button {
 }
 
 
-
-.event {
-	padding: 10px;
-	text-transform: uppercase;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: black; 
-    display: flex;
-    width: 100%; 
-	/*   border-bottom: 1px solid #3c5055; */
-}
-
-.event>div {
-    vertical-align: top;
-    display: table-cell; 
-}
-
-.date{
-    margin-right: 20px; 
-    flex: 0 0 100px;  
-}
-
-.date .date-day,
-.date .date-desc {
-	font-size: 32px;
-	padding: 5px 0;
-    text-align: center;
-}
-
-.date .date-month {
-	text-align: center;
-}
-
-.date .date-year {
-	font-size: 16px;
-}
-
-.event-link{    
-	font-size: 24px;
-    text-align: center; 
-    flex: 1; 
-}

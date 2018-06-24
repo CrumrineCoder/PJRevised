@@ -56,7 +56,7 @@
                         <option value="Other">Other</option>
                     </select>
                     <input class="input" type="text" placeholder="Anything else we should know?" name="other">
-                    <button onclick="toggle('initial-ordering'); toggle('thankyou-order');" id="red-background-button" class="Link">Submit my order</button>
+                    <button onclick="toggle('initial-ordering'); toggle('thankyou-order');" id="red-background-button" class="Link roundButton">Submit my order</button>
                 </div>
             </form>
         </div>
@@ -67,10 +67,18 @@
                 <img src="!assets/X.png" onclick="toggle('initial-class');" alt="">
             </button>
             <div class="popup-copy">
-                <h2>Join our mailing list and we'll let you know when our next class is:</h2>
-                <form action="https://github.us18.list-manage.com/subscribe/post?u=001fc7f8967d5959dddfc1b01&amp;id=a40c44d50d" method="post"
-                    class="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                    <input class="input" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="What is your email?" required style="display: inline;"> <button type="submit" onclick="toggle('joining-window'); toggle('thankyou-class')" name="subscribe" id="inline-submit-button"><i style="color: black;" class="fas fa-arrow-right"></i></button>
+                <h2 style="margin: 5px auto; text-align: left; ">Next Classes</h2>
+                <h3 style="color: #6D02D8; margin: 5px auto; font-size: 14px; text-align: left;">Get Our Schedule Delievered to Your Inbox</h3>
+                <form style="margin: 10px auto;" action="https://github.us18.list-manage.com/subscribe/post?u=001fc7f8967d5959dddfc1b01&amp;id=a40c44d50d"
+                    method="post" class="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+                    novalidate>
+                    <div class="searchContainer">
+                        <input class="searchBox" type="email" name="EMAIL" placeholder="Enter Your Email"  required="">
+                        <button type="submit" value="Search" class="searchButton">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <!--             <input class="input" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="What is your email?" required style="display: inline;"> <button type="submit" onclick="toggle('joining-window'); toggle('thankyou-class')" name="subscribe" id="inline-submit-button">< -->
                     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                     <div style="position: absolute; left: -5000px;" aria-hidden="true">
                         <input type="text" name="b_001fc7f8967d5959dddfc1b01_a40c44d50d" tabindex="-1" value="" />
@@ -81,14 +89,14 @@
                             class="button">
                     </div> -->
                 </form>
-                <h2>Next Classes</h2>
-                <div class="event">
+
+                <a class="event-tassle event" href="https://www.hisawyer.com/freshmade/schedules/activity/camp/428707" target="_blank">
                     <div class="date">
                         <div class="date-month">June</div>
                         <div class="date-day">30</div>
-
                     </div>
                     <div class="date">
+                        <div class="date-hours">11 am to Noon</div>
                         <div class="date-desc">SAT</div>
                     </div>
                     <div class="date event-link">
@@ -96,14 +104,14 @@
                         <br /> 636 Broadway
                         <br /> New York, NY 10012
                     </div>
-                </div>
-                <div class="event">
+                </a>
+                <a class="event-tassle event" href="https://www.hisawyer.com/freshmade/schedules/activity/camp/428707" target="_blank">
                     <div class="date">
                         <div class="date-month">July</div>
                         <div class="date-day">7</div>
-                        <div class="date-hours">11 am to Noon</div>
                     </div>
                     <div class="date">
+                        <div class="date-hours">11 am to Noon</div>
                         <div class="date-desc">SAT</div>
                     </div>
                     <div class="date event-link">
@@ -111,7 +119,9 @@
                         <br /> 636 Broadway
                         <br /> New York, NY 10012
                     </div>
-                </div>
+                </a>
+
+                <button id="white-background-purple-border-button" class="booking-buttons Link roundButton" onclick="toggle('booking-window'); toggle('initial-class');">Book a class</button>
             </div>
         </div>
     </div>
@@ -126,7 +136,7 @@
                     <p>We're always open to new class opportunities.</p>
                     <input class="input" type="text" placeholder="What is your name?" name="name" />
                     <input class="input" type="text" placeholder="What is your email?" name="email" />
-                    <button onclick="toggle('booking-window'); toggle('thankyou-class')" class="booking-buttons Link" id="purple-background-button">Get in touch</button>
+                    <button onclick="toggle('booking-window'); toggle('thankyou-class')" class="booking-buttons Link roundButton" id="purple-background-button">Get in touch</button>
                 </form>
             </div>
         </div>
@@ -222,7 +232,7 @@
         <div class="subnav-right">
             <ul class="right">
                 <li>
-                    <button id="nav-button" class="Link" onclick="toggle('initial-ordering');">
+                    <button id="nav-button" class="Link roundButton" onclick="toggle('initial-ordering');">
                         Place an order
                     </button>
                 </li>
@@ -310,7 +320,7 @@
                     delight when creating something beautiful they can eat or give to friends and family. Anybody can join
                     our classes, just sign up for our email list to learn when the next one is.
                 </p>
-                <button onclick="toggle('initial-class')" class="whiteghostbutton Link">Join a class</button>
+                <button onclick="toggle('initial-class')" class="whiteghostbutton Link roundButton">Join a class</button>
             </div>
         </div>
         <div class="portfolio-wrapper">
@@ -328,7 +338,7 @@
                 <p> We make custom cookies for all occasions. We work with you to create the perfect set, custom designed, and
                     baked for your individual needs and preferences.
                 </p>
-                <button onclick="toggle('initial-ordering')" class="whiteghostbutton Link">Ask for an estimate</button>
+                <button onclick="toggle('initial-ordering')" class="whiteghostbutton Link roundButton">Ask for an estimate</button>
             </div>
         </div>
         <div class="portfolio-wrapper">
