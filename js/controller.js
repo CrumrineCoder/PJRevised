@@ -63,3 +63,11 @@ window.onload = function() {
       });
 }
 
+function validate(){
+
+    if(document.getElementById("order-name").value != ""){
+        return true; 
+    }
+
+    return false;
+ }

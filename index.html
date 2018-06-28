@@ -36,11 +36,11 @@
                 <img src="!assets/X.png" onclick="toggle('initial-ordering');" alt="">
             </button>
 
-            <form name="theform" target="_self" action="scripts/order.php" method="post">
+            <form name="theform" target="_self" action="scripts/order.php" method="post" >
                 <div class="popup-copy">
                     <h2>Cookies are coming!</h2>
                     <p>Our cookies are avaliable for pickup in NYC, we cannot ship them.</p>
-                    <input class="input" type="text" placeholder="What is your name?" name="name" required />
+                    <input class="input" type="text" placeholder="What is your name?" name="name" required id="order-name"/>
                     <input class="input" type="text" placeholder="What is your email?" name="email" required/>
                     <select class="input" name="number" required>
                         <option value="" disabled selected>How many cookies do you want?</option>
