@@ -5,7 +5,7 @@ $field_email = $_POST['email'];
 $field_number = $_POST['number'];
 $field_occasion = $_POST['occasion'];
 $field_other = $_POST['other'];
-$mail_to = 'crumrinecoding@gmail.com';
+$mail_to = 'pennyjanescookies@gmail.com';
 $subject = "Order";
 
 $body_message = 'From: '.$field_name."\n";
