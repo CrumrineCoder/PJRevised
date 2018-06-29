@@ -36,14 +36,29 @@
                 <img src="!assets/X.png" onclick="toggle('initial-ordering');" alt="">
             </button>
 
-            <form  action="scripts/order.php" method="post" >
-             
-                    <input type="text" name="name" maxlength="50" placeholder="Name" class="contact-standard" /></br></br>
-                    <input type="email" name="email" placeholder="Email" class="contact-standard"></input></br></br>
-                    <input type="text" name="subject" placeholder="Subject" class="contact-standard"></input></br></br>
-                    <textarea name="message" placeholder="Message" class="contact-message"></textarea></br></br>
-                    <input type="submit" name="submit" value="Send Message" class="contact-submit"></input></br></br>
-               
+            <form name="theform" action="scripts/order.php" method="post" target="_self" >
+                <div class="popup-copy">
+                    <h2>Cookies are coming!</h2>
+                    <p>Our cookies are avaliable for pickup in NYC, we cannot ship them.</p>
+                    <input class="input" type="text" placeholder="What is your name?" name="name" required id="order-name"/>
+                    <input class="input" type="text" placeholder="What is your email?" name="email" required/>
+                    <select class="input" name="number" required>
+                        <option value="" disabled selected>How many cookies do you want?</option>
+                        <option value="A dozen">A dozen</option>
+                        <option value="Two dozen">Two dozen</option>
+                        <option value="Three dozen or more">Three dozen or more</option>
+                        <option value="Unsure">I'm not sure</option>
+                    </select>
+                    <select class="input" name="occasion" required>
+                        <option value="" disabled selected>What occasion are they for?</option>
+                        <option value="Birthday party">Birthday party</option>
+                        <option value="Wedding">Wedding</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <input class="input" type="text" placeholder="Anything else we should know?" name="other">
+                    <button type="submit"  id="red-background-button" class="Link roundButton">Submit my order</button>
+                 <!--   <button onclick="toggle('initial-ordering'); toggle('thankyou-order');" id="red-background-button" class="Link roundButton">Submit my order</button> -->
+                </div>
             </form>
         </div>
     </div>
