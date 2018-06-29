@@ -22,9 +22,9 @@ if (isset($_POST["submit"])) {
         $message = $_REQUEST['message'] ;
         $subject = $_REQUEST['subject'] ;
 
-        mail( "email@hotmail.com", $subject, $message, "From: $email" );
+        mail( "crumrinecoding@gmail.com", $subject, $message, "From: $email" );
         header( "Location: http://www.thankyou.html" );
         }
     }
 }
-            <?php?>
+?>

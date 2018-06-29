@@ -16,9 +16,6 @@
 
     <!-- Loads the debug version of analytics.js. **Important!** replace
   `analytics_debug.js` with `analytics.js` before deploying to production. -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
-
     <script async src="https://www.google-analytics.com/analytics.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
@@ -39,14 +36,15 @@
                 <img src="!assets/X.png" onclick="toggle('initial-ordering');" alt="">
             </button>
 
-            <form method="post" action="scripts/order.php">
-                <input type="text" name="name" maxlength="50" placeholder="Name" class="contact-standard" /></br></br>
-                <input type="email" name="email" placeholder="Email" class="contact-standard"></input></br></br>
-                <input type="text" name="subject" placeholder="Subject" class="contact-standard"></input></br></br>
-                <textarea name="message" placeholder="Message" class="contact-message"></textarea></br></br>
-                <input type="submit" name="submit" value="Send Message" class="contact-submit"></input></br></br>
+            <form  action="scripts/order.php" method="post" >
+             
+                    <input type="text" name="name" maxlength="50" placeholder="Name" class="contact-standard" /></br></br>
+                    <input type="email" name="email" placeholder="Email" class="contact-standard"></input></br></br>
+                    <input type="text" name="subject" placeholder="Subject" class="contact-standard"></input></br></br>
+                    <textarea name="message" placeholder="Message" class="contact-message"></textarea></br></br>
+                    <input type="submit" name="submit" value="Send Message" class="contact-submit"></input></br></br>
+               
             </form>
-            
         </div>
     </div>
     <div id="initial-class" class="hide cover">
