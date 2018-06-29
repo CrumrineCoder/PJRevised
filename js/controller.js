@@ -63,11 +63,27 @@ window.onload = function() {
       });
 }
 
-function validate(){
+$(document).ready(function() {
+    // On submit, validate below fields.
+    $("#emailer").validate({
+        rules: {
+            name: "required",
+            email: {
+                    required: true,
+                    email: true
+                },
+            subject: "required",
+            message: "required"
+        },
+        messages: {
 
-    if(document.getElementById("order-name").value != ""){
-        return true; 
-    }
-
-    return false;
- }
+            name: "required",
+            email: {
+                    required: "Required",
+                    email: "must be valid email"
+                },
+            subject: "required",
+            message: "required"
+        }
+    });
+});

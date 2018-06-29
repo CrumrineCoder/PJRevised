@@ -16,6 +16,9 @@
 
     <!-- Loads the debug version of analytics.js. **Important!** replace
   `analytics_debug.js` with `analytics.js` before deploying to production. -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+
     <script async src="https://www.google-analytics.com/analytics.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
@@ -36,29 +39,14 @@
                 <img src="!assets/X.png" onclick="toggle('initial-ordering');" alt="">
             </button>
 
-            <form name="theform" target="_self" action="scripts/order.php" method="post" >
-                <div class="popup-copy">
-                    <h2>Cookies are coming!</h2>
-                    <p>Our cookies are avaliable for pickup in NYC, we cannot ship them.</p>
-                    <input class="input" type="text" placeholder="What is your name?" name="name" required id="order-name"/>
-                    <input class="input" type="text" placeholder="What is your email?" name="email" required/>
-                    <select class="input" name="number" required>
-                        <option value="" disabled selected>How many cookies do you want?</option>
-                        <option value="A dozen">A dozen</option>
-                        <option value="Two dozen">Two dozen</option>
-                        <option value="Three dozen or more">Three dozen or more</option>
-                        <option value="Unsure">I'm not sure</option>
-                    </select>
-                    <select class="input" name="occasion" required>
-                        <option value="" disabled selected>What occasion are they for?</option>
-                        <option value="Birthday party">Birthday party</option>
-                        <option value="Wedding">Wedding</option>
-                        <option value="Other">Other</option>
-                    </select>
-                    <input class="input" type="text" placeholder="Anything else we should know?" name="other">
-                    <button onclick="toggle('initial-ordering'); toggle('thankyou-order');" id="red-background-button" class="Link roundButton">Submit my order</button>
-                </div>
+            <form method="post" action="scripts/order.php">
+                <input type="text" name="name" maxlength="50" placeholder="Name" class="contact-standard" /></br></br>
+                <input type="email" name="email" placeholder="Email" class="contact-standard"></input></br></br>
+                <input type="text" name="subject" placeholder="Subject" class="contact-standard"></input></br></br>
+                <textarea name="message" placeholder="Message" class="contact-message"></textarea></br></br>
+                <input type="submit" name="submit" value="Send Message" class="contact-submit"></input></br></br>
             </form>
+            
         </div>
     </div>
     <div id="initial-class" class="hide cover">
