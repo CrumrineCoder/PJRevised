@@ -632,6 +632,8 @@ select, input, button {
 
 }
 
+  
+
 @media screen and (min-width: 600px) {
     .class-popup, .order-popup{
         width: 60%;

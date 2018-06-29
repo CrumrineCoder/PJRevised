@@ -26,7 +26,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src='js/intense.js'></script>
-
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>
@@ -36,27 +36,28 @@
                 <img src="!assets/X.png" onclick="toggle('initial-ordering');" alt="">
             </button>
 
-            <form name="theform" target="_self" action="scripts/order.php" method="post">
+            <form name="theform" action="scripts/order.php" method="post" target="_self" >
                 <div class="popup-copy">
                     <h2>Cookies are coming!</h2>
                     <p>Our cookies are avaliable for pickup in NYC, we cannot ship them.</p>
-                    <input class="input" type="text" placeholder="What is your name?" name="name" />
-                    <input class="input" type="text" placeholder="What is your email?" name="email" />
-                    <select class="input" name="number">
+                    <input class="input" type="text" placeholder="What is your name?" name="name" required id="order-name"/>
+                    <input class="input" type="text" placeholder="What is your email?" name="email" required/>
+                    <select class="input" name="number" required>
                         <option value="" disabled selected>How many cookies do you want?</option>
                         <option value="A dozen">A dozen</option>
                         <option value="Two dozen">Two dozen</option>
                         <option value="Three dozen or more">Three dozen or more</option>
                         <option value="Unsure">I'm not sure</option>
                     </select>
-                    <select class="input" name="occasion">
+                    <select class="input" name="occasion" required>
                         <option value="" disabled selected>What occasion are they for?</option>
                         <option value="Birthday party">Birthday party</option>
                         <option value="Wedding">Wedding</option>
                         <option value="Other">Other</option>
                     </select>
                     <input class="input" type="text" placeholder="Anything else we should know?" name="other">
-                    <button onclick="toggle('initial-ordering'); toggle('thankyou-order');" id="red-background-button" class="Link roundButton">Submit my order</button>
+                    <button type="submit"  id="red-background-button" class="Link roundButton">Submit my order</button>
+                 <!--   <button onclick="toggle('initial-ordering'); toggle('thankyou-order');" id="red-background-button" class="Link roundButton">Submit my order</button> -->
                 </div>
             </form>
         </div>
@@ -73,7 +74,7 @@
                     method="post" class="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
                     novalidate>
                     <div class="searchContainer">
-                        <input class="searchBox" type="email" name="EMAIL" placeholder="Enter Your Email"  required="">
+                        <input class="searchBox" type="email" name="EMAIL" placeholder="Enter Your Email" required>
                         <button type="submit" value="Search" class="searchButton">
                             <i class="fas fa-arrow-right"></i>
                         </button>
@@ -134,8 +135,8 @@
                 <form name="theform" target="_self" action="scripts/book.php" method="post">
                     <h2>Book a class!</h2>
                     <p>We're always open to new class opportunities.</p>
-                    <input class="input" type="text" placeholder="What is your name?" name="name" />
-                    <input class="input" type="text" placeholder="What is your email?" name="email" />
+                    <input class="input" type="text" placeholder="What is your name?" name="name" required/>
+                    <input class="input" type="text" placeholder="What is your email?" name="email" required/>
                     <button onclick="toggle('booking-window'); toggle('thankyou-class')" class="booking-buttons Link roundButton" id="purple-background-button">Get in touch</button>
                 </form>
             </div>
