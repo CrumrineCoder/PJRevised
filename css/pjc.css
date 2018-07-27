@@ -266,7 +266,7 @@ h4{
  .order-popup h2{
      color: rgb(221, 89, 88);
 }
- .class-popup h2{
+ .class-popup h2, .class-popup h4{
      color: #6D02D8;
 }
 

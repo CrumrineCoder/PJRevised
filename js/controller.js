@@ -62,28 +62,3 @@ window.onload = function() {
         } 
       });
 }
-
-$(document).ready(function() {
-    // On submit, validate below fields.
-    $("#emailer").validate({
-        rules: {
-            name: "required",
-            email: {
-                    required: true,
-                    email: true
-                },
-            subject: "required",
-            message: "required"
-        },
-        messages: {
-
-            name: "required",
-            email: {
-                    required: "Required",
-                    email: "must be valid email"
-                },
-            subject: "required",
-            message: "required"
-        }
-    });
-});
