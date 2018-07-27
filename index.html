@@ -22,7 +22,7 @@
     <meta charset="UTF-8">
     <title>PJC</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.css">
-    <link rel="stylesheet" href="css/pjc.css">
+    <link rel="stylesheet" href="css/pjc.css" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src='js/intense.js'></script>
@@ -36,11 +36,11 @@
                 <img src="!assets/X.png" onclick="toggle('initial-ordering');" alt="">
             </button>
 
-            <form name="theform" action="scripts/order.php" method="post" target="_self" >
+            <form name="theform" action="scripts/order.php" method="post" target="_self">
                 <div class="popup-copy">
                     <h2>Cookies are coming!</h2>
                     <p>Our cookies are avaliable for pickup in NYC, we cannot ship them.</p>
-                    <input class="input" type="text" placeholder="What is your name?" name="name" required id="order-name"/>
+                    <input class="input" type="text" placeholder="What is your name?" name="name" required id="order-name" />
                     <input class="input" type="text" placeholder="What is your email?" name="email" required/>
                     <select class="input" name="number" required>
                         <option value="" disabled selected>How many cookies do you want?</option>
@@ -56,8 +56,8 @@
                         <option value="Other">Other</option>
                     </select>
                     <input class="input" type="text" placeholder="Anything else we should know?" name="other">
-                    <button type="submit"  id="red-background-button" class="Link roundButton">Submit my order</button>
-                 <!--   <button onclick="toggle('initial-ordering'); toggle('thankyou-order');" id="red-background-button" class="Link roundButton">Submit my order</button> -->
+                    <button type="submit" id="red-background-button" class="Link roundButton">Submit my order</button>
+                    <!--   <button onclick="toggle('initial-ordering'); toggle('thankyou-order');" id="red-background-button" class="Link roundButton">Submit my order</button> -->
                 </div>
             </form>
         </div>
@@ -91,7 +91,7 @@
                     </div> -->
                 </form>
                 <h4>There are currently no scheduled classes.</h4>
-<!--
+                <!--
                 <a class="event-tassle event" href="https://www.hisawyer.com/freshmade/schedules/activity/camp/428707" target="_blank">
                     <div class="date">
                         <div class="date-month">June</div>
@@ -183,8 +183,7 @@
         </div>
     </div>
     <div id="Email" class="hide cover" onclick="toggle('Email')">
-
-        <div class="popup class-popup email-popup">
+        <div class="popup class-popup" id="emailer-poper">
             <button class="nobutton">
                 <img src="!assets/X.png" alt="">
             </button>

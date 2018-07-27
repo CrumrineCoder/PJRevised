@@ -1,7 +1,16 @@
 @charset "UTF-8";
 /** CSS Document **/
- html, body{
-     height: 100%;
+ html{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    position: relative;
+    color: white;
+    background: rgba(48, 117, 131, 0.555);
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    height: 100%;
      width: 100%;
      margin: 0px;
      position: relative;
@@ -16,20 +25,23 @@ h1{
     font-size: 18px; 
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
-h3, h4{
+h3{
+    font-size: 32px;
+    margin: 10px; 
     color: white;
     font-weight: 500;
     letter-spacing: 0px;
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     text-align: center;
 }
-h3{
-    font-size: 32px;
-    margin: 10px; 
-}
 h4{
     font-size: 20px;
     padding: 5px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0px;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    text-align: center;
 }
 /* Forms: Buttons and Inputs */
 
@@ -105,7 +117,14 @@ h4{
     text-align: center;
     margin: 20px 0px;
 }
-.popup p, #email-link{
+.popup p{
+    font-weight: bold;
+    color: black;
+    font-size: medium;
+    text-align: center;
+}
+
+#email-link{
     font-weight: bold;
     color: black;
     font-size: medium;
@@ -195,7 +214,11 @@ h4{
     display: flex;
 }
 
-.event>div, .event>a {
+.event>div{
+    vertical-align: top;
+    display: table-cell; 
+}
+.event>a{
     vertical-align: top;
     display: table-cell; 
 }
@@ -208,9 +231,13 @@ h4{
 .date:nth-child(2n){
     flex: 0 0 50px; 
 }
-.date .date-day,
-.date .date-desc {
+.date .date-day{
 	font-size: 32px;
+	padding: 5px 0;
+    text-align: center;
+}
+.date .date-desc {
+    font-size: 32px;
 	padding: 5px 0;
     text-align: center;
 }
@@ -242,7 +269,7 @@ h4{
      width: 50%;
      max-width: 400px; 
 }
-.email-popup{
+#emailer-poper{
     width: 80%;
     max-width: 300px; 
 }
@@ -266,8 +293,11 @@ h4{
  .order-popup h2{
      color: rgb(221, 89, 88);
 }
- .class-popup h2, .class-popup h4{
+ .class-popup h2 {
      color: #6D02D8;
+}
+.class-popup h4{
+    color: #6D02D8 !important;
 }
 
 
@@ -320,8 +350,11 @@ h4{
      flex-basis: auto;
      order: 3;
 }
- .subnav, .subnav-right{
+ .subnav{
      width: 100%!important;
+}
+.subnav-right{
+    width: 100%!important;
 }
  .Link {
      cursor: pointer;
@@ -350,9 +383,13 @@ h4{
     /* Mobile only */
      padding: 0px;
 }
- #nav-button, #submit-order-button{
+ #nav-button{
      background: #DD5958;
      border: 2px solid #DD5958;
+}
+#submit-order-button{
+background: #DD5958;
+border: 2px solid #DD5958;
 }
 #nav-button{
     padding: 10px 20px;
@@ -583,7 +620,13 @@ h4{
     margin: 0px; 
 }
 
-select, input, button {
+select{
+    border-width: 0px;
+}
+input{
+    border-width: 0px;
+}
+button{
     border-width: 0px;
 }
 
@@ -635,7 +678,10 @@ select, input, button {
   
 
 @media screen and (min-width: 600px) {
-    .class-popup, .order-popup{
+    .class-popup{
+        width: 60%;
+    }
+    .order-popup{
         width: 60%;
     }
     nav{
@@ -676,7 +722,12 @@ select, input, button {
       display: flex;
       overflow: hidden;
     }
-    .info-box, .portfolio-wrapper{
+    .info-box{
+        flex: 1;
+        width: 50%; 
+        padding: 0px; 
+    }
+    .portfolio-wrapper{
         flex: 1;
         width: 50%; 
         padding: 0px; 
