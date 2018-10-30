@@ -307,6 +307,10 @@ label {
     color: #6D02D8 !important;
 }
 
+.end-paragraph{
+    margin-bottom: 30px; 
+}
+
 .booking-buttons {
     border: 2px solid #6D02D8;
 }
