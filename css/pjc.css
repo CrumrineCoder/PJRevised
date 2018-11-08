@@ -583,6 +583,15 @@ ul {
     max-height: 600px;
 }
 
+.portfolio-image {
+    width: 50%;
+    margin: 0px;
+    float: left;
+    height: 50%;
+}
+
+
+
 .purple {
     background: #6D02D8;
 }
@@ -620,12 +629,6 @@ ul {
     cursor: pointer;
 }
 
-.portfolio-image {
-    width: 50%;
-    margin: 0px;
-    float: left;
-    height: 50%;
-}
 
 #newsletter {
     padding: 140px 0px;
