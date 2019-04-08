@@ -549,14 +549,14 @@ ul {
     align-items: center;
 }
 
-#slide1 {
+#llamaSlide {
     background-image: url("../!assets/slides/twollama.png");
 }
 
-#slide2 {
+#farmSlide {
     background-image: url("../!assets/slides/OnTheFarm.png");
 }
-
+/*
 #slide3 {
     background-image: url("../!assets/slides/Pineapple.png");
 }
@@ -564,9 +564,21 @@ ul {
 #slide4 {
     background-image: url("../!assets/slides/SuperHeroes.png");
 }
-
-#slide5 {
+*/
+#thanksgivingSlide {
     background-image: url("../!assets/slides/thanks.png");
+}
+
+#unicornSlide{
+    background-image: url("../!assets/slides/unicorn.jpg");
+}
+
+#bearsSlide{
+    background-image: url("../!assets/slides/bears.jpg");
+}
+
+#dogsSlide{
+    background-image: url("../!assets/slides/dogs.jpg");
 }
 
 .info-box {

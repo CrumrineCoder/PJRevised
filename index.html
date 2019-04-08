@@ -2,6 +2,23 @@
 <html>
 
 <head>
+    <link rel="apple-touch-icon" sizes="57x57" href="./apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <script>addEventListener('error', window.__e = function f(e) { f.q = f.q || []; f.q.push(e) });</script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!--   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118660358-1"></script>
@@ -37,14 +54,14 @@
                 <img src="!assets/X.png" onclick="toggle('initial-ordering');" alt="">
             </button>
 
-            <form name="theform" action="scripts/order.php" method="post" target="_self">
-                <div class="popup-copy">
-                    <h2>Cookies are coming!</h2>
-                    <p>Please send an email to the following address:</p>
-                    <a id="email-link" href="mailto:pennyjanescookies@gmail.com">pennyjanescookies@gmail.com</a>
-                    <P>Please detail the amount of cookies, the occasion, and anything else we should know.</P>
-                    <p class="end-paragraph">Thank you!</p>
-                <!--    <input class="input" type="text" placeholder="What is your name?" name="name" required id="order-name" />
+
+            <div class="popup-copy">
+                <h2>Cookies are coming!</h2>
+                <p>Please send an email to the following address:</p>
+                <a id="email-link" href="mailto:pennyjanescookies@gmail.com">pennyjanescookies@gmail.com</a>
+                <P>Please detail the amount of cookies, the occasion, and anything else we should know.</P>
+                <p class="end-paragraph">Thank you!</p>
+                <!--    <form name="theform" action="scripts/order.php" method="post" target="_self">  <input class="input" type="text" placeholder="What is your name?" name="name" required id="order-name" />
                     <input class="input" type="text" placeholder="What is your email?" name="email" required/>
                     <select class="input" name="number" required>
                         <option value="" disabled selected>How many cookies do you want?</option>
@@ -61,9 +78,9 @@
                     </select>
                     <input class="input" type="text" placeholder="Anything else we should know?" name="other">
                     <button type="submit" id="red-background-button" class="Link roundButton">Submit my order</button> -->
-                    <!--   <button onclick="toggle('initial-ordering'); toggle('thankyou-order');" id="red-background-button" class="Link roundButton">Submit my order</button> -->
-                </div>
-            </form>
+                <!--   <button onclick="toggle('initial-ordering'); toggle('thankyou-order');" id="red-background-button" class="Link roundButton">Submit my order</button>  </form> -->
+            </div>
+
         </div>
     </div>
     <div id="initial-class" class="hide cover">
@@ -73,10 +90,11 @@
             </button>
             <div class="popup-copy">
                 <h2 style="margin: 5px auto; text-align: left; ">Next Classes</h2>
-                <h3 style="color: #6D02D8; margin: 5px auto; font-size: 14px; text-align: left;">Get Our Schedule Delievered to Your Inbox</h3>
+                <h3 style="color: #6D02D8; margin: 5px auto; font-size: 14px; text-align: left;">Get Our Schedule
+                    Delievered to Your Inbox</h3>
                 <form style="margin: 10px auto;" action="https://github.us18.list-manage.com/subscribe/post?u=001fc7f8967d5959dddfc1b01&amp;id=a40c44d50d"
-                    method="post" class="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
-                    novalidate>
+                    method="post" class="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                    target="_blank" novalidate>
                     <div class="searchContainer">
                         <input class="searchBox" type="email" name="EMAIL" placeholder="Enter Your Email" required>
                         <button type="submit" value="Search" class="searchButton">
@@ -127,7 +145,8 @@
                     </div>
                 </a>
             -->
-                <button id="white-background-purple-border-button" class="booking-buttons Link roundButton" onclick="toggle('booking-window'); toggle('initial-class');">Book a class</button>
+                <button id="white-background-purple-border-button" class="booking-buttons Link roundButton" onclick="toggle('booking-window'); toggle('initial-class');">Book
+                    a class</button>
             </div>
         </div>
     </div>
@@ -140,9 +159,10 @@
                 <form name="theform" target="_self" action="scripts/book.php" method="post">
                     <h2>Book a class!</h2>
                     <p>We're always open to new class opportunities.</p>
-                    <input class="input" type="text" placeholder="What is your name?" name="name" required/>
-                    <input class="input" type="text" placeholder="What is your email?" name="email" required/>
-                    <button onclick="toggle('booking-window'); toggle('thankyou-class')" class="booking-buttons Link roundButton" id="purple-background-button">Get in touch</button>
+                    <input class="input" type="text" placeholder="What is your name?" name="name" required />
+                    <input class="input" type="text" placeholder="What is your email?" name="email" required />
+                    <button onclick="toggle('booking-window'); toggle('thankyou-class')" class="booking-buttons Link roundButton"
+                        id="purple-background-button">Get in touch</button>
                 </form>
             </div>
         </div>
@@ -155,18 +175,20 @@
                 <img src="!assets/X.png" onclick="toggle('joining-window');" alt="">
             </button>
             <div class="popup-copy">
-                <form action="https://github.us18.list-manage.com/subscribe/post?u=001fc7f8967d5959dddfc1b01&amp;id=a40c44d50d" method="post"
-                    id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <form action="https://github.us18.list-manage.com/subscribe/post?u=001fc7f8967d5959dddfc1b01&amp;id=a40c44d50d"
+                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                    target="_blank" novalidate>
                     <h2>Join our classes!</h2>
                     <p>We'll let you know when our next class is:</p>
-                    <input class="input" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="What is your email?" required>
+                    <input class="input" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="What is your email?"
+                        required>
                     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                     <div style="position: absolute; left: -5000px;" aria-hidden="true">
                         <input type="text" name="b_001fc7f8967d5959dddfc1b01_a40c44d50d" tabindex="-1" value="">
                     </div>
                     <div class="clear">
-                        <input type="submit" onclick="toggle('joining-window'); toggle('thankyou-class')" value="Notify Me" name="subscribe" id="mc-embedded-subscribe"
-                            class="button">
+                        <input type="submit" onclick="toggle('joining-window'); toggle('thankyou-class')" value="Notify Me"
+                            name="subscribe" id="mc-embedded-subscribe" class="button">
                     </div>
                 </form>
             </div>
@@ -215,7 +237,8 @@
             <ul class="left">
                 <li>
                     <a href="#MainBlock" class="Link">
-                        <img src="!assets/PJCNoText.png" width="30px" style="margin: 5px; padding-bottom: 10px; margin-left: 0px;" alt="" />
+                        <img src="!assets/PJCNoText.png" width="30px" style="margin: 5px; padding-bottom: 10px; margin-left: 0px;"
+                            alt="" />
                     </a>
                 </li>
                 <li>
@@ -246,11 +269,14 @@
     </nav>
     <div class="swiper-container" id="top">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" id="slide1"></div>
-            <div class="swiper-slide" id="slide2"></div>
-            <div class="swiper-slide" id="slide3"></div>
-            <div class="swiper-slide" id="slide4"></div>
-            <div class="swiper-slide" id="slide5"></div>
+            <div class="swiper-slide" id="bearsSlide"></div>
+            <div class="swiper-slide" id="dogsSlide"></div>
+            <div class="swiper-slide" id="llamaSlide"></div>
+            <div class="swiper-slide" id="farmSlide"></div>
+            <!--      <div class="swiper-slide" id="slide3"></div> 
+            <div class="swiper-slide" id="slide4"></div>-->
+            <div class="swiper-slide" id="thanksgivingSlide"></div>
+            <div class="swiper-slide" id="unicornSlide"></div>
         </div>
         <!-- Add Pagination -->
         <!--    <div class="swiper-pagination"></div> -->
@@ -264,7 +290,8 @@
                 <br> locally in New York City
             </h1>
             <div id="landing-links">
-                <img src="!assets/Email.png" onclick="toggle('Email');" class="Link" width="38px" style="margin-left:12px;" alt="" />
+                <img src="!assets/Email.png" onclick="toggle('Email');" class="Link" width="38px" style="margin-left:12px;"
+                    alt="" />
                 <a href="http://www.instagram.com/pennyjanescookies" target="_blank" class="Link">
                     <img src="!assets/SocialInstaB.png" width="30px" alt="" />
                 </a>
@@ -276,7 +303,8 @@
             <a href="#MainBlock" id="browser-anchor-link">BROWSE OUR COOKIES</a>
         </button>
         <button class="main-button" onclick="toggle('initial-class')" id="book-button">JOIN OR BOOK A CLASS</button>
-        <button class="main-button" onclick="toggle('initial-ordering')" style="height: 34%" id="order-button">PLACE AN ORDER</button>
+        <button class="main-button" onclick="toggle('initial-ordering')" style="height: 34%" id="order-button">PLACE AN
+            ORDER</button>
     </div>
     <div id="clear"></div>
     <div class="row">
@@ -284,9 +312,12 @@
             <div class="inner-wrapper-info">
                 <img src="!assets/PennCirc.png" alt="" />
                 <h3>Hi, I'm Penny Jane May!</h3>
-                <p> Me and mom are always ready to make cookies to spread love to friends and strangers. We bake them ourselves
-                    but I like the decorating part better. Every holiday or when one of my or mom's friends have a party
-                    we make a fresh batch. Santa loved my reindeer cookies so maybe you'll like them too! I laugh everytime
+                <p> Me and mom are always ready to make cookies to spread love to friends and strangers. We bake them
+                    ourselves
+                    but I like the decorating part better. Every holiday or when one of my or mom's friends have a
+                    party
+                    we make a fresh batch. Santa loved my reindeer cookies so maybe you'll like them too! I laugh
+                    everytime
                     I get to hand out the cookies and see frowns turn upside down.
                 </p>
             </div>
@@ -303,8 +334,10 @@
             <div class="inner-wrapper-info">
                 <img src="!assets/Ma.png" alt="" />
                 <h3>Hi, I'm Julie May!</h3>
-                <p> Me and my daughter started handing out cookies in the park to inspire joy and spread positivity. We called
-                    our project Cookies For Love. Then people started asking for batches, so we created this cookie company
+                <p> Me and my daughter started handing out cookies in the park to inspire joy and spread positivity. We
+                    called
+                    our project Cookies For Love. Then people started asking for batches, so we created this cookie
+                    company
                     where they could order from. Each order keeps Cookies For Love going!
                 </p>
             </div>
@@ -321,8 +354,10 @@
             <div class="inner-wrapper-info">
                 <img src="!assets/ClassCirc.png" alt="" />
                 <h3>We do classes!</h3>
-                <p> After giving out 1,000s of cookies we decided to start teaching others how to make them. We love seeing their
-                    delight when creating something beautiful they can eat or give to friends and family. Anybody can join
+                <p> After giving out 1,000s of cookies we decided to start teaching others how to make them. We love
+                    seeing their
+                    delight when creating something beautiful they can eat or give to friends and family. Anybody can
+                    join
                     our classes, just sign up for our email list to learn when the next one is.
                 </p>
                 <button onclick="toggle('initial-class')" class="whiteghostbutton Link roundButton">Join a class</button>
@@ -340,10 +375,12 @@
             <div class="inner-wrapper-info">
                 <img src="!assets/MaAndSis.png" alt="" />
                 <h3>Decorate your event</h3>
-                <p> We make custom cookies for all occasions. We work with you to create the perfect set, custom designed, and
+                <p> We make custom cookies for all occasions. We work with you to create the perfect set, custom
+                    designed, and
                     baked for your individual needs and preferences.
                 </p>
-                <button onclick="toggle('initial-ordering')" class="whiteghostbutton Link roundButton">Ask for an estimate</button>
+                <button onclick="toggle('initial-ordering')" class="whiteghostbutton Link roundButton">Ask for an
+                    estimate</button>
             </div>
         </div>
         <div class="portfolio-wrapper">
@@ -357,9 +394,11 @@
         <div id="newsletter">
             <h4>Get fresh news about our cookies
                 <br> and classes delievered to your inbox:</h4>
-            <form action="https://github.us18.list-manage.com/subscribe/post?u=001fc7f8967d5959dddfc1b01&amp;id=a40c44d50d" method="post"
-                id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <input class="input" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="What is your email?" required>
+            <form action="https://github.us18.list-manage.com/subscribe/post?u=001fc7f8967d5959dddfc1b01&amp;id=a40c44d50d"
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+                novalidate>
+                <input class="input" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="What is your email?"
+                    required>
                 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
                     <input type="text" name="b_001fc7f8967d5959dddfc1b01_a40c44d50d" tabindex="-1" value="">
